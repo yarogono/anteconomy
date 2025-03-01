@@ -30,7 +30,6 @@ export async function getStaticProps() {
     props: {
       realEstateData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

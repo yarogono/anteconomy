@@ -26,7 +26,6 @@ export async function getStaticProps() {
     props: {
       commoditiesData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

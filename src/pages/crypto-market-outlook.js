@@ -5,26 +5,24 @@ export async function getStaticProps() {
   const cryptoData = {
     marketOverview: {
       bitcoin: {
-        currentPrice: "$52,000",
-        yearToDateChange: "+25%",
-        marketDominance: "45%",
+        price: "$45,000",
+        yearToDateChange: "+35%",
+        dominance: "42%",
       },
       ethereum: {
-        currentPrice: "$2,800",
-        yearToDateChange: "+20%",
-        marketDominance: "18%",
+        price: "$2,800",
+        yearToDateChange: "+45%",
       },
     },
     lastUpdated: new Date().toISOString(),
     author: "암호화폐분석팀",
-    category: "시장전망",
+    category: "암호화폐",
   };
 
   return {
     props: {
       cryptoData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

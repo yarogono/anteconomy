@@ -2,13 +2,10 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import "@/styles/globals.css";
 
-export async function getServerSideProps() {
-  const apiUrl = `https://m.search.naver.com/p/csearch/content/qapirender.nhn?key=calculator&pkid=141&q=%ED%99%98%EC%9C%A8&where=m&u1=keb&u6=standardUnit&u7=0&u3=USD&u4=KRW&u8=down&u2=1`;
-  const res = await fetch(apiUrl);
-  const data = await res.json();
+export async function getStaticProps() {
   return {
     props: {
-      initialRate: data?.calculatorMessage || "환율 정보를 불러올 수 없습니다.",
+      initialRate: "환율 정보를 불러오는 중...",
     },
   };
 }

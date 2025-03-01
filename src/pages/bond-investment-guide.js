@@ -4,15 +4,13 @@ import "@/styles/globals.css";
 export async function getStaticProps() {
   const bondData = {
     marketOverview: {
-      yields: {
-        treasury10Y: "4.5%",
-        treasury2Y: "4.8%",
-        corporateAAA: "5.2%",
-        highYield: "8.5%",
+      treasuryYield: {
+        tenYear: "4.2%",
+        twoYear: "4.8%",
       },
-      marketSize: {
-        government: "120조 달러",
-        corporate: "80조 달러",
+      creditSpread: {
+        investment: "120bp",
+        highYield: "380bp",
       },
     },
     lastUpdated: new Date().toISOString(),
@@ -24,7 +22,6 @@ export async function getStaticProps() {
     props: {
       bondData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

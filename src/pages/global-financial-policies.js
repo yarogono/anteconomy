@@ -28,7 +28,6 @@ export async function getStaticProps() {
     props: {
       policyData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

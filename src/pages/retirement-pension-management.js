@@ -23,7 +23,6 @@ export async function getStaticProps() {
     props: {
       pensionData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

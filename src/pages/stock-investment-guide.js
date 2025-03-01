@@ -32,7 +32,6 @@ export async function getStaticProps() {
     props: {
       investmentGuideData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

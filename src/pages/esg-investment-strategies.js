@@ -17,7 +17,6 @@ export async function getStaticProps() {
     props: {
       esgData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 
@@ -192,7 +191,7 @@ export default function ESGInvestmentStrategies({ esgData }) {
 
           <footer className="mt-8 pt-8 border-t border-gray-200">
             <p className="text-gray-600 text-center">
-              🌱 더 자세한 ESG 투자 분석과 전략이 궁금하신가요?{" "}
+              �� 더 자세한 ESG 투자 분석과 전략이 궁금하신가요?{" "}
               <a href="#" className="text-blue-600 hover:text-blue-800">
                 ESG 투자 리포트 구독하기
               </a>

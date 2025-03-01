@@ -25,7 +25,6 @@ export async function getStaticProps() {
     props: {
       techData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 

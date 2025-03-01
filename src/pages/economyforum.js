@@ -3,49 +3,28 @@ import Head from "next/head";
 import "@/styles/globals.css";
 
 export async function getStaticProps() {
-  const economicData = {
-    goldPriceFactors: [
-      {
-        title: "세계 경제 상황",
-        description:
-          "글로벌 경제 위기나 불확실성이 증가할 경우, 안전 자산으로서의 금 수요가 증가하여 가격이 상승할 가능성이 큽니다.",
+  const forumData = {
+    marketOverview: {
+      topics: {
+        macro: "거시경제",
+        market: "금융시장",
+        policy: "정책동향",
+        industry: "산업분석",
       },
-      {
-        title: "달러 가치",
-        description:
-          "금은 일반적으로 미국 달러와 반대 방향으로 움직입니다. 달러 가치가 하락하면 금 가격이 상승하는 경향이 있습니다.",
-      },
-      {
-        title: "금리 정책",
-        description:
-          "중앙은행의 금리 정책은 금 가격에 직접적인 영향을 미칩니다. 금리가 낮아지면 금의 투자 매력이 상승하고, 반대로 금리가 오르면 금 수요가 줄어들 가능성이 있습니다.",
-      },
-      {
-        title: "공급과 수요",
-        description:
-          "금 채굴량, 중앙은행의 금 보유량 증가 여부, 산업 및 투자 수요가 금 시세 변동에 영향을 미칩니다.",
-      },
-      {
-        title: "지정학적 리스크",
-        description:
-          "전쟁, 국제 갈등, 정치적 불안정 등은 금 가격 상승 요인으로 작용할 수 있습니다.",
-      },
-    ],
+    },
     lastUpdated: new Date().toISOString(),
     author: "경제분석팀",
-    category: "경제전망",
+    category: "경제포럼",
   };
 
   return {
     props: {
-      economicData,
+      forumData,
     },
-    // 12시간마다 재생성
-    revalidate: 43200,
   };
 }
 
-export default function EconomicForum({ economicData }) {
+export default function EconomicForum({ forumData }) {
   return (
     <div className="min-h-screen bg-green-900 text-white flex flex-col items-center justify-center p-4">
       <Head>
