@@ -1,4 +1,4 @@
-const EXTERNAL_DATA_URL = "https://anteconomy.com";
+const EXTERNAL_DATA_URL = "https://anteconomy.co.kr";
 
 function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
