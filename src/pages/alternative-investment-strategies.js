@@ -24,7 +24,6 @@ export async function getStaticProps() {
     props: {
       alternativeData,
     },
-    revalidate: 43200, // 12시간
   };
 }
 
