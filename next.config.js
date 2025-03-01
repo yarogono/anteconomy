@@ -7,8 +7,8 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
-      // sitemap.xml 생성을 위한 설정
-      require("./scripts/generate-sitemap");
+      // rss.xml 생성
+      require("./scripts/generate-rss");
     }
     return config;
   },
