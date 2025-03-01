@@ -99,22 +99,29 @@ function generateSiteMap() {
  `;
 }
 
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting
-}
-
-export async function getServerSideProps({ res }) {
-  // We generate the XML sitemap
+export const getStaticProps = async ({ res }) => {
   const sitemap = generateSiteMap();
 
-  res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
-  res.write(sitemap);
-  res.end();
-
   return {
-    props: {},
+    props: {
+      sitemap,
+    },
   };
-}
+};
+
+const SiteMap = ({ sitemap }) => {
+  return (
+    <>
+      <style jsx global>{`
+        xml {
+          display: block;
+          white-space: pre;
+          font-family: monospace;
+        }
+      `}</style>
+      <xml dangerouslySetInnerHTML={{ __html: sitemap }} />
+    </>
+  );
+};
 
 export default SiteMap;
