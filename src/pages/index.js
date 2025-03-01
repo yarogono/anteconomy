@@ -41,6 +41,10 @@ export default function Home({ initialRate }) {
       <Head>
         <title>환율 계산기</title>
         <meta name="description" content="실시간 환율 계산기" />
+        <meta
+          name="google-site-verification"
+          content="UTD90ZX-CkWyU8r9HYnHm8cLOIkl4586zXCqWdduKUQ"
+        />
       </Head>
       <h1 className="text-3xl font-bold mb-6">환율 계산기</h1>
       <div className="bg-white text-black p-6 rounded-2xl shadow-lg max-w-lg w-full">
