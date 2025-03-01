@@ -1,4 +1,4 @@
-const EXTERNAL_DATA_URL = "https://your-domain.com";
+const EXTERNAL_DATA_URL = "https://anteconomy.com";
 
 function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -99,16 +99,22 @@ function generateSiteMap() {
  `;
 }
 
-export async function getStaticProps() {
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
+}
+
+export async function getServerSideProps({ res }) {
+  // We generate the XML sitemap
   const sitemap = generateSiteMap();
 
+  res.setHeader("Content-Type", "text/xml");
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+
   return {
-    props: {
-      sitemap,
-    },
+    props: {},
   };
 }
 
-export default function SiteMap({ sitemap }) {
-  return sitemap;
-}
+export default SiteMap;
