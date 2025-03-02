@@ -48,9 +48,16 @@ export default function Home({ initialRate }) {
           name="keywords"
           content="환율 계산기, 실시간 환율, 금융 시장 분석, 주식 투자, 부동산 투자, 가상화폐, ESG 투자, 글로벌 경제"
         />
+
+        {/* 구글 서치 콘솔 */}
         <meta
           name="google-site-verification"
           content="UTD90ZX-CkWyU8r9HYnHm8cLOIkl4586zXCqWdduKUQ"
+        />
+        {/* 네이버 서치 어드바이저 */}
+        <meta
+          name="naver-site-verification"
+          content="bddc3ddea95360ac9a2b5d8b5f7d059be0a74a17"
         />
 
         {/* Open Graph / Facebook */}
