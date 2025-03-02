@@ -60,11 +60,11 @@ export default function GlobalIndustryOutlook({ industryData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/industry-2024.jpg"
+          content="https://anteconomy.co.kr/images/industry-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/global-industry-outlook"
+          content="https://anteconomy.co.kr/global-industry-outlook"
         />
         <meta property="og:site_name" content="글로벌 산업 분석 센터" />
 
@@ -77,7 +77,7 @@ export default function GlobalIndustryOutlook({ industryData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/industry-2024.jpg"
+          content="https://anteconomy.co.kr/images/industry-2024.jpg"
         />
       </Head>
 

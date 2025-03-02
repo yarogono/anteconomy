@@ -57,11 +57,11 @@ export default function TechCompanyAnalysis({ techData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/tech-2024.jpg"
+          content="https://anteconomy.co.kr/images/tech-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/tech-company-analysis"
+          content="https://anteconomy.co.kr/tech-company-analysis"
         />
         <meta property="og:site_name" content="테크기업 분석 센터" />
 
@@ -74,7 +74,7 @@ export default function TechCompanyAnalysis({ techData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/tech-2024.jpg"
+          content="https://anteconomy.co.kr/images/tech-2024.jpg"
         />
       </Head>
 

@@ -64,11 +64,11 @@ export default function StockInvestmentGuide({ investmentGuideData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/stock-guide.jpg"
+          content="https://anteconomy.co.kr/images/stock-guide.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/stock-investment-guide"
+          content="https://anteconomy.co.kr/stock-investment-guide"
         />
         <meta property="og:site_name" content="투자 교육 센터" />
 
@@ -84,7 +84,7 @@ export default function StockInvestmentGuide({ investmentGuideData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/stock-guide.jpg"
+          content="https://anteconomy.co.kr/images/stock-guide.jpg"
         />
       </Head>
 

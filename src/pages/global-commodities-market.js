@@ -60,11 +60,11 @@ export default function GlobalCommoditiesMarket({ commoditiesData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/commodities-2024.jpg"
+          content="https://anteconomy.co.kr/images/commodities-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/global-commodities-market"
+          content="https://anteconomy.co.kr/global-commodities-market"
         />
         <meta property="og:site_name" content="글로벌 원자재 시장 분석 센터" />
 
@@ -77,7 +77,7 @@ export default function GlobalCommoditiesMarket({ commoditiesData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/commodities-2024.jpg"
+          content="https://anteconomy.co.kr/images/commodities-2024.jpg"
         />
       </Head>
 

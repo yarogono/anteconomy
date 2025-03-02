@@ -56,11 +56,11 @@ export default function EmergingMarketsStrategy({ emergingData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/emerging-2024.jpg"
+          content="https://anteconomy.co.kr/images/emerging-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/emerging-markets-strategy"
+          content="https://anteconomy.co.kr/emerging-markets-strategy"
         />
         <meta property="og:site_name" content="신흥국 투자 분석 센터" />
 
@@ -73,7 +73,7 @@ export default function EmergingMarketsStrategy({ emergingData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/emerging-2024.jpg"
+          content="https://anteconomy.co.kr/images/emerging-2024.jpg"
         />
       </Head>
 

@@ -56,11 +56,11 @@ export default function FinancialRiskManagement({ riskData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/risk-2024.jpg"
+          content="https://anteconomy.co.kr/images/risk-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/financial-risk-management"
+          content="https://anteconomy.co.kr/financial-risk-management"
         />
         <meta property="og:site_name" content="금융 리스크 관리 센터" />
 
@@ -73,7 +73,7 @@ export default function FinancialRiskManagement({ riskData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/risk-2024.jpg"
+          content="https://anteconomy.co.kr/images/risk-2024.jpg"
         />
       </Head>
 

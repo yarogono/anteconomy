@@ -56,11 +56,11 @@ export default function GlobalTradeTrends({ tradeData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/trade-2024.jpg"
+          content="https://anteconomy.co.kr/images/trade-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/global-trade-trends"
+          content="https://anteconomy.co.kr/global-trade-trends"
         />
         <meta property="og:site_name" content="글로벌 무역 분석 센터" />
 
@@ -73,7 +73,7 @@ export default function GlobalTradeTrends({ tradeData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/trade-2024.jpg"
+          content="https://anteconomy.co.kr/images/trade-2024.jpg"
         />
       </Head>
 

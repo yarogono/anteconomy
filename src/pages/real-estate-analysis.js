@@ -64,11 +64,11 @@ export default function RealEstateAnalysis({ realEstateData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/real-estate-2024.jpg"
+          content="https://anteconomy.co.kr/images/real-estate-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/real-estate-analysis"
+          content="https://anteconomy.co.kr/real-estate-analysis"
         />
         <meta property="og:site_name" content="부동산 시장 분석 센터" />
 
@@ -81,7 +81,7 @@ export default function RealEstateAnalysis({ realEstateData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/real-estate-2024.jpg"
+          content="https://anteconomy.co.kr/images/real-estate-2024.jpg"
         />
       </Head>
 

@@ -54,11 +54,11 @@ export default function BondInvestmentGuide({ bondData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/bond-2024.jpg"
+          content="https://anteconomy.co.kr/images/bond-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/bond-investment-guide"
+          content="https://anteconomy.co.kr/bond-investment-guide"
         />
         <meta property="og:site_name" content="채권 투자 분석 센터" />
 

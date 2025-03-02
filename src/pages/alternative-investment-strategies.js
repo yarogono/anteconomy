@@ -58,11 +58,11 @@ export default function AlternativeInvestmentStrategies({ alternativeData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/alternative-2024.jpg"
+          content="https://anteconomy.co.kr/images/alternative-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/alternative-investment-strategies"
+          content="https://anteconomy.co.kr/alternative-investment-strategies"
         />
         <meta property="og:site_name" content="대체투자 분석 센터" />
 
@@ -75,7 +75,7 @@ export default function AlternativeInvestmentStrategies({ alternativeData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/alternative-2024.jpg"
+          content="https://anteconomy.co.kr/images/alternative-2024.jpg"
         />
       </Head>
 

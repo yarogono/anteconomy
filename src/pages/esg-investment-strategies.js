@@ -49,11 +49,11 @@ export default function ESGInvestmentStrategies({ esgData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/esg-2024.jpg"
+          content="https://anteconomy.co.kr/images/esg-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/esg-investment-strategies"
+          content="https://anteconomy.co.kr/esg-investment-strategies"
         />
         <meta property="og:site_name" content="ESG 투자 분석 센터" />
 
@@ -66,7 +66,7 @@ export default function ESGInvestmentStrategies({ esgData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/esg-2024.jpg"
+          content="https://anteconomy.co.kr/images/esg-2024.jpg"
         />
       </Head>
 

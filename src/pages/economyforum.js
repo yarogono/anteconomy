@@ -53,11 +53,11 @@ export default function EconomicForum({ forumData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/economy-2025.jpg"
+          content="https://anteconomy.co.kr/images/economy-2025.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/economyforum"
+          content="https://anteconomy.co.kr/economyforum"
         />
         <meta property="og:site_name" content="경제 블로그" />
 
@@ -73,7 +73,7 @@ export default function EconomicForum({ forumData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/economy-2025.jpg"
+          content="https://anteconomy.co.kr/images/economy-2025.jpg"
         />
       </Head>
       <body>

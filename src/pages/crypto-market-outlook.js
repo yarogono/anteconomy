@@ -55,11 +55,11 @@ export default function CryptoMarketOutlook({ cryptoData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/crypto-2024.jpg"
+          content="https://anteconomy.co.kr/images/crypto-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/crypto-market-outlook"
+          content="https://anteconomy.co.kr/crypto-market-outlook"
         />
         <meta property="og:site_name" content="암호화폐 시장 분석 센터" />
 
@@ -72,7 +72,7 @@ export default function CryptoMarketOutlook({ cryptoData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/crypto-2024.jpg"
+          content="https://anteconomy.co.kr/images/crypto-2024.jpg"
         />
       </Head>
 

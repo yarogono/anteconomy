@@ -62,11 +62,11 @@ export default function GlobalFinancialPolicies({ policyData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/financial-policy-2024.jpg"
+          content="https://anteconomy.co.kr/images/financial-policy-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/global-financial-policies"
+          content="https://anteconomy.co.kr/global-financial-policies"
         />
         <meta property="og:site_name" content="글로벌 금융정책 분석 센터" />
 
@@ -79,7 +79,7 @@ export default function GlobalFinancialPolicies({ policyData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/financial-policy-2024.jpg"
+          content="https://anteconomy.co.kr/images/financial-policy-2024.jpg"
         />
       </Head>
 

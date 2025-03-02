@@ -57,11 +57,11 @@ export default function RetirementPensionManagement({ pensionData }) {
         />
         <meta
           property="og:image"
-          content="https://your-domain.com/images/pension-2024.jpg"
+          content="https://anteconomy.co.kr/images/pension-2024.jpg"
         />
         <meta
           property="og:url"
-          content="https://your-domain.com/retirement-pension-management"
+          content="https://anteconomy.co.kr/retirement-pension-management"
         />
         <meta property="og:site_name" content="연금자산관리센터" />
 
@@ -74,7 +74,7 @@ export default function RetirementPensionManagement({ pensionData }) {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/images/pension-2024.jpg"
+          content="https://anteconomy.co.kr/images/pension-2024.jpg"
         />
       </Head>
 
