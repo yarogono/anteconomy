@@ -26,179 +26,156 @@ export async function getStaticProps() {
 
 export default function EconomicForum({ forumData }) {
   return (
-    <div className="min-h-screen bg-green-900 text-white flex flex-col items-center justify-center p-4">
+    <>
       <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>2025년 경제 전망: 글로벌 시장 트렌드 분석</title>
+        <title>경제 포럼 - 글로벌 경제 동향과 전망 분석 | 안트이코노미</title>
         <meta
           name="description"
-          content="2025년 경제 전망 및 글로벌 시장 트렌드를 분석합니다. 인플레이션, 금리 정책, 기술 혁신 등 핵심 경제 이슈를 다룹니다."
+          content="세계 경제의 주요 이슈와 트렌드를 분석하고 미래 전망을 제시합니다. 글로벌 경제 정책, 시장 동향, 산업 변화에 대한 전문가들의 심층 분석을 제공합니다."
         />
         <meta
           name="keywords"
-          content="2025년 경제 전망, 글로벌 시장 트렌드, 인플레이션, 금리 정책, 주식 시장, 경제 성장"
+          content="경제 포럼, 글로벌 경제, 경제 전망, 경제 정책, 시장 분석, 산업 동향, 경제 트렌드, 금융 시장"
         />
-        <meta name="author" content="경제 블로그" />
-
-        {/* Open Graph 태그 */}
-        <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="2025년 경제 전망: 글로벌 시장 트렌드 분석"
+          content="경제 포럼 - 글로벌 경제 동향과 전망 분석 | 안트이코노미"
         />
         <meta
           property="og:description"
-          content="2025년 경제 전망 및 글로벌 시장 트렌드를 분석합니다. 인플레이션, 금리 정책, 기술 혁신 등 핵심 경제 이슈를 다룹니다."
+          content="세계 경제의 주요 이슈와 트렌드를 분석하고 미래 전망을 제시합니다. 글로벌 경제 정책, 시장 동향, 산업 변화에 대한 전문가들의 심층 분석을 제공합니다."
         />
-        <meta
-          property="og:image"
-          content="https://anteconomy.co.kr/images/economy-2025.jpg"
-        />
-        <meta
-          property="og:url"
-          content="https://anteconomy.co.kr/economyforum"
-        />
-        <meta property="og:site_name" content="경제 블로그" />
-
-        {/* Twitter 카드 */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="2025년 경제 전망: 글로벌 시장 트렌드 분석"
-        />
-        <meta
-          name="twitter:description"
-          content="2025년 경제 전망 및 글로벌 시장 트렌드를 분석합니다."
-        />
-        <meta
-          name="twitter:image"
-          content="https://anteconomy.co.kr/images/economy-2025.jpg"
-        />
+        <link rel="canonical" href="https://anteconomy.co.kr/economyforum" />
       </Head>
-      <body>
-        <header>
-          <h1>2025년 경제 전망: 글로벌 시장 트렌드 분석</h1>
-          <p>
-            <strong>2025년 세계 경제는 어떻게 변화할까요?</strong> 금리 정책,
-            인플레이션, 기술 혁신 등 주요 이슈를 분석하고 글로벌 경제 흐름을
-            전망합니다.
-          </p>
-        </header>
 
-        <section>
-          <h2>1. 2025년 세계 경제 성장 전망</h2>
-          <p>
-            국제통화기금(IMF)과 세계은행(World Bank)의 최근 보고서에 따르면,
-            2025년 세계 경제 성장률은 약 <strong>2.9%~3.2%</strong>로
-            예측됩니다. 이는 2024년 대비 소폭 상승한 수치로, 경기 침체 우려가
-            완화되면서 안정적인 성장이 기대됩니다.
-          </p>
-          <ul>
-            <li>미국: 인플레이션 둔화와 소비 회복으로 경제 성장 예상</li>
-            <li>유럽: 에너지 위기 완화 및 내수 회복이 관건</li>
-            <li>중국: 부동산 시장 조정과 내수 확대 정책이 경제 성장을 견인</li>
-          </ul>
-        </section>
+      <div className="min-h-screen bg-gray-50">
+        <main className="max-w-4xl mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            경제 포럼: 글로벌 경제 동향과 미래 전망
+          </h1>
 
-        <section>
-          <h2>2. 글로벌 인플레이션과 금리 정책</h2>
-          <p>
-            인플레이션은 2023~2024년 정점을 찍고 하락세로 접어들었으나, 여전히
-            높은 수준을 유지하고 있습니다. 이에 따라{" "}
-            <strong>각국 중앙은행의 금리 정책</strong>이 2025년 경제 흐름을
-            결정짓는 중요한 요소가 될 것입니다.
-          </p>
-          <h3>▶ 미국 연방준비제도(Fed)의 금리 정책</h3>
-          <p>
-            미국은 2025년 상반기부터 점진적인 금리 인하를 고려할 가능성이
-            큽니다. 이는 금융 시장에 긍정적인 영향을 미칠 것으로 예상됩니다.
-          </p>
-          <h3>▶ 유럽과 아시아의 금리 정책</h3>
-          <p>
-            유럽중앙은행(ECB)과 한국은행도 완화적 통화정책을 검토할 수 있으며,
-            이에 따라 대출 시장과 주택 시장에 변화가 있을 전망입니다.
-          </p>
-        </section>
+          <div className="prose max-w-none">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              1. 글로벌 경제 현황
+            </h2>
+            <p className="mb-6">
+              세계 경제는 다양한 도전과 기회에 직면해 있습니다. 인플레이션 압력,
+              통화정책 변화, 지정학적 리스크 등이 경제 환경을 형성하고 있으며,
+              이러한 요인들이 각국의 경제 성장과 금융 시장에 영향을 미치고
+              있습니다.
+            </p>
 
-        <section>
-          <h2>3. 주식 시장과 금융 시장 전망</h2>
-          <p>
-            2025년 주식 시장은{" "}
-            <strong>기술주, 친환경 산업, 인공지능(AI) 관련 기업</strong>을
-            중심으로 강세를 보일 가능성이 큽니다.
-          </p>
-          <h3>▶ 유망한 산업과 투자 기회</h3>
-          <ul>
-            <li>
-              <strong>AI & 핀테크:</strong> ChatGPT와 같은 AI 기술이
-              금융·헬스케어 시장에 미치는 영향 증가
-            </li>
-            <li>
-              <strong>친환경 에너지:</strong> 전기차, 태양광, 수소에너지 관련
-              기업 주목
-            </li>
-            <li>
-              <strong>반도체 산업:</strong> 데이터 센터, AI 칩 개발 증가로
-              지속적 성장 기대
-            </li>
-          </ul>
-        </section>
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              주요 경제 이슈
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li>글로벌 인플레이션 동향</li>
+              <li>주요국 통화정책 방향</li>
+              <li>국제 무역 환경 변화</li>
+              <li>에너지 시장 동향</li>
+              <li>디지털 경제 전환</li>
+            </ul>
 
-        <section>
-          <h2>4. 주요 리스크 요인</h2>
-          <p>
-            2025년에도 글로벌 경제를 위협하는 다양한 리스크 요인이 존재합니다.
-          </p>
-          <h3>▶ 지정학적 리스크</h3>
-          <p>
-            러시아-우크라이나 전쟁, 미중 갈등, 중동 지역의 정치 불안정이 글로벌
-            경제에 영향을 미칠 수 있습니다.
-          </p>
-          <h3>▶ 공급망 불안정</h3>
-          <p>
-            반도체, 원자재 수급 문제가 지속될 경우, 특정 산업의 성장이 제한될 수
-            있습니다.
-          </p>
-          <h3>▶ 기후 변화와 ESG 규제</h3>
-          <p>
-            탄소 배출 규제와 친환경 정책 강화로 기업들이 새로운 대응 전략을
-            필요로 합니다.
-          </p>
-        </section>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              2. 주요국 경제 분석
+            </h2>
+            <p className="mb-6">
+              각국의 경제 상황과 정책 대응은 글로벌 경제의 향방을 결정짓는
+              중요한 요소입니다. 주요 경제권의 성장 동력과 구조적 과제를
+              분석하여 시사점을 도출합니다.
+            </p>
 
-        <section>
-          <h2>5. 2025년 경제 전망 요약</h2>
-          <ul>
-            <li>
-              <strong>경제 성장:</strong> 글로벌 경제 성장률 2.9%~3.2% 예상
-            </li>
-            <li>
-              <strong>금리 정책:</strong> 미국, 유럽 등 주요 국가의 금리 인하
-              가능성
-            </li>
-            <li>
-              <strong>유망 산업:</strong> AI, 핀테크, 친환경 에너지, 반도체
-            </li>
-            <li>
-              <strong>위험 요소:</strong> 지정학적 리스크, 공급망 문제, ESG 규제
-              강화
-            </li>
-          </ul>
-          <p>
-            2025년은 <strong>기술 혁신과 금융 정책의 변화</strong>에 따라 새로운
-            투자 기회가 생길 것입니다. 글로벌 경제 흐름을 주의 깊게 살피며 대응
-            전략을 세우는 것이 중요합니다.
-          </p>
-        </section>
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              지역별 경제 동향
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li>미국: 경제 성장과 통화정책</li>
+              <li>유럽: 에너지 위기와 경제 회복</li>
+              <li>중국: 구조 전환과 성장 전략</li>
+              <li>일본: 디플레이션 극복과 성장 동력</li>
+              <li>신흥국: 경제 발전과 도전 과제</li>
+            </ul>
 
-        <footer>
-          <p>
-            📢 더 많은 경제 전망 및 투자 전략 정보를 원하시면{" "}
-            <a href="#">경제 블로그 구독</a>을 추천드립니다!
-          </p>
-        </footer>
-      </body>
-    </div>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              3. 산업 구조 변화
+            </h2>
+            <p className="mb-6">
+              기술 혁신과 환경 변화는 글로벌 산업 구조를 근본적으로 변화시키고
+              있습니다. 새로운 성장 동력과 비즈니스 모델의 등장은 경제의 질적
+              변화를 이끌고 있습니다.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              주요 산업 트렌드
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li>디지털 전환 가속화</li>
+              <li>친환경 에너지 전환</li>
+              <li>공급망 재편</li>
+              <li>서비스 경제화</li>
+              <li>플랫폼 비즈니스 성장</li>
+            </ul>
+
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              4. 금융 시장 동향
+            </h2>
+            <p className="mb-6">
+              글로벌 금융 시장은 경제 환경 변화에 민감하게 반응하며, 새로운 투자
+              기회와 리스크를 창출하고 있습니다. 주요 자산 시장의 동향과 투자
+              전략을 분석합니다.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              시장 주요 이슈
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li>글로벌 금리 동향</li>
+              <li>주식 시장 전망</li>
+              <li>원자재 시장 변화</li>
+              <li>외환 시장 동향</li>
+              <li>대체투자 기회</li>
+            </ul>
+
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              5. 경제 정책 분석
+            </h2>
+            <p className="mb-6">
+              각국의 경제 정책은 시장과 기업 활동에 직접적인 영향을 미칩니다.
+              주요 정책의 배경과 영향을 분석하여 시사점을 도출하고 대응 방안을
+              모색합니다.
+            </p>
+
+            <div className="bg-blue-50 p-6 rounded-lg mb-8">
+              <h3 className="text-xl font-semibold text-blue-900 mb-3">
+                주요 정책 영역
+              </h3>
+              <ul className="list-disc pl-6 text-blue-800">
+                <li>통화정책과 금융안정</li>
+                <li>재정정책과 경제성장</li>
+                <li>산업정책과 혁신전략</li>
+                <li>무역정책과 국제협력</li>
+                <li>환경정책과 지속가능성</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-100 p-6 rounded-lg mt-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                결론: 경제의 미래와 대응 전략
+              </h2>
+              <p className="mb-4">
+                글로벌 경제는 구조적 변화와 새로운 도전에 직면해 있습니다.
+                디지털화, 친환경 전환, 인구구조 변화 등 메가트렌드는 경제의
+                미래를 근본적으로 재편하고 있습니다.
+              </p>
+              <p>
+                이러한 변화 속에서 성공적인 경제 운영과 비즈니스 전략을 위해서는
+                장기적 관점의 분석과 유연한 대응이 필요합니다. 지속가능한 성장을
+                위한 혁신과 적응이 그 어느 때보다 중요해지고 있습니다.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
