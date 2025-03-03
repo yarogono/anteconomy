@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import "@/styles/globals.css";
+import Link from "next/link";
 
 export async function getStaticProps() {
   return {
@@ -151,17 +152,17 @@ export default function Home({ initialRate }) {
           <h2 className="text-3xl font-bold mb-8">주요 금융 시장 분석</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">글로벌 주식 시장</h3>
+              <h3 className="text-xl font-bold mb-4">실시간 금 시세</h3>
               <p className="mb-4">
-                최신 글로벌 주식 시장 동향과 투자 전략을 분석합니다. 주요 지수와
-                개별 종목에 대한 심층 분석을 제공합니다.
+                국제 금 시세와 차트를 실시간으로 제공하며, 투자 전략을
+                분석합니다.
               </p>
-              <a
-                href="/stock-investment-guide"
+              <Link
+                href="/gold-price"
                 className="text-green-300 hover:text-green-100"
               >
-                자세히 보기 →
-              </a>
+                시세 보기 →
+              </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">부동산 시장</h3>
