@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://anteconomy.co.kr/sitemap.xml 
+# Host
+Host: https://anteconomy.co.kr
+
+# Sitemaps
+Sitemap: https://anteconomy.co.kr/sitemap.xml

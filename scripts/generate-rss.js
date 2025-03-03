@@ -14,6 +14,8 @@ const feed = new RSS({
   language: "ko-KR",
   pubDate: new Date(),
   ttl: "60",
+  copyright: "© 2024 anteconomy",
+  author: "anteconomy",
 });
 
 // pages 디렉토리 스캔
@@ -64,6 +66,8 @@ function getPages(dir) {
           : "금융 시장 분석과 투자 정보",
         url: url === "/index" ? "" : url,
         date: fs.statSync(fullPath).mtime,
+        author: "anteconomy",
+        categories: ["금융", "투자", "경제"],
       };
     })
     .filter(Boolean)
@@ -83,7 +87,8 @@ pages.forEach((page) => {
     url: `${EXTERNAL_DATA_URL}${page.url}`,
     guid: `${EXTERNAL_DATA_URL}${page.url}`,
     date: page.date,
-    categories: ["금융", "투자", "경제"],
+    author: page.author,
+    categories: page.categories,
   });
 });
 
@@ -94,5 +99,6 @@ if (!fs.existsSync(publicPath)) {
 }
 
 // RSS 피드를 XML 파일로 저장
-fs.writeFileSync(path.join(publicPath, "rss.xml"), feed.xml({ indent: true }));
+const xml = feed.xml({ indent: true });
+fs.writeFileSync(path.join(publicPath, "rss.xml"), xml);
 console.log("RSS feed generated!");

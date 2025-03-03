@@ -9,9 +9,11 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 03 Mar 2025 11:40:31 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Mar 2025 12:01:52 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 03 Mar 2025 11:40:31 GMT</pubDate>
+        <author><![CDATA[anteconomy]]></author>
+        <pubDate>Mon, 03 Mar 2025 12:01:52 GMT</pubDate>
+        <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
         <item>
@@ -22,6 +24,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:55:52 GMT</pubDate>
         </item>
         <item>
@@ -32,6 +35,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:34:38 GMT</pubDate>
         </item>
         <item>
@@ -42,6 +46,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:37:19 GMT</pubDate>
         </item>
         <item>
@@ -52,6 +57,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Mon, 03 Mar 2025 11:40:14 GMT</pubDate>
         </item>
         <item>
@@ -62,6 +68,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:38:00 GMT</pubDate>
         </item>
         <item>
@@ -72,6 +79,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:38:40 GMT</pubDate>
         </item>
         <item>
@@ -82,6 +90,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:39:50 GMT</pubDate>
         </item>
         <item>
@@ -92,6 +101,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:40:43 GMT</pubDate>
         </item>
         <item>
@@ -102,6 +112,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:41:42 GMT</pubDate>
         </item>
         <item>
@@ -112,6 +123,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:42:24 GMT</pubDate>
         </item>
         <item>
@@ -122,6 +134,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:43:07 GMT</pubDate>
         </item>
         <item>
@@ -132,6 +145,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:43:55 GMT</pubDate>
         </item>
         <item>
@@ -142,6 +156,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Mon, 03 Mar 2025 00:44:33 GMT</pubDate>
         </item>
         <item>
@@ -152,6 +167,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:44:39 GMT</pubDate>
         </item>
         <item>
@@ -162,6 +178,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:45:22 GMT</pubDate>
         </item>
         <item>
@@ -172,6 +189,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:33:22 GMT</pubDate>
         </item>
         <item>
@@ -182,6 +200,7 @@
             <category><![CDATA[금융]]></category>
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:46:06 GMT</pubDate>
         </item>
     </channel>
