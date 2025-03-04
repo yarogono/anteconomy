@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 04 Mar 2025 00:01:52 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Mar 2025 00:11:14 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Tue, 04 Mar 2025 00:01:52 GMT</pubDate>
+        <pubDate>Tue, 04 Mar 2025 00:11:14 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -58,7 +58,7 @@
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
-            <pubDate>Tue, 04 Mar 2025 00:01:27 GMT</pubDate>
+            <pubDate>Tue, 04 Mar 2025 00:03:02 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[economyforum]]></title>
@@ -102,7 +102,7 @@
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
-            <pubDate>Mon, 03 Mar 2025 23:59:03 GMT</pubDate>
+            <pubDate>Tue, 04 Mar 2025 00:10:42 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[financial-risk-management]]></title>

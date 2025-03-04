@@ -4,7 +4,27 @@ import axios from "axios";
 import CoupangBanner from "../components/CoupangBanner";
 
 export default function ExchangeRate() {
-  // ... existing state and effects ...
+  const [mounted, setMounted] = useState(false);
+  const [currentTime, setCurrentTime] = useState("");
+  const [exchangeRates, setExchangeRates] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [amount, setAmount] = useState("");
+  const [currency, setCurrency] = useState("USD");
+
+  useEffect(() => {
+    setMounted(true);
+    const updateTime = () => {
+      setCurrentTime(new Date().toLocaleString());
+    };
+    updateTime();
+    const timer = setInterval(updateTime, 1000);
+
+    return () => {
+      clearInterval(timer);
+      setMounted(false);
+    };
+  }, []);
 
   return (
     <>
