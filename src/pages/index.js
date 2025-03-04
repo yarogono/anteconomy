@@ -181,17 +181,16 @@ export default function Home({ initialRate }) {
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">가상화폐 시장</h3>
+              <h3 className="text-xl font-bold mb-4">퍼센트 계산기</h3>
               <p className="mb-4">
-                암호화폐 시장의 최신 동향과 주요 코인들의 기술적 분석을
-                제공합니다.
+                백분율(%), 천분율(‰), 만분율(‱)을 쉽고 정확하게 계산해보세요.
               </p>
-              <a
-                href="/crypto-market-outlook"
+              <Link
+                href="/percent-calculator"
                 className="text-green-300 hover:text-green-100"
               >
-                자세히 보기 →
-              </a>
+                계산하기 →
+              </Link>
             </div>
           </div>
         </div>
