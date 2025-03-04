@@ -168,17 +168,17 @@ export default function Home({ initialRate }) {
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">부동산 시장</h3>
+              <h3 className="text-xl font-bold mb-4">예금 이자 계산기</h3>
               <p className="mb-4">
-                국내외 부동산 시장 동향과 투자 기회를 분석합니다. 지역별 시장
-                상황과 투자 전략을 제시합니다.
+                예치금액, 기간, 이자율에 따른 수익을 계산하고 세금까지 고려한
+                최종 수령액을 확인하세요.
               </p>
-              <a
-                href="/real-estate-analysis"
+              <Link
+                href="/deposit-calculator"
                 className="text-green-300 hover:text-green-100"
               >
-                자세히 보기 →
-              </a>
+                계산하기 →
+              </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">가상화폐 시장</h3>
