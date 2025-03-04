@@ -221,12 +221,12 @@ export default function GoldPrice() {
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-lg font-semibold mb-2">현재가 (USD)</h3>
+                <h3 className="text-lg font-semibold mb-2">현재가 (원)</h3>
                 <p className="text-3xl font-bold text-blue-600">
-                  {formatPrice(parseFloat(goldPrice?.price))}
+                  {formatPriceKRW(parseFloat(goldPrice?.price))}
                 </p>
                 <p className="text-xl text-gray-600 mt-2">
-                  {formatPriceKRW(parseFloat(goldPrice?.price))}
+                  {formatPrice(parseFloat(goldPrice?.price))}
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -239,10 +239,11 @@ export default function GoldPrice() {
                   }`}
                 >
                   {parseFloat(goldPrice?.change) > 0 ? "+" : ""}
-                  {goldPrice?.change}
+                  {formatPriceKRW(parseFloat(goldPrice?.change))}
                 </p>
                 <p className="text-xl text-gray-600 mt-2">
-                  {formatPriceKRW(parseFloat(goldPrice?.change))}
+                  {parseFloat(goldPrice?.change) > 0 ? "+" : ""}
+                  {goldPrice?.change} 달러
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -278,16 +279,17 @@ export default function GoldPrice() {
                     <XAxis dataKey="time" />
                     <YAxis
                       yAxisId="left"
+                      orientation="left"
                       domain={["auto", "auto"]}
-                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                      tickFormatter={(value) =>
+                        `₩${(value / 1000).toFixed(0)}K`
+                      }
                     />
                     <YAxis
                       yAxisId="right"
                       orientation="right"
                       domain={["auto", "auto"]}
-                      tickFormatter={(value) =>
-                        `₩${(value / 1000).toFixed(0)}K`
-                      }
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
                     />
                     <Tooltip
                       contentStyle={{
@@ -298,24 +300,24 @@ export default function GoldPrice() {
                       }}
                       formatter={(value, name) => [
                         name === "price"
-                          ? `$${value.toFixed(2)}`
-                          : `₩${value.toLocaleString()}`,
-                        name === "price" ? "USD" : "KRW",
+                          ? `₩${value.toLocaleString()}`
+                          : `$${value.toFixed(2)}`,
+                        name === "price" ? "원" : "달러",
                       ]}
                     />
                     <Line
                       yAxisId="left"
                       type="monotone"
-                      dataKey="price"
-                      stroke="#2563eb"
+                      dataKey="priceKRW"
+                      stroke="#10b981"
                       strokeWidth={2}
                       dot={false}
                     />
                     <Line
                       yAxisId="right"
                       type="monotone"
-                      dataKey="priceKRW"
-                      stroke="#10b981"
+                      dataKey="price"
+                      stroke="#2563eb"
                       strokeWidth={2}
                       dot={false}
                     />
@@ -331,28 +333,28 @@ export default function GoldPrice() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2">고가</h3>
                     <p className="text-xl">
-                      {formatPrice(parseFloat(goldPrice?.high))}
+                      {formatPriceKRW(parseFloat(goldPrice?.high))}
                     </p>
                     <p className="text-lg text-gray-600">
-                      {formatPriceKRW(parseFloat(goldPrice?.high))}
+                      {formatPrice(parseFloat(goldPrice?.high))}
                     </p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">저가</h3>
                     <p className="text-xl">
-                      {formatPrice(parseFloat(goldPrice?.low))}
+                      {formatPriceKRW(parseFloat(goldPrice?.low))}
                     </p>
                     <p className="text-lg text-gray-600">
-                      {formatPriceKRW(parseFloat(goldPrice?.low))}
+                      {formatPrice(parseFloat(goldPrice?.low))}
                     </p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">시가</h3>
                     <p className="text-xl">
-                      {formatPrice(parseFloat(goldPrice?.open))}
+                      {formatPriceKRW(parseFloat(goldPrice?.open))}
                     </p>
                     <p className="text-lg text-gray-600">
-                      {formatPriceKRW(parseFloat(goldPrice?.open))}
+                      {formatPrice(parseFloat(goldPrice?.open))}
                     </p>
                   </div>
                 </div>
