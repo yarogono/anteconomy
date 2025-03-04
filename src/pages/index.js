@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import "@/styles/globals.css";
 import Link from "next/link";
+import CoupangBanner from "../components/CoupangBanner";
 
 export async function getStaticProps() {
   return {
@@ -147,6 +148,8 @@ export default function Home({ initialRate }) {
           </div>
         </div>
 
+        <CoupangBanner />
+
         {/* 주요 금융 시장 분석 섹션 */}
         <div className="max-w-6xl mx-auto px-4 py-12">
           <h2 className="text-3xl font-bold mb-8">주요 금융 시장 분석</h2>
@@ -192,6 +195,8 @@ export default function Home({ initialRate }) {
             </div>
           </div>
         </div>
+
+        <CoupangBanner />
 
         {/* 투자 전략 섹션 */}
         <div className="bg-green-800 py-12">

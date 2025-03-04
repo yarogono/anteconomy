@@ -10,6 +10,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import GoldPriceChart from "../components/GoldPriceChart";
+import CoupangBanner from "../components/CoupangBanner";
 
 export default function GoldPrice() {
   const [goldPrice, setGoldPrice] = useState(null);
@@ -137,14 +139,33 @@ export default function GoldPrice() {
   return (
     <>
       <Head>
-        <title>실시간 금 시세 | 안트이코노미</title>
+        <title>실시간 금 시세 - 실시간 국내/해외 금 시세 정보</title>
         <meta
           name="description"
-          content="실시간 금 시세와 차트를 제공합니다. 국제 금 시세와 국내 금 시세를 비교 분석하실 수 있습니다."
+          content="실시간 금 시세 정보를 확인하세요. 국내/해외 금 시세, 차트, 분석까지 한번에 볼 수 있습니다."
         />
         <meta
           name="keywords"
-          content="금 시세, 실시간 금값, 금 가격, 금 투자, 귀금속 시세"
+          content="금 시세, 실시간 금 시세, 국내 금 시세, 해외 금 시세, 금 시세 차트, 금 시세 분석"
+        />
+        <meta
+          property="og:title"
+          content="금 시세 - 실시간 국내/해외 금 시세 정보"
+        />
+        <meta
+          property="og:description"
+          content="실시간 금 시세 정보를 확인하세요. 국내/해외 금 시세, 차트, 분석까지 한번에 볼 수 있습니다."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://anteconomy.co.kr/gold-price" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="금 시세 - 실시간 국내/해외 금 시세 정보"
+        />
+        <meta
+          name="twitter:description"
+          content="실시간 금 시세 정보를 확인하세요. 국내/해외 금 시세, 차트, 분석까지 한번에 볼 수 있습니다."
         />
       </Head>
 
@@ -205,6 +226,8 @@ export default function GoldPrice() {
               </div>
             </div>
 
+            <CoupangBanner />
+
             <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
               <h2 className="text-2xl font-bold mb-6">실시간 차트</h2>
               <div className="h-[400px]">
@@ -260,6 +283,9 @@ export default function GoldPrice() {
                   </div>
                 </div>
               </div>
+
+              <CoupangBanner />
+
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold mb-4">투자 정보</h2>
                 <div className="prose max-w-none">
