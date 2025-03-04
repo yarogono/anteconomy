@@ -20,6 +20,7 @@ export default function GoldPrice() {
   const [chartData, setChartData] = useState([]);
   const [currentTime, setCurrentTime] = useState("");
   const [mounted, setMounted] = useState(false);
+  const [exchangeRate, setExchangeRate] = useState(null);
 
   useEffect(() => {
     setMounted(true);
@@ -51,20 +52,39 @@ export default function GoldPrice() {
   useEffect(() => {
     if (!mounted) return;
 
+    const fetchExchangeRate = async () => {
+      try {
+        const response = await axios.get(
+          "https://m.search.naver.com/p/csearch/content/qapirender.nhn?key=calculator&pkid=141&q=%ED%99%98%EC%9C%A8&where=m&u1=keb&u6=standardUnit&u7=0&u3=USD&u4=KRW&u8=down&u2=1"
+        );
+        const rate = response.data?.country[1].subValue;
+        if (rate) {
+          setExchangeRate(parseFloat(rate.replace(/,/g, "")));
+        }
+      } catch (error) {
+        console.error("환율 정보를 불러오는데 실패했습니다:", error);
+      }
+    };
+
+    fetchExchangeRate();
+    const exchangeRateTimer = setInterval(fetchExchangeRate, 60000);
+
+    return () => clearInterval(exchangeRateTimer);
+  }, [mounted]);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     const fetchGoldPrice = async () => {
       setLoading(true);
       try {
-        // 내부 API 엔드포인트 사용
         const response = await axios.get("/api/gold-price");
-
-        console.log("API Response:", response.data);
 
         if (!response.data) {
           throw new Error("Invalid API response format");
         }
 
         const data = response.data;
-
         setGoldPrice(data);
         setChartData((prevData) => {
           const newData = [
@@ -72,6 +92,9 @@ export default function GoldPrice() {
             {
               time: new Date().toLocaleTimeString(),
               price: parseFloat(data.price),
+              priceKRW: exchangeRate
+                ? parseFloat(data.price) * exchangeRate
+                : null,
             },
           ];
 
@@ -90,7 +113,6 @@ export default function GoldPrice() {
           console.log("Error Status:", err.response.status);
         }
 
-        // 샘플 데이터 구조 업데이트
         const sampleData = {
           price: "2023.50",
           change: "-12.30",
@@ -108,6 +130,9 @@ export default function GoldPrice() {
             {
               time: new Date().toLocaleTimeString(),
               price: parseFloat(sampleData.price),
+              priceKRW: exchangeRate
+                ? parseFloat(sampleData.price) * exchangeRate
+                : null,
             },
           ];
 
@@ -127,13 +152,22 @@ export default function GoldPrice() {
     const interval = setInterval(fetchGoldPrice, 60000);
 
     return () => clearInterval(interval);
-  }, [mounted]);
+  }, [mounted, exchangeRate]);
 
-  const formatPrice = (price) => {
+  const formatPrice = (price, currency = "USD") => {
+    if (!price) return "N/A";
     return new Intl.NumberFormat("ko-KR", {
       style: "currency",
-      currency: "USD",
+      currency: currency,
     }).format(price);
+  };
+
+  const formatPriceKRW = (price) => {
+    if (!price || !exchangeRate) return "N/A";
+    return new Intl.NumberFormat("ko-KR", {
+      style: "currency",
+      currency: "KRW",
+    }).format(price * exchangeRate);
   };
 
   return (
@@ -187,9 +221,12 @@ export default function GoldPrice() {
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-lg font-semibold mb-2">현재가</h3>
+                <h3 className="text-lg font-semibold mb-2">현재가 (USD)</h3>
                 <p className="text-3xl font-bold text-blue-600">
                   {formatPrice(parseFloat(goldPrice?.price))}
+                </p>
+                <p className="text-xl text-gray-600 mt-2">
+                  {formatPriceKRW(parseFloat(goldPrice?.price))}
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -203,6 +240,9 @@ export default function GoldPrice() {
                 >
                   {parseFloat(goldPrice?.change) > 0 ? "+" : ""}
                   {goldPrice?.change}
+                </p>
+                <p className="text-xl text-gray-600 mt-2">
+                  {formatPriceKRW(parseFloat(goldPrice?.change))}
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -223,6 +263,7 @@ export default function GoldPrice() {
                 <p className="text-3xl font-bold text-gray-800">
                   {new Intl.NumberFormat("ko-KR").format(goldPrice?.volume)}
                 </p>
+                <p className="text-sm text-gray-600 mt-2">온스</p>
               </div>
             </div>
 
@@ -236,8 +277,17 @@ export default function GoldPrice() {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="time" />
                     <YAxis
+                      yAxisId="left"
                       domain={["auto", "auto"]}
                       tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
+                    <YAxis
+                      yAxisId="right"
+                      orientation="right"
+                      domain={["auto", "auto"]}
+                      tickFormatter={(value) =>
+                        `₩${(value / 1000).toFixed(0)}K`
+                      }
                     />
                     <Tooltip
                       contentStyle={{
@@ -246,11 +296,26 @@ export default function GoldPrice() {
                         borderRadius: "0.5rem",
                         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                       }}
+                      formatter={(value, name) => [
+                        name === "price"
+                          ? `$${value.toFixed(2)}`
+                          : `₩${value.toLocaleString()}`,
+                        name === "price" ? "USD" : "KRW",
+                      ]}
                     />
                     <Line
+                      yAxisId="left"
                       type="monotone"
                       dataKey="price"
                       stroke="#2563eb"
+                      strokeWidth={2}
+                      dot={false}
+                    />
+                    <Line
+                      yAxisId="right"
+                      type="monotone"
+                      dataKey="priceKRW"
+                      stroke="#10b981"
                       strokeWidth={2}
                       dot={false}
                     />
@@ -268,17 +333,26 @@ export default function GoldPrice() {
                     <p className="text-xl">
                       {formatPrice(parseFloat(goldPrice?.high))}
                     </p>
+                    <p className="text-lg text-gray-600">
+                      {formatPriceKRW(parseFloat(goldPrice?.high))}
+                    </p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">저가</h3>
                     <p className="text-xl">
                       {formatPrice(parseFloat(goldPrice?.low))}
                     </p>
+                    <p className="text-lg text-gray-600">
+                      {formatPriceKRW(parseFloat(goldPrice?.low))}
+                    </p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">시가</h3>
                     <p className="text-xl">
                       {formatPrice(parseFloat(goldPrice?.open))}
+                    </p>
+                    <p className="text-lg text-gray-600">
+                      {formatPriceKRW(parseFloat(goldPrice?.open))}
                     </p>
                   </div>
                 </div>
