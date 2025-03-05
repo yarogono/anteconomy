@@ -125,6 +125,7 @@ export default function Home({ initialRate }) {
                 <option value="KRW">🇰🇷 KRW</option>
                 <option value="EUR">🇪🇺 EUR</option>
                 <option value="JPY">🇯🇵 JPY</option>
+                <option value="CNY">🇨🇳 CNY</option>
               </select>
               <span className="text-xl">→</span>
               <select
@@ -136,6 +137,7 @@ export default function Home({ initialRate }) {
                 <option value="USD">🇺🇸 USD</option>
                 <option value="EUR">🇪🇺 EUR</option>
                 <option value="JPY">🇯🇵 JPY</option>
+                <option value="CNY">🇨🇳 CNY</option>
               </select>
             </div>
             <div className="text-lg font-bold">
