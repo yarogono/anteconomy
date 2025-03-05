@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 04 Mar 2025 12:13:28 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Mar 2025 01:03:13 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Tue, 04 Mar 2025 12:13:28 GMT</pubDate>
+        <pubDate>Wed, 05 Mar 2025 01:03:13 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -48,6 +48,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:37:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[date-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/date-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/date-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Wed, 05 Mar 2025 00:59:28 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[deposit-calculator]]></title>
