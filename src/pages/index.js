@@ -207,6 +207,19 @@ export default function Home({ initialRate }) {
                 계산하기 →
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">육아휴직 급여 계산기</h3>
+              <p className="mb-4">
+                육아휴직 기간 동안 받을 수 있는 급여를 계산하고 6+6
+                부모육아휴직제 혜택도 확인해보세요.
+              </p>
+              <Link
+                href="/parental-leave-calculator"
+                className="text-green-300 hover:text-green-100"
+              >
+                계산하기 →
+              </Link>
+            </div>
           </div>
         </div>
 
