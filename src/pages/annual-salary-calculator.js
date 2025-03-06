@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
 
 export default function AnnualSalaryCalculator() {
@@ -181,19 +182,27 @@ export default function AnnualSalaryCalculator() {
   return (
     <>
       <Head>
-        <title>연봉 실수령액 계산기 - 세금 공제 후 실수령액 계산</title>
+        <title>2025 연봉 실수령액 계산기 - 세금 공제 후 실수령액 계산</title>
         <meta
           name="description"
           content="연봉 실수령액을 계산해보세요. 국민연금, 건강보험, 고용보험 등 각종 세금과 공제액을 고려한 정확한 실수령액을 확인할 수 있습니다."
         />
         <meta
           name="keywords"
-          content="연봉 계산기, 실수령액 계산, 세금 계산, 연봉 공제, 월급 계산기"
+          content="2025 연봉 실수령액 계산기, 연봉 계산기, 실수령액 계산, 세금 계산, 연봉 공제, 월급 계산기"
         />
       </Head>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8">연봉 실수령액 계산기</h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold">연봉 실수령액 계산기</h1>
+          <Link
+            href="/annual-salary-table"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors"
+          >
+            연봉 실수령액표로 이동
+          </Link>
+        </div>
 
         <div className="bg-blue-50 p-4 rounded-lg mb-8">
           <p className="text-sm">
