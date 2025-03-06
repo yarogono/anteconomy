@@ -220,6 +220,18 @@ export default function Home({ initialRate }) {
                 계산하기 →
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">연봉 실수령액 계산기</h3>
+              <p className="mb-4">
+                연봉에서 세금과 4대 보험료를 공제한 실수령액을 계산해보세요.
+              </p>
+              <Link
+                href="/annual-salary-calculator"
+                className="text-green-300 hover:text-green-100"
+              >
+                계산하기 →
+              </Link>
+            </div>
           </div>
         </div>
 
