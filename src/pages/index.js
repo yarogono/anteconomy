@@ -170,6 +170,19 @@ export default function Home({ initialRate }) {
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">적금 이자 계산기</h3>
+              <p className="mb-4">
+                단리, 복리 방식의 이자 계산과 비과세, 세금우대 등 세금 공제를
+                고려한 정확한 수령액을 계산해보세요.
+              </p>
+              <Link
+                href="/savings-calculator"
+                className="text-green-300 hover:text-green-100"
+              >
+                계산하기 →
+              </Link>
+            </div>
+            <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">예금 이자 계산기</h3>
               <p className="mb-4">
                 예치금액, 기간, 이자율에 따른 수익을 계산하고 세금까지 고려한
