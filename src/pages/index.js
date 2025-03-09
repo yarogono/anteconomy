@@ -258,6 +258,20 @@ export default function Home({ initialRate }) {
                 계산하기 →
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">실업급여 계산기</h3>
+              <p className="mb-4">
+                2025년 기준 실업급여(구직급여) 예상 금액을 계산해보세요. 퇴직 전
+                임금과 나이, 고용보험 가입기간에 따른 실업급여 모의계산이
+                가능합니다.
+              </p>
+              <Link
+                href="/unemployment-calculator"
+                className="text-green-300 hover:text-green-100"
+              >
+                계산하기 →
+              </Link>
+            </div>
           </div>
         </div>
 
