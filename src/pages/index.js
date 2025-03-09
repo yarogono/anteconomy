@@ -245,6 +245,19 @@ export default function Home({ initialRate }) {
                 계산하기 →
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">중도상환수수료 계산기</h3>
+              <p className="mb-4">
+                대출 조기상환 시 발생하는 수수료를 계산해보세요. 2025년 1월부터
+                변경된 수수료율이 적용됩니다.
+              </p>
+              <Link
+                href="/prepayment-calculator"
+                className="text-green-300 hover:text-green-100"
+              >
+                계산하기 →
+              </Link>
+            </div>
           </div>
         </div>
 
