@@ -10,8 +10,22 @@ export default function UnemploymentCalculator() {
   const [salary, setSalary] = useState("");
   const [isPartTime, setIsPartTime] = useState(false);
   const [workHours, setWorkHours] = useState(8);
-  const [insurancePeriod, setInsurancePeriod] = useState("1-3");
   const [result, setResult] = useState(null);
+
+  // 고용보험 가입기간 계산
+  const calculateInsurancePeriod = (startDate, endDate) => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const years = end.getFullYear() - start.getFullYear();
+    const months = end.getMonth() - start.getMonth();
+    const totalMonths = years * 12 + months;
+
+    if (totalMonths < 12) return "1미만";
+    if (totalMonths < 36) return "1-3";
+    if (totalMonths < 60) return "3-5";
+    if (totalMonths < 120) return "5-10";
+    return "10이상";
+  };
 
   // 지급기간 계산
   const calculatePaymentPeriod = (age, period) => {
@@ -63,10 +77,13 @@ export default function UnemploymentCalculator() {
     // 2. 연령 계산
     const age = calculateAge(birthDate, endDate);
 
-    // 3. 지급기간 계산
+    // 3. 고용보험 가입기간 계산
+    const insurancePeriod = calculateInsurancePeriod(startDate, endDate);
+
+    // 4. 지급기간 계산
     const paymentDays = calculatePaymentPeriod(age, insurancePeriod);
 
-    // 4. 총 실업급여액 계산
+    // 5. 총 실업급여액 계산
     let totalBenefit = dailyBenefit * paymentDays;
 
     // 단시간 근로자 계산
@@ -83,6 +100,7 @@ export default function UnemploymentCalculator() {
       totalBenefit: Math.round(totalBenefit),
       monthlyBenefit: Math.round(monthlyBenefit),
       age: age,
+      insurancePeriod: insurancePeriod,
     });
   };
 
@@ -157,23 +175,6 @@ export default function UnemploymentCalculator() {
             </div>
 
             <div className="mb-6">
-              <label className="block mb-2">
-                고용보험 가입기간
-                <select
-                  value={insurancePeriod}
-                  onChange={(e) => setInsurancePeriod(e.target.value)}
-                  className="w-full p-2 border rounded mt-1"
-                >
-                  <option value="1미만">1년 미만</option>
-                  <option value="1-3">1년 이상 3년 미만</option>
-                  <option value="3-5">3년 이상 5년 미만</option>
-                  <option value="5-10">5년 이상 10년 미만</option>
-                  <option value="10이상">10년 이상</option>
-                </select>
-              </label>
-            </div>
-
-            <div className="mb-6">
               <label className="flex items-center">
                 <input
                   type="checkbox"
@@ -215,6 +216,19 @@ export default function UnemploymentCalculator() {
                     ▶ 실업급여 계산 결과
                   </h3>
                   <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span>고용보험 가입기간</span>
+                      <span>
+                        {result.insurancePeriod === "1미만" && "1년 미만"}
+                        {result.insurancePeriod === "1-3" &&
+                          "1년 이상 3년 미만"}
+                        {result.insurancePeriod === "3-5" &&
+                          "3년 이상 5년 미만"}
+                        {result.insurancePeriod === "5-10" &&
+                          "5년 이상 10년 미만"}
+                        {result.insurancePeriod === "10이상" && "10년 이상"}
+                      </span>
+                    </div>
                     <div className="flex justify-between">
                       <span>1일 실업급여액</span>
                       <span>{result.dailyBenefit.toLocaleString()} 원</span>
