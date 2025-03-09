@@ -171,6 +171,11 @@ export default function UnemploymentCalculator() {
                   className="w-full p-2 border rounded mt-1"
                   placeholder="퇴직 전 3개월 총 임금을 입력하세요"
                 />
+                {salary && (
+                  <span className="text-sm text-gray-600 mt-1 block">
+                    약 {Math.round(Number(salary) / 10000).toLocaleString()}만원
+                  </span>
+                )}
               </label>
             </div>
 
