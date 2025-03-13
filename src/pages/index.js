@@ -272,6 +272,19 @@ export default function Home({ initialRate }) {
                 계산하기 →
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">연차 수당 계산기</h3>
+              <p className="mb-4">
+                2025년 기준 미사용 연차 수당을 계산해보세요. 근속기간과 급여,
+                사용한 연차 일수를 입력하여 받을 수 있는 연차 수당을 확인하세요.
+              </p>
+              <Link
+                href="/leave-allowance-calculator"
+                className="text-green-300 hover:text-green-100"
+              >
+                계산하기 →
+              </Link>
+            </div>
           </div>
         </div>
 
