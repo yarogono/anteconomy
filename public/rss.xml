@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 14 Mar 2025 10:06:12 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 15 Mar 2025 12:14:01 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Fri, 14 Mar 2025 10:06:12 GMT</pubDate>
+        <pubDate>Sat, 15 Mar 2025 12:14:01 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -26,6 +26,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:55:52 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[annual-leave-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/annual-leave-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/annual-leave-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sat, 15 Mar 2025 12:04:13 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[annual-salary-calculator]]></title>

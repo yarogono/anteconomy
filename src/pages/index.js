@@ -311,6 +311,18 @@ export default function Home({ initialRate }) {
                 휴업수당 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">연차 계산기</h3>
+              <p className="mb-4">
+                입사일과 출근율을 입력하여 받을 수 있는 연차를 계산해보세요.
+              </p>
+              <Link
+                href="/annual-leave-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                연차 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 
