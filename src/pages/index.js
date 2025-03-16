@@ -164,9 +164,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/gold-price"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                시세 보기 →
+                실시간 금 시세 보러가기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -177,9 +177,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/savings-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                적금 이자 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -190,9 +190,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/deposit-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                예금 이자 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -202,9 +202,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/percent-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                퍼센트 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -215,9 +215,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/date-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                날짜 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -228,9 +228,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/parental-leave-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                육아휴직 급여 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -240,9 +240,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/annual-salary-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                연봉 실수령액 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -253,9 +253,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/prepayment-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                중도상환수수료 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -267,9 +267,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/unemployment-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                실업급여 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -280,9 +280,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/leave-allowance-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                연차 수당 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
@@ -293,9 +293,9 @@ export default function Home({ initialRate }) {
               </p>
               <Link
                 href="/severance-calculator"
-                className="text-green-300 hover:text-green-100"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
-                계산하기 →
+                퇴직금 계산하기
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
