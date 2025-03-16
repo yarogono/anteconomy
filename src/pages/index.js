@@ -299,7 +299,7 @@ export default function Home({ initialRate }) {
               </Link>
             </div>
             <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">휴업수당 계산기</h3>
+              <h3 className="text-xl font-2">휴업수당 계산기</h3>
               <p className="mb-4">
                 휴업 기간과 이전 3개월 임금을 입력하여 받을 수 있는 휴업수당을
                 계산해보세요.
@@ -321,6 +321,19 @@ export default function Home({ initialRate }) {
                 className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
                 연차 계산하기
+              </Link>
+            </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">세후 월급 계산기</h3>
+              <p className="mb-4">
+                2025년 기준 세후 월급을 계산해보세요. 4대 보험과 세금을 고려한
+                실수령액을 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/after-tax-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                세후 월급 계산하기
               </Link>
             </div>
           </div>

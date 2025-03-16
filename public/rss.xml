@@ -9,13 +9,24 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 16 Mar 2025 02:11:47 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 16 Mar 2025 02:50:34 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Sun, 16 Mar 2025 02:11:47 GMT</pubDate>
+        <pubDate>Sun, 16 Mar 2025 02:50:34 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
+        <item>
+            <title><![CDATA[after-tax-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/after-tax-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/after-tax-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sun, 16 Mar 2025 02:29:36 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[alternative-investment-strategies]]></title>
             <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
@@ -290,6 +301,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:45:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[salary-table-2025]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/salary-table-2025</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/salary-table-2025</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sun, 16 Mar 2025 02:40:38 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[savings-calculator]]></title>
