@@ -5,7 +5,8 @@ import CoupangBanner from "../components/CoupangBanner";
 
 export default function SalaryTable2025() {
   const [searchSalary, setSearchSalary] = useState("");
-  const [searchResult, setSearchResult] = useState(null);
+  const [dependents, setDependents] = useState("1");
+  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 20 });
 
   const salaryTable = [
     {
@@ -1099,27 +1100,33 @@ export default function SalaryTable2025() {
     },
   ];
 
-  const findClosestSalary = (input) => {
-    const targetSalary = Number(input);
-    if (!targetSalary) return null;
+  const handleSearch = () => {
+    const targetSalary = Number(searchSalary);
+    if (!targetSalary) return;
 
-    let closest = salaryTable[0];
-    let minDiff = Math.abs(salaryTable[0].salary - targetSalary);
+    const index = salaryTable.findIndex(
+      (entry) => entry.salary >= targetSalary
+    );
 
-    for (const entry of salaryTable) {
-      const diff = Math.abs(entry.salary - targetSalary);
-      if (diff < minDiff) {
-        minDiff = diff;
-        closest = entry;
-      }
+    if (index !== -1) {
+      const start = Math.max(0, index - 10);
+      const end = Math.min(salaryTable.length, start + 20);
+      setVisibleRange({ start, end });
     }
-
-    return closest;
   };
 
-  const handleSearch = () => {
-    const result = findClosestSalary(searchSalary);
-    setSearchResult(result);
+  const handleScroll = (direction) => {
+    if (direction === "prev" && visibleRange.start > 0) {
+      setVisibleRange({
+        start: Math.max(0, visibleRange.start - 20),
+        end: Math.max(20, visibleRange.end - 20),
+      });
+    } else if (direction === "next" && visibleRange.end < salaryTable.length) {
+      setVisibleRange({
+        start: visibleRange.start + 20,
+        end: Math.min(salaryTable.length, visibleRange.end + 20),
+      });
+    }
   };
 
   return (
@@ -1133,7 +1140,7 @@ export default function SalaryTable2025() {
       </Head>
 
       <div className="min-h-screen bg-green-900 text-white py-8">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-8">
             <Link href="/" className="text-green-300 hover:text-green-100">
               ← 홈으로 돌아가기
@@ -1144,76 +1151,114 @@ export default function SalaryTable2025() {
 
           <div className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
             <div className="mb-6">
-              <label className="block mb-2">
-                월급 검색 (원)
-                <div className="flex gap-2">
-                  <input
-                    type="number"
-                    value={searchSalary}
-                    onChange={(e) => setSearchSalary(e.target.value)}
-                    className="flex-1 p-2 border rounded"
-                    placeholder="월급을 입력하세요"
-                  />
-                  <button
-                    onClick={handleSearch}
-                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label className="block">
+                  월급 검색 (원)
+                  <div className="flex gap-2">
+                    <input
+                      type="number"
+                      value={searchSalary}
+                      onChange={(e) => setSearchSalary(e.target.value)}
+                      className="flex-1 p-2 border rounded"
+                      placeholder="월급을 입력하세요"
+                    />
+                    <button
+                      onClick={handleSearch}
+                      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+                    >
+                      검색
+                    </button>
+                  </div>
+                </label>
+                <label className="block">
+                  공제대상 가족수
+                  <select
+                    value={dependents}
+                    onChange={(e) => setDependents(e.target.value)}
+                    className="w-full p-2 border rounded"
                   >
-                    검색
-                  </button>
-                </div>
-              </label>
+                    <option value="1">1명</option>
+                    <option value="2">2명</option>
+                    <option value="3">3명</option>
+                    <option value="4">4명</option>
+                    <option value="5">5명</option>
+                  </select>
+                </label>
+              </div>
             </div>
 
-            {searchResult && (
-              <div className="mt-4 p-4 bg-gray-100 rounded">
-                <h3 className="text-lg font-bold mb-4">▶ 검색 결과</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between font-bold">
-                    <span>세전 월급</span>
-                    <span>{searchResult.salary.toLocaleString()} 원</span>
-                  </div>
-                  <div className="flex justify-between text-blue-600 font-bold">
-                    <span>실수령액</span>
-                    <span>{searchResult.takeHome.toLocaleString()} 원</span>
-                  </div>
-                  <div className="pt-2 border-t">
-                    <p className="font-bold mb-2">공제 내역</p>
-                    <div className="space-y-1 pl-4">
-                      <div className="flex justify-between text-sm">
-                        <span>국민연금 (4.5%)</span>
-                        <span>{searchResult.pension.toLocaleString()} 원</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span>건강보험 (3.43%)</span>
-                        <span>{searchResult.health.toLocaleString()} 원</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span>장기요양보험</span>
-                        <span>{searchResult.care.toLocaleString()} 원</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span>고용보험 (0.9%)</span>
-                        <span>
-                          {searchResult.employment.toLocaleString()} 원
-                        </span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span>소득세</span>
-                        <span>{searchResult.tax.toLocaleString()} 원</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span>지방소득세</span>
-                        <span>{searchResult.localTax.toLocaleString()} 원</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between pt-2 border-t font-bold">
-                    <span>총 공제액</span>
-                    <span>{searchResult.total.toLocaleString()} 원</span>
-                  </div>
-                </div>
-              </div>
-            )}
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="p-2 border">월급</th>
+                    <th className="p-2 border">실수령액</th>
+                    <th className="p-2 border">공제합계</th>
+                    <th className="p-2 border">국민연금</th>
+                    <th className="p-2 border">건강보험</th>
+                    <th className="p-2 border">장기요양</th>
+                    <th className="p-2 border">고용보험</th>
+                    <th className="p-2 border">소득세</th>
+                    <th className="p-2 border">지방소득세</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {salaryTable
+                    .slice(visibleRange.start, visibleRange.end)
+                    .map((entry, index) => (
+                      <tr
+                        key={index}
+                        className={index % 2 === 0 ? "bg-gray-50" : ""}
+                      >
+                        <td className="p-2 border text-right">
+                          {entry.salary.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right font-bold text-blue-600">
+                          {entry.takeHome.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.total.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.pension.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.health.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.care.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.employment.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.tax.toLocaleString()}
+                        </td>
+                        <td className="p-2 border text-right">
+                          {entry.localTax.toLocaleString()}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-4 flex justify-between">
+              <button
+                onClick={() => handleScroll("prev")}
+                disabled={visibleRange.start === 0}
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              >
+                이전
+              </button>
+              <button
+                onClick={() => handleScroll("next")}
+                disabled={visibleRange.end >= salaryTable.length}
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              >
+                다음
+              </button>
+            </div>
           </div>
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
@@ -1242,8 +1287,21 @@ export default function SalaryTable2025() {
                 </ul>
               </div>
 
+              <div className="bg-green-700 p-4 rounded">
+                <p className="font-bold mb-2">공제대상 가족수 안내</p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>
+                    본인을 포함한 가족 수에 따라 소득세 감면 혜택이 적용됩니다
+                  </li>
+                  <li>배우자, 직계존속, 직계비속이 공제대상에 포함됩니다</li>
+                  <li>부양가족 추가 시 기본공제 및 추가공제 혜택이 있습니다</li>
+                </ul>
+              </div>
+
               <p className="text-sm">
                 * 지방소득세는 소득세의 10%가 적용됩니다.
+                <br />* 실제 공제액은 개인의 상황과 회사 규정에 따라 다를 수
+                있습니다.
               </p>
             </div>
           </div>
