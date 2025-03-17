@@ -336,6 +336,21 @@ export default function Home({ initialRate }) {
                 세후 월급 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">
+                마이너스통장 이자 계산기
+              </h3>
+              <p className="mb-4">
+                마이너스통장(한도대출)의 이자를 간편하게 계산해보세요. 대출금액,
+                금리, 기간에 따른 이자를 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/loan-interest-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                이자 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 
