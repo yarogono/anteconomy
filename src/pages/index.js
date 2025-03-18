@@ -3,6 +3,8 @@ import Head from "next/head";
 import "@/styles/globals.css";
 import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
+import AdsenseAd from "../components/AdsenseAd";
+import AdsenseInit from "../components/AdsenseInit";
 
 export async function getStaticProps() {
   return {
@@ -40,6 +42,7 @@ export default function Home({ initialRate }) {
 
   return (
     <>
+      <AdsenseInit />
       <Head>
         <title>실시간 환율 계산기 및 글로벌 금융 시장 분석</title>
         <meta
@@ -150,7 +153,10 @@ export default function Home({ initialRate }) {
           </div>
         </div>
 
-        <CoupangBanner />
+        <AdsenseAd slot="homepage-top" />
+
+        <AdsenseInit />
+        <AdsenseAd />
 
         {/* 주요 금융 시장 분석 섹션 */}
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -354,40 +360,7 @@ export default function Home({ initialRate }) {
           </div>
         </div>
 
-        <CoupangBanner />
-
-        {/* 투자 전략 섹션 */}
-        <div className="bg-green-800 py-12">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8">전문 투자 전략</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-green-700 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4">ESG 투자</h3>
-                <p className="mb-4">
-                  지속가능한 투자의 중요성과 ESG 기반 투자 전략을 소개합니다.
-                </p>
-                <a
-                  href="/esg-investment-strategies"
-                  className="text-green-300 hover:text-green-100"
-                >
-                  전략 살펴보기 →
-                </a>
-              </div>
-              <div className="bg-green-700 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4">퇴직연금 관리</h3>
-                <p className="mb-4">
-                  장기적인 자산 관리와 퇴직연금 운용 전략을 제시합니다.
-                </p>
-                <a
-                  href="/retirement-pension-management"
-                  className="text-green-300 hover:text-green-100"
-                >
-                  관리 방법 보기 →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AdsenseAd slot="homepage-middle" />
 
         {/* 최신 금융 뉴스 섹션 */}
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -417,6 +390,8 @@ export default function Home({ initialRate }) {
             </div>
           </div>
         </div>
+
+        <AdsenseAd slot="homepage-bottom" />
 
         {/* 푸터 섹션 */}
         <footer className="bg-green-950 text-center py-8">

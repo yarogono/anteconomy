@@ -1,10 +1,12 @@
-import "@/styles/globals.css";
+import "../styles/globals.css";
+import AdsenseScript from "../components/AdsenseScript";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <AdsenseScript />
       <Component {...pageProps} />
-    </div>
+    </>
   );
 }
 

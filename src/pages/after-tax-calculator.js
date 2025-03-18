@@ -2,6 +2,8 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
+import AdsenseAd from "../components/AdsenseAd";
+import AdsenseInit from "../components/AdsenseInit";
 
 export default function AfterTaxCalculator() {
   const [salary, setSalary] = useState("");
@@ -100,10 +102,10 @@ export default function AfterTaxCalculator() {
   return (
     <>
       <Head>
-        <title>세후 월급 계산기 - 2025년 기준</title>
+        <title>세후 월급 계산기 - 2025년 실수령액 계산</title>
         <meta
           name="description"
-          content="2025년 기준 세후 월급을 계산해보세요. 4대 보험과 세금을 고려한 실수령액을 확인할 수 있습니다."
+          content="2025년 기준 세후 월급을 계산해보세요. 4대보험, 세금 공제액을 포함한 실수령액을 확인할 수 있습니다."
         />
       </Head>
 
@@ -116,6 +118,9 @@ export default function AfterTaxCalculator() {
           </div>
 
           <h1 className="text-3xl font-bold mb-6">세후 월급 계산기</h1>
+
+          <AdsenseInit />
+          <AdsenseAd />
 
           <div className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
             <div className="mb-6">
@@ -202,6 +207,8 @@ export default function AfterTaxCalculator() {
               </div>
             )}
           </div>
+
+          <AdsenseAd />
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
             <h2 className="text-xl font-bold mb-4">세후 월급 계산 안내</h2>
