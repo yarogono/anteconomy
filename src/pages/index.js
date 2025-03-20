@@ -357,6 +357,19 @@ export default function Home({ initialRate }) {
                 이자 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">대출 이자 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                원리금균등상환, 원금균등상환, 만기일시상환 방식의 대출 이자를
+                계산해보세요.
+              </p>
+              <Link
+                href="/loan-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                대출 이자 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

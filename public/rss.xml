@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 18 Mar 2025 14:39:35 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Mar 2025 03:03:51 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Tue, 18 Mar 2025 14:39:35 GMT</pubDate>
+        <pubDate>Thu, 20 Mar 2025 03:03:51 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -246,6 +246,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Thu, 13 Mar 2025 13:02:27 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[loan-calculator]]></title>
+            <description><![CDATA[원리금균등상환, 원금균등상환, 만기일시상환 방식의 대출 이자를 계산하는 온라인 계산기입니다.]]></description>
+            <link>https://anteconomy.co.kr/loan-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/loan-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Thu, 20 Mar 2025 02:56:37 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[loan-interest-calculator]]></title>
