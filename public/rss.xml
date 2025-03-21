@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 21 Mar 2025 11:00:18 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 21 Mar 2025 11:33:50 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Fri, 21 Mar 2025 11:00:18 GMT</pubDate>
+        <pubDate>Fri, 21 Mar 2025 11:33:49 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -125,6 +125,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Tue, 04 Mar 2025 00:54:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[dsr-calculator]]></title>
+            <description><![CDATA[주택담보대출, 신용대출, 기타대출의 원리금상환액을 고려하여 DSR을 계산하는 온라인 계산기입니다.]]></description>
+            <link>https://anteconomy.co.kr/dsr-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/dsr-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Fri, 21 Mar 2025 11:27:01 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[economyforum]]></title>

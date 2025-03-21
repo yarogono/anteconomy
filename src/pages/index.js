@@ -383,6 +383,20 @@ export default function Home({ initialRate }) {
                 자동차 할부 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">DSR 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                주택담보대출, 신용대출, 기타대출의 원리금상환액을 고려하여 DSR을
+                계산해보세요. 연소득, 월소득, 각종 대출의 월 상환액을 입력하여
+                총부채원리금상환비율을 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/dsr-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                DSR 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 
