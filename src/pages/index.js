@@ -161,7 +161,7 @@ export default function Home({ initialRate }) {
         {/* 주요 금융 시장 분석 섹션 */}
         <div className="max-w-6xl mx-auto px-4 py-12">
           <h2 className="text-3xl font-bold mb-8">주요 금융 시장 분석</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">실시간 금 시세</h3>
               <p className="mb-4">
@@ -368,6 +368,19 @@ export default function Home({ initialRate }) {
                 className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
               >
                 대출 이자 계산하기
+              </Link>
+            </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">자동차 할부 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                차량 구매 시 할부금액과 이자를 계산해보세요. 계약금, 할부 개월,
+                이자율을 입력하여 월납금액을 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/car-loan-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                자동차 할부 계산하기
               </Link>
             </div>
           </div>
