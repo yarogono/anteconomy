@@ -397,6 +397,20 @@ export default function Home({ initialRate }) {
                 DSR 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">LTV/DTI 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                주택가격, 대출금액, 소득, 부채를 고려하여 LTV와 DTI를
+                계산해보세요. 주택담보대출 한도를 예측하고 대출 가능성을 확인할
+                수 있습니다.
+              </p>
+              <Link
+                href="/ltv-dti-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                LTV/DTI 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 
