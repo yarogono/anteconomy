@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 21 Mar 2025 12:11:33 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 22 Mar 2025 01:02:47 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Fri, 21 Mar 2025 12:11:33 GMT</pubDate>
+        <pubDate>Sat, 22 Mar 2025 01:02:47 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -248,6 +248,17 @@
             <pubDate>Tue, 04 Mar 2025 01:52:26 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[jeonse-loan-calculator]]></title>
+            <description><![CDATA[전세금액, 보증금, 대출금액, 이자율을 고려하여 전세 대출의 월 상환액을 계산하는 온라인 계산기입니다.]]></description>
+            <link>https://anteconomy.co.kr/jeonse-loan-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/jeonse-loan-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sat, 22 Mar 2025 00:41:13 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[layoff-allowance-calculator]]></title>
             <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
             <link>https://anteconomy.co.kr/layoff-allowance-calculator</link>
@@ -301,6 +312,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Fri, 21 Mar 2025 11:58:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[monthly-rent-loan-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/monthly-rent-loan-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/monthly-rent-loan-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sat, 22 Mar 2025 01:00:02 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[parental-leave-calculator]]></title>

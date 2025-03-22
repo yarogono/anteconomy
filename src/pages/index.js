@@ -411,6 +411,34 @@ export default function Home({ initialRate }) {
                 LTV/DTI 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">전세 대출 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                전세금액, 보증금, 대출금액, 이자율을 고려하여 전세 대출의 월
+                상환액을 계산해보세요. 전세 대출 한도를 예측하고 대출 가능성을
+                확인할 수 있습니다.
+              </p>
+              <Link
+                href="/jeonse-loan-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                전세 대출 계산하기
+              </Link>
+            </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">월세 대출 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                월세 보증금, 대출금액, 이자율을 고려하여 월세 대출의 월 상환액을
+                계산해보세요. 월세 대출 한도를 예측하고 대출 가능성을 확인할 수
+                있습니다.
+              </p>
+              <Link
+                href="/monthly-rent-loan-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                월세 대출 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 
