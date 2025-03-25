@@ -439,6 +439,20 @@ export default function Home({ initialRate }) {
                 월세 대출 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">복리 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                원금, 이자율, 기간을 입력하여 복리로 계산된 최종 금액과 이자를
+                계산해보세요. 복리 주기를 선택하여 다양한 복리 계산이
+                가능합니다.
+              </p>
+              <Link
+                href="/compound-interest-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                복리 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

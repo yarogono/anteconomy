@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 22 Mar 2025 01:02:47 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Mar 2025 14:42:57 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Sat, 22 Mar 2025 01:02:47 GMT</pubDate>
+        <pubDate>Tue, 25 Mar 2025 14:42:57 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -92,6 +92,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Fri, 21 Mar 2025 10:52:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[compound-interest-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/compound-interest-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/compound-interest-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Tue, 25 Mar 2025 14:34:58 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[crypto-market-outlook]]></title>
