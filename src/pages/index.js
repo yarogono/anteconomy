@@ -453,6 +453,19 @@ export default function Home({ initialRate }) {
                 복리 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">평단가 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                주식, 코인 등의 평균 매수 단가(평단가)를 계산해보세요. 매수
+                금액과 수량을 입력하여 정확한 평단가를 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/average-price-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                평단가 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

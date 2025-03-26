@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 25 Mar 2025 14:42:57 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Mar 2025 11:11:46 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Tue, 25 Mar 2025 14:42:57 GMT</pubDate>
+        <pubDate>Wed, 26 Mar 2025 11:11:46 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -70,6 +70,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Thu, 06 Mar 2025 01:13:21 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[average-price-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/average-price-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/average-price-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Wed, 26 Mar 2025 11:10:19 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[bond-investment-guide]]></title>
