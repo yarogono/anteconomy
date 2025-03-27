@@ -466,6 +466,20 @@ export default function Home({ initialRate }) {
                 평단가 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">대출 상환 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                원리금균등상환, 원금균등상환, 만기일시상환 방식의 대출 상환액을
+                계산해보세요. 대출금액, 기간, 이자율을 입력하여 상환 스케줄을
+                확인할 수 있습니다.
+              </p>
+              <Link
+                href="/loan-repayment-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                대출 상환 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

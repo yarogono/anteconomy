@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 26 Mar 2025 11:11:46 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 27 Mar 2025 02:21:11 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Wed, 26 Mar 2025 11:11:46 GMT</pubDate>
+        <pubDate>Thu, 27 Mar 2025 02:21:11 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -323,6 +323,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Mon, 17 Mar 2025 01:00:31 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[loan-repayment-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/loan-repayment-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/loan-repayment-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Thu, 27 Mar 2025 02:20:43 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[ltv-dti-calculator]]></title>
