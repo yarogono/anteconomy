@@ -480,6 +480,19 @@ export default function Home({ initialRate }) {
                 대출 상환 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">학점 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                과목별 학점과 성적을 입력하여 평균 평점(GPA)을 계산해보세요. 각
+                과목의 이수 학점과 성적을 고려한 정확한 학점 계산이 가능합니다.
+              </p>
+              <Link
+                href="/gpa-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                학점 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

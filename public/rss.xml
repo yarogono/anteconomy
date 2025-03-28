@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 27 Mar 2025 02:21:11 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 28 Mar 2025 15:10:46 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Thu, 27 Mar 2025 02:21:11 GMT</pubDate>
+        <pubDate>Fri, 28 Mar 2025 15:10:46 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -268,6 +268,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Tue, 04 Mar 2025 01:52:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[gpa-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/gpa-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/gpa-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Fri, 28 Mar 2025 15:06:41 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[jeonse-loan-calculator]]></title>
