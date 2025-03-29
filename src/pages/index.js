@@ -493,6 +493,20 @@ export default function Home({ initialRate }) {
                 학점 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">자동차 연비 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                주행거리와 연료 소비량을 입력하여 자동차의 연비와 연료비용을
+                계산해보세요. 휘발유, 경유, LPG 등 다양한 연료 종류의 연비를
+                계산할 수 있습니다.
+              </p>
+              <Link
+                href="/fuel-efficiency-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                연비 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

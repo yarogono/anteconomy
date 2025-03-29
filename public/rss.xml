@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 28 Mar 2025 15:10:46 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 29 Mar 2025 07:10:46 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Fri, 28 Mar 2025 15:10:46 GMT</pubDate>
+        <pubDate>Sat, 29 Mar 2025 07:10:46 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -213,6 +213,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:40:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[fuel-efficiency-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/fuel-efficiency-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/fuel-efficiency-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sat, 29 Mar 2025 07:05:52 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[global-commodities-market]]></title>
