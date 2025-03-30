@@ -507,6 +507,20 @@ export default function Home({ initialRate }) {
                 연비 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">칼로리 소모량 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                운동 종류, 운동 시간, 체중을 입력하여 소모된 칼로리를
+                계산해보세요. 걷기, 달리기, 수영 등 다양한 운동의 칼로리
+                소모량을 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/calorie-burn-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                칼로리 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 
