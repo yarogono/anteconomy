@@ -521,6 +521,19 @@ export default function Home({ initialRate }) {
                 칼로리 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">BMI & 체지방률 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                키, 체중, 성별, 나이를 입력하여 BMI(신체질량지수)와 체지방률을
+                계산해보세요. 정상 범위와 건강 상태를 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/bmi-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                BMI 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

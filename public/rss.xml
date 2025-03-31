@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 30 Mar 2025 02:49:45 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 31 Mar 2025 01:54:11 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Sun, 30 Mar 2025 02:49:45 GMT</pubDate>
+        <pubDate>Mon, 31 Mar 2025 01:54:11 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -81,6 +81,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Wed, 26 Mar 2025 11:10:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[bmi-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/bmi-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/bmi-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Mon, 31 Mar 2025 01:48:37 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[bond-investment-guide]]></title>
