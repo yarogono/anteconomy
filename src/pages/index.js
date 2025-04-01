@@ -534,6 +534,20 @@ export default function Home({ initialRate }) {
                 BMI 계산하기
               </Link>
             </div>
+            <div className="bg-green-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">전기 요금 계산기</h3>
+              <p className="text-sm text-gray-300 mb-4">
+                전력 사용량을 입력하여 예상 전기 요금을 계산해보세요. 기본요금,
+                전력량요금, 기후환경요금, 연료비조정액 등을 포함한 상세 요금
+                내역을 확인할 수 있습니다.
+              </p>
+              <Link
+                href="/electricity-bill-calculator"
+                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
+              >
+                전기 요금 계산하기
+              </Link>
+            </div>
           </div>
         </div>
 

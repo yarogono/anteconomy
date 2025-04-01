@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 31 Mar 2025 01:54:11 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 01 Apr 2025 00:22:09 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Mon, 31 Mar 2025 01:54:11 GMT</pubDate>
+        <pubDate>Tue, 01 Apr 2025 00:22:09 GMT</pubDate>
         <copyright><![CDATA[© 2024 anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -191,6 +191,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 02 Mar 2025 11:38:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[electricity-bill-calculator]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/electricity-bill-calculator</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/electricity-bill-calculator</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Tue, 01 Apr 2025 00:20:19 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[emerging-markets-strategy]]></title>
