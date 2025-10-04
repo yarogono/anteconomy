@@ -9,4 +9,4 @@ Host: https://anteconomy.co.kr
 Sitemap: https://anteconomy.co.kr/sitemap.xml
 
 # DaumWebMasterTool
-#DaumWebMasterTool:0135631b57b24f4f1df466bfe9abf1d86897d8e25d0289c3b4c759fb81c9c255:a52ifj9BuAwykHvnxiKKPA==
+DaumWebMasterTool:0135631b57b24f4f1df466bfe9abf1d86897d8e25d0289c3b4c759fb81c9c255:a52ifj9BuAwykHvnxiKKPA==
