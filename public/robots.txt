@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://anteconomy.co.kr
+Host: anteconomy.co.kr
 
 # Sitemaps
 Sitemap: https://anteconomy.co.kr/sitemap.xml
