@@ -1,9 +1,15 @@
-const withMDX = require('@next/mdx')();
+const withMDX = require("@next/mdx")();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'], // .mdx 확장자 추가
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"], // .mdx 확장자 추가
   reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    styledComponents: true,
+    displayName: true,
+    ssr: true,
+  },
   images: {
     remotePatterns: [
       {
