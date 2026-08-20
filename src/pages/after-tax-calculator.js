@@ -102,10 +102,10 @@ export default function AfterTaxCalculator() {
   return (
     <>
       <Head>
-        <title>세후 월급 계산기 - 2025년 실수령액 계산</title>
+        <title>세후 월급 계산기 - 실수령액 계산</title>
         <meta
           name="description"
-          content="2025년 기준 세후 월급을 계산해보세요. 4대보험, 세금 공제액을 포함한 실수령액을 확인할 수 있습니다."
+          content="월급에서 4대보험과 세금을 공제한 예상 실수령액을 계산해보세요. 계산 기준과 공제 내역을 함께 확인할 수 있습니다."
         />
       </Head>
 
@@ -237,16 +237,16 @@ export default function AfterTaxCalculator() {
               </div>
 
               <div className="bg-green-700 p-4 rounded">
-                <p className="font-bold mb-2">2025년 실수령액 조회</p>
+                <p className="font-bold mb-2">월급 실수령액 조회</p>
                 <p className="mb-4">
-                  2025년 기준 월급별 실수령액과 공제 내역을 확인하실 수
+                  월급별 실수령액과 공제 내역을 확인하실 수
                   있습니다.
                 </p>
                 <Link
                   href="/salary-table-2025"
                   className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
                 >
-                  2025년 월급 실수령액 조회하기
+                  월급 실수령액 조회하기
                 </Link>
               </div>
 

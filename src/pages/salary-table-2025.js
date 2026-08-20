@@ -1132,10 +1132,10 @@ export default function SalaryTable2025() {
   return (
     <>
       <Head>
-        <title>2025년 월급 실수령액 조회 - 급여별 세금 공제 안내</title>
+        <title>월급 실수령액 조회 - 급여별 세금 공제 안내</title>
         <meta
           name="description"
-          content="2025년 기준 월급 실수령액과 4대보험, 세금 공제액을 한눈에 확인하세요. 급여 구간별 상세 공제내역을 제공합니다."
+          content="월급 실수령액과 4대보험, 세금 공제액을 한눈에 확인하세요. 급여 구간별 상세 공제내역을 제공합니다."
         />
       </Head>
 
@@ -1147,7 +1147,7 @@ export default function SalaryTable2025() {
             </Link>
           </div>
 
-          <h1 className="text-3xl font-bold mb-6">2025년 월급 실수령액 조회</h1>
+          <h1 className="text-3xl font-bold mb-6">월급 실수령액 조회</h1>
 
           <div className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
             <div className="mb-6">
@@ -1262,7 +1262,7 @@ export default function SalaryTable2025() {
           </div>
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
-            <h2 className="text-xl font-bold mb-4">2025년 공제율 안내</h2>
+            <h2 className="text-xl font-bold mb-4">공제율 안내</h2>
             <div className="space-y-4">
               <div className="bg-green-700 p-4 rounded">
                 <p className="font-bold mb-2">4대 보험 요율</p>

@@ -106,23 +106,32 @@ export default function Home({ initialRate }) {
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen bg-green-900 text-white">
+      <div className="homepage-shell min-h-screen bg-slate-50 text-slate-900">
         {/* 환율 계산기 섹션 */}
-        <div className="flex flex-col items-center justify-center p-8">
-          <h1 className="text-4xl font-bold mb-6">실시간 환율 계산기</h1>
-          <div className="bg-white text-black p-6 rounded-2xl shadow-lg max-w-lg w-full mb-8">
-            <label className="block mb-2 text-lg">금액</label>
+        <section className="homepage-hero px-4 py-14 sm:py-20">
+          <div className="mx-auto flex max-w-6xl flex-col items-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-100">
+              Ant Economy
+            </p>
+            <h1 className="mb-4 text-center text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              실시간 환율 계산기
+            </h1>
+            <p className="mb-9 max-w-xl text-center text-base leading-7 text-white/90 sm:text-lg">
+              주요 통화의 환율을 빠르게 확인하고 원하는 금액으로 바로 계산해보세요.
+            </p>
+            <div className="w-full max-w-2xl rounded-3xl bg-white p-5 text-slate-900 shadow-2xl shadow-emerald-950/20 sm:p-8">
+              <label className="mb-2 block text-base font-semibold text-slate-700">금액</label>
             <input
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              className="w-full p-2 border rounded mb-4"
+              className="mb-5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-lg outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
             />
-            <div className="flex justify-between mb-4">
+            <div className="mb-5 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
               <select
                 value={fromCurrency}
                 onChange={(e) => setFromCurrency(e.target.value)}
-                className="p-2 border rounded"
+                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-base font-medium outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
               >
                 <option value="USD">🇺🇸 USD</option>
                 <option value="KRW">🇰🇷 KRW</option>
@@ -130,11 +139,11 @@ export default function Home({ initialRate }) {
                 <option value="JPY">🇯🇵 JPY</option>
                 <option value="CNY">🇨🇳 CNY</option>
               </select>
-              <span className="text-xl">→</span>
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-lg font-bold text-emerald-700">→</span>
               <select
                 value={toCurrency}
                 onChange={(e) => setToCurrency(e.target.value)}
-                className="p-2 border rounded"
+                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-base font-medium outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
               >
                 <option value="KRW">🇰🇷 KRW</option>
                 <option value="USD">🇺🇸 USD</option>
@@ -143,7 +152,7 @@ export default function Home({ initialRate }) {
                 <option value="CNY">🇨🇳 CNY</option>
               </select>
             </div>
-            <div className="text-lg font-bold">
+            <div className="rounded-2xl bg-emerald-50 px-4 py-4 text-xl font-bold text-emerald-900">
               {isLoading ? (
                 <p className="text-gray-500">환율 정보를 불러오는 중...</p>
               ) : (
@@ -152,15 +161,21 @@ export default function Home({ initialRate }) {
             </div>
           </div>
         </div>
+        </section>
 
-        <AdsenseAd slot="homepage-top" />
+        <div className="homepage-content">
+          <AdsenseAd slot="homepage-top" />
 
-        <AdsenseInit />
-        <AdsenseAd />
+          <AdsenseInit />
 
         {/* 주요 금융 시장 분석 섹션 */}
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold mb-8">주요 금융 시장 분석</h2>
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <p className="mb-2 text-sm font-semibold text-emerald-700">금융 도구 모음</p>
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">주요 금융 시장 분석</h2>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">실시간 금 시세</h3>
@@ -254,8 +269,8 @@ export default function Home({ initialRate }) {
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">중도상환수수료 계산기</h3>
               <p className="mb-4">
-                대출 조기상환 시 발생하는 수수료를 계산해보세요. 2025년 1월부터
-                변경된 수수료율이 적용됩니다.
+                대출 조기상환 시 발생하는 수수료를 계산해보세요. 금융기관과 상품별
+                수수료율을 확인하여 예상 비용을 계산할 수 있습니다.
               </p>
               <Link
                 href="/prepayment-calculator"
@@ -267,7 +282,7 @@ export default function Home({ initialRate }) {
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">실업급여 계산기</h3>
               <p className="mb-4">
-                2025년 기준 실업급여(구직급여) 예상 금액을 계산해보세요. 퇴직 전
+                실업급여(구직급여) 예상 금액을 계산해보세요. 퇴직 전
                 임금과 나이, 고용보험 가입기간에 따른 실업급여 모의계산이
                 가능합니다.
               </p>
@@ -281,7 +296,7 @@ export default function Home({ initialRate }) {
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">연차 수당 계산기</h3>
               <p className="mb-4">
-                2025년 기준 미사용 연차 수당을 계산해보세요. 근속기간과 급여,
+                미사용 연차 수당을 계산해보세요. 근속기간과 급여,
                 사용한 연차 일수를 입력하여 받을 수 있는 연차 수당을 확인하세요.
               </p>
               <Link
@@ -294,7 +309,7 @@ export default function Home({ initialRate }) {
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">퇴직금 계산기</h3>
               <p className="mb-4">
-                2025년 기준 퇴직금을 계산해보세요. 근속기간과 급여를 입력하여
+                퇴직금을 계산해보세요. 근속기간과 급여를 입력하여
                 받을 수 있는 퇴직금을 확인하세요.
               </p>
               <Link
@@ -332,7 +347,7 @@ export default function Home({ initialRate }) {
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">세후 월급 계산기</h3>
               <p className="mb-4">
-                2025년 기준 세후 월급을 계산해보세요. 4대 보험과 세금을 고려한
+                세후 월급을 계산해보세요. 4대 보험과 세금을 고려한
                 실수령액을 확인할 수 있습니다.
               </p>
               <Link
@@ -554,8 +569,9 @@ export default function Home({ initialRate }) {
         <AdsenseAd slot="homepage-middle" />
 
         {/* 최신 금융 뉴스 섹션 */}
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold mb-8">글로벌 금융 동향</h2>
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+          <p className="mb-2 text-sm font-semibold text-emerald-700">인사이트</p>
+          <h2 className="mb-8 text-3xl font-bold tracking-tight text-slate-900">글로벌 금융 동향</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-green-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">금융 정책 분석</h3>
@@ -585,12 +601,13 @@ export default function Home({ initialRate }) {
         <AdsenseAd slot="homepage-bottom" />
 
         {/* 푸터 섹션 */}
-        <footer className="bg-green-950 text-center py-8">
-          <p className="text-sm">© 2024 안트이코노미. All rights reserved.</p>
+        <footer className="bg-slate-900 py-8 text-center text-slate-300">
+          <p className="text-sm">© 2026 안트이코노미. All rights reserved.</p>
           <p className="text-sm mt-2">
             실시간 금융 시장 분석과 투자 정보를 제공합니다.
           </p>
         </footer>
+      </div>
       </div>
     </>
   );

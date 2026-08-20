@@ -1,19 +1,5 @@
-import { useEffect } from "react";
-
 export default function AdsenseInit() {
-  useEffect(() => {
-    try {
-      // 광고가 이미 로드된 요소를 제외하고 초기화
-      const ads = document.querySelectorAll(
-        "ins.adsbygoogle:not([data-ad-status='filled'])"
-      );
-      if (ads.length > 0) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (error) {
-      console.error("AdSense initialization error:", error);
-    }
-  }, []);
-
+  // 광고 초기화는 각 AdsenseAd 슬롯이 자체적으로 한 번만 수행합니다.
+  // 이 컴포넌트는 기존 페이지 호환을 위해 남겨둔 no-op입니다.
   return null;
 }

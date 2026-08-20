@@ -45,7 +45,7 @@ export default function PrepaymentCalculator() {
         <title>중도상환수수료 계산기 - 대출 조기상환 수수료 계산</title>
         <meta
           name="description"
-          content="대출 중도상환 시 발생하는 수수료를 계산해보세요. 2025년 1월 13일부터 변경된 중도상환수수료 기준이 적용됩니다."
+          content="대출 중도상환 시 발생하는 수수료를 계산해보세요. 금융기관과 상품별 수수료율을 확인해 예상 비용을 계산할 수 있습니다."
         />
       </Head>
 
@@ -91,14 +91,14 @@ export default function PrepaymentCalculator() {
                   (잔존일수 ÷ 대출기간)
                 </p>
                 <p className="mt-2">
-                  금융당국의 정책에 따라 2025년 1월 13일부터 중도상환 수수료의
-                  대대적인 인하가 있었습니다. "요율" 탭을 참고해주세요.
+                  중도상환 수수료율은 금융당국 정책과 금융기관 상품에 따라 달라질
+                  수 있습니다. 최신 요율은 대출 약관과 금융기관 안내를 확인해주세요.
                 </p>
               </div>
             ) : (
               <div className="bg-blue-50 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">
-                  2025년 1월 13일부터 적용되는 중도상환수수료 요율
+                  적용 중도상환수수료 요율
                 </h3>
                 <ul className="list-disc list-inside space-y-1">
                   <li>주택담보대출: 최대 1.2% → 매월 0.02%p 감소</li>

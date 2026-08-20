@@ -34,11 +34,11 @@ export default function AnnualSalaryCalculator() {
     // 고용보험 (0.9%)
     const employmentInsurance = monthlyBase * 0.009;
 
-    // 근로소득세 계산 (2024년 간이세액표 기준)
+    // 근로소득세 계산: 적용 세율과 간이세액표를 정기적으로 검토해야 합니다.
     const dependentsCount = parseInt(dependents) || 0;
     const childrenCount = parseInt(children) || 0;
 
-    // 2024년 간이세액표에 따른 소득세 계산
+    // 간이세액표에 따른 소득세 계산
     function getIncomeTaxByTable(monthlyIncome, deps) {
       // 1000원 단위로 반올림
       const roundedIncome = Math.round(monthlyIncome / 1000) * 1000;
@@ -128,7 +128,7 @@ export default function AnnualSalaryCalculator() {
       }
     }
 
-    // 자녀세액공제 (2024년 기준)
+    // 자녀세액공제: 최신 세법 기준 검토 필요
     function getChildTaxCredit(childCount) {
       if (childCount === 0) return 0;
       if (childCount === 1) return 12500;

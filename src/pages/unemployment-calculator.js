@@ -107,10 +107,10 @@ export default function UnemploymentCalculator() {
   return (
     <>
       <Head>
-        <title>실업급여 계산기 - 2025년 기준</title>
+        <title>실업급여 계산기 - 구직급여 예상액 계산</title>
         <meta
           name="description"
-          content="2025년 기준 실업급여(구직급여) 예상 금액을 계산해보세요. 퇴직 전 임금과 나이, 고용보험 가입기간에 따른 실업급여 모의계산이 가능합니다."
+          content="퇴직 전 임금과 나이, 고용보험 가입기간을 입력하여 실업급여 예상액을 계산해보세요. 지급 기준과 참고사항을 함께 확인할 수 있습니다."
         />
       </Head>
 
@@ -263,7 +263,7 @@ export default function UnemploymentCalculator() {
                 <p className="font-bold mb-2">실업급여 계산 방법</p>
                 <ul className="list-disc list-inside space-y-1">
                   <li>1일 실업급여액 = (퇴직 전 3개월 총 임금 ÷ 90일) × 60%</li>
-                  <li>2025년 기준 상한액: 66,000원</li>
+                  <li>상한액은 고용보험 제도 변경에 따라 달라질 수 있습니다.</li>
                   <li>하한액: 최저임금 일급의 80%</li>
                 </ul>
               </div>

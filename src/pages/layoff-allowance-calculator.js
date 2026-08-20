@@ -78,10 +78,10 @@ export default function LayoffAllowanceCalculator() {
   return (
     <>
       <Head>
-        <title>휴업수당 계산기 - 2025년 기준</title>
+        <title>휴업수당 계산기 - 휴업수당 계산</title>
         <meta
           name="description"
-          content="2025년 기준 휴업수당을 계산해보세요. 휴업 기간과 이전 3개월 임금을 입력하여 받을 수 있는 휴업수당을 확인하세요."
+          content="휴업 기간과 이전 3개월 임금을 입력하여 받을 수 있는 휴업수당을 계산해보세요. 산정 기준과 참고사항을 함께 확인할 수 있습니다."
         />
       </Head>
 

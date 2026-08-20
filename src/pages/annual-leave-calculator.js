@@ -104,10 +104,10 @@ export default function AnnualLeaveCalculator() {
   return (
     <>
       <Head>
-        <title>연차 계산기 - 2025년 기준</title>
+        <title>연차 계산기 - 연차 일수 계산</title>
         <meta
           name="description"
-          content="2025년 기준 연차를 계산해보세요. 입사일과 출근율을 입력하여 받을 수 있는 연차를 확인하세요."
+          content="입사일과 출근율을 입력하여 발생 연차를 계산해보세요. 근로기준법상 연차 산정 기준과 계산 결과를 함께 확인할 수 있습니다."
         />
       </Head>
 

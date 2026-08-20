@@ -83,10 +83,10 @@ export default function LeaveAllowanceCalculator() {
   return (
     <>
       <Head>
-        <title>연차 수당 계산기 - 2025년 기준</title>
+        <title>연차 수당 계산기 - 미사용 연차 수당 계산</title>
         <meta
           name="description"
-          content="2025년 기준 미사용 연차 수당을 계산해보세요. 근속기간과 급여, 사용한 연차 일수를 입력하여 받을 수 있는 연차 수당을 확인하세요."
+          content="근속기간과 급여, 사용한 연차 일수를 입력하여 미사용 연차 수당을 계산해보세요. 산정 기준과 참고사항을 함께 확인할 수 있습니다."
         />
       </Head>
 

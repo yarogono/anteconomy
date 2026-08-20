@@ -78,7 +78,7 @@ export default function DepositCalculator() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://anteconomy.com/deposit-calculator"
+          content="https://anteconomy.co.kr/deposit-calculator"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

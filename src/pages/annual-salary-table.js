@@ -830,7 +830,7 @@ export default function AnnualSalaryTable() {
         </title>
         <meta
           name="description"
-          content="2025년 연봉별 실수령액과 4대보험, 소득세 등 상세 공제액 정보를 확인할 수 있습니다."
+          content="연봉별 예상 실수령액과 4대보험, 소득세 등 상세 공제액 정보를 확인할 수 있습니다."
         />
         <meta
           name="keywords"
@@ -840,7 +840,7 @@ export default function AnnualSalaryTable() {
 
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">2025년 연봉 실수령액 표</h1>
+          <h1 className="text-4xl font-bold">연봉 실수령액 표</h1>
           <Link
             href="/annual-salary-calculator"
             className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors"
@@ -851,7 +851,7 @@ export default function AnnualSalaryTable() {
 
         <div className="bg-blue-50 p-4 rounded-lg mb-8">
           <p className="text-sm">
-            2025년 기준 연봉별 실수령액과 공제액 정보입니다.
+            연봉별 실수령액과 공제액 정보입니다.
             <br />
             4대보험, 소득세, 지방소득세 등 상세 공제 내역을 확인할 수 있습니다.
           </p>

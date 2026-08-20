@@ -113,10 +113,10 @@ export default function SeveranceCalculator() {
   return (
     <>
       <Head>
-        <title>퇴직금 계산기 - 2025년 기준</title>
+        <title>퇴직금 계산기 - 퇴직금 예상액 계산</title>
         <meta
           name="description"
-          content="2025년 기준 퇴직금을 계산해보세요. 근속기간과 급여를 입력하여 받을 수 있는 퇴직금을 확인하세요."
+          content="근속기간과 급여를 입력하여 예상 퇴직금을 계산해보세요. 평균임금 산정 기준과 참고사항을 함께 확인할 수 있습니다."
         />
       </Head>
 

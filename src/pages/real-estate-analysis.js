@@ -9,7 +9,7 @@ export async function getStaticProps() {
         trends: {
           price: "전년 대비 2% 하락",
           transaction: "거래량 30% 감소",
-          forecast: "2024년 하반기 반등 예상",
+          forecast: "시장 지표와 정책 변화에 따라 전망 확인 필요",
         },
       },
       {
@@ -17,7 +17,7 @@ export async function getStaticProps() {
         trends: {
           price: "전년 대비 1.5% 하락",
           transaction: "거래량 25% 감소",
-          forecast: "2024년 보합세 전망",
+          forecast: "시장 지표와 정책 변화에 따라 전망 확인 필요",
         },
       },
     ],

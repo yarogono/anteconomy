@@ -7,8 +7,6 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     styledComponents: true,
-    displayName: true,
-    ssr: true,
   },
   images: {
     remotePatterns: [
@@ -18,6 +16,14 @@ const nextConfig = {
       },
     ],
     unoptimized: true,
+  },
+  async rewrites() {
+    return [
+      // Keep legacy social/RSS image URLs working while all pages migrate to the shared asset.
+      { source: "/og-image.jpg", destination: "/og-image.svg" },
+      { source: "/logo.png", destination: "/og-image.svg" },
+      { source: "/images/:path*.jpg", destination: "/og-image.svg" },
+    ];
   },
   webpack: (config, { isServer }) => {
     if (isServer) {

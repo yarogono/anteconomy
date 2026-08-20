@@ -10,11 +10,11 @@ const feed = new RSS({
   description: "실시간 금융 시장 분석과 투자 전략 정보를 제공합니다.",
   feed_url: `${EXTERNAL_DATA_URL}/rss.xml`,
   site_url: EXTERNAL_DATA_URL,
-  image_url: `${EXTERNAL_DATA_URL}/logo.png`,
+  image_url: `${EXTERNAL_DATA_URL}/og-image.svg`,
   language: "ko-KR",
   pubDate: new Date(),
   ttl: "60",
-  copyright: "© 2024 anteconomy",
+  copyright: "© anteconomy",
   author: "anteconomy",
 });
 

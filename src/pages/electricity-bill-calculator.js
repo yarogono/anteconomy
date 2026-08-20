@@ -25,7 +25,7 @@ export default function ElectricityBillCalculator() {
       return;
     }
 
-    // 2024년 가정용 전기 요금제 (한국전력공사 기준)
+    // 가정용 전기 요금제 (한국전력공사 기준, 요금표 변경 시 업데이트 필요)
     let totalBill = 0;
     let details = [];
 
