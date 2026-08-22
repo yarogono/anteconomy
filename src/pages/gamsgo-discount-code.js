@@ -6,11 +6,11 @@ const gamsgoUrl = "https://www.gamsgo.com/partner/xV82m";
 const updatedAt = "2026년 8월 22일";
 
 const services = [
-  { name: "ChatGPT", label: "챗GPT", icon: "✦", tone: "violet" },
-  { name: "YouTube Premium", label: "유튜브 프리미엄", icon: "▶", tone: "red" },
-  { name: "Netflix", label: "넷플릭스", icon: "N", tone: "black" },
-  { name: "Pokémon GO", label: "포켓몬고", icon: "⌁", tone: "yellow" },
-  { name: "VALORANT", label: "발로란트", icon: "◇", tone: "pink" },
+  { name: "ChatGPT", label: "챗GPT", detail: "AI 구독 상품", icon: "✦", tone: "violet" },
+  { name: "YouTube Premium", label: "유튜브 프리미엄", detail: "영상 구독 상품", icon: "▶", tone: "red" },
+  { name: "Netflix", label: "넷플릭스", detail: "영상 구독 상품", icon: "N", tone: "black" },
+  { name: "Pokémon GO", label: "포켓몬고", detail: "게임 상품", icon: "⌁", tone: "yellow" },
+  { name: "VALORANT", label: "발로란트", detail: "게임 상품", icon: "◇", tone: "pink" },
 ];
 
 const faqs = [
@@ -43,18 +43,22 @@ export default function GamsgoDiscountCode() {
   return (
     <>
       <Head>
-        <html lang="ko" />
-        <title>겜스고 할인 코드 쿠폰 GamsGo 프로모션 | 2026년 8월</title>
-        <meta name="description" content="2026년 8월 겜스고 할인 코드와 쿠폰을 확인하세요. GamsGo 프로모션 코드 사용 방법과 챗GPT, 유튜브, 넷플릭스, 포켓몬고, 발로란트 관련 상품 이용 전 주의사항을 정리했습니다." />
-        <meta name="keywords" content="겜스고 할인 코드, 겜스고 할인코드, 겜스고 쿠폰, gamsgo 프로모션, 챗gpt, 유튜브, 넷플릭스, 포켓몬고, 발로란트" />
+        <title>겜스고 할인 코드 JMHR5 | GamsGo 쿠폰·프로모션</title>
+        <meta name="description" content="겜스고 할인 코드 JMHR5와 GamsGo 쿠폰 사용 방법을 확인하세요. 챗GPT, 유튜브, 넷플릭스 등 상품별 할인 적용 조건과 결제 전 주의사항을 안내합니다." />
         <link rel="canonical" href="https://anteconomy.co.kr/겜스고-할인-코드-쿠폰-gamsgo-프로모션" />
-        <meta property="og:title" content="겜스고 할인 코드 쿠폰 GamsGo 프로모션" />
-        <meta property="og:description" content="겜스고 할인 코드와 프로모션 적용 방법을 한 페이지에서 확인하세요." />
+        <meta property="og:title" content="겜스고 할인 코드 JMHR5 | GamsGo 쿠폰·프로모션" />
+        <meta property="og:description" content="겜스고 할인 코드 JMHR5 사용 방법과 서비스별 확인 사항을 안내합니다." />
         <meta property="og:type" content="article" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqSchema,
+          "@type": "WebPage",
+          name: "겜스고 할인 코드 JMHR5",
+          url: "https://anteconomy.co.kr/겜스고-할인-코드-쿠폰-gamsgo-프로모션",
+          inLanguage: "ko-KR",
+          dateModified: "2026-08-22",
+          author: { "@type": "Organization", name: "안트이코노미 편집팀", url: "https://anteconomy.co.kr" },
+          isPartOf: { "@type": "WebSite", name: "안트이코노미", url: "https://anteconomy.co.kr" },
+          mainEntity: { "@type": "FAQPage", mainEntity: faqSchema },
         }) }} />
       </Head>
 
@@ -63,6 +67,7 @@ export default function GamsgoDiscountCode() {
           <a className="gamsgo-brand" href="#top" aria-label="겜스고 할인 코드 홈">GamsGo <span>쿠폰 가이드</span></a>
           <nav aria-label="페이지 메뉴">
             <a href="#coupon">할인 코드</a>
+            <a href="#verification">확인 기준</a>
             <a href="#how-to-use">사용 방법</a>
             <a href="#services">서비스</a>
             <a href="#faq">FAQ</a>
@@ -73,7 +78,7 @@ export default function GamsgoDiscountCode() {
           <section className="gamsgo-hero">
             <div className="gamsgo-hero-copy">
               <p className="gamsgo-eyebrow">GAMSGO PROMOTION · COUPON GUIDE</p>
-              <h1>겜스고 할인 코드<br /><strong>쿠폰·프로모션 한눈에 보기</strong></h1>
+              <h1>겜스고 할인 코드<br /><strong>JMHR5 쿠폰·프로모션</strong></h1>
               <p className="gamsgo-lead">겜스고에서 사용할 수 있는 할인 코드와 쿠폰 정보를 정리했습니다. 결제 전 코드를 적용하고 최종 할인 금액을 확인해보세요.</p>
               <div className="gamsgo-updated"><span className="status-dot" /> 최신 확인일 {updatedAt}</div>
             </div>
@@ -108,6 +113,17 @@ export default function GamsgoDiscountCode() {
             <div className="notice-box"><strong>잠깐 확인하세요</strong><br />이 페이지의 할인 정보는 변동될 수 있습니다. 결제 화면에서 할인 코드가 적용되고 최종 금액이 변경되는지 확인한 후 결제하세요.</div>
           </section>
 
+          <section className="content-section verification-section" id="verification">
+            <p className="section-kicker">VERIFICATION</p>
+            <h2>JMHR5 할인 코드 확인 기준</h2>
+            <p>안트이코노미 편집팀은 겜스고 공식 제휴 링크와 결제 화면을 기준으로 할인 코드 정보를 확인합니다. 상품과 이용자 조건에 따라 적용 결과가 달라질 수 있으므로, 최종 결제 금액이 실제로 줄어드는지 확인한 뒤 결제하세요.</p>
+            <div className="verification-grid">
+              <div><strong>마지막 확인</strong><span>{updatedAt}</span></div>
+              <div><strong>확인 코드</strong><span>JMHR5</span></div>
+              <div><strong>확인 방식</strong><span>결제 전 적용 여부 확인</span></div>
+            </div>
+          </section>
+
           <section className="content-section" id="how-to-use">
             <p className="section-kicker">HOW TO USE</p>
             <h2>겜스고 할인 코드 사용 방법</h2>
@@ -123,7 +139,7 @@ export default function GamsgoDiscountCode() {
             <h2>서비스별 겜스고 할인 확인</h2>
             <p className="section-description">아래 서비스의 상품 판매 여부와 프로모션 적용 조건은 공식 상품 페이지에서 확인하세요.</p>
             <div className="service-grid">
-              {services.map((service) => <a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className={`service-card ${service.tone}`} key={service.name}><span>{service.icon}</span><div><strong>{service.label}</strong><small>{service.name}</small></div><b>확인 →</b></a>)}
+              {services.map((service) => <a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className={`service-card ${service.tone}`} key={service.name}><span>{service.icon}</span><div><strong>{service.label}</strong><small>{service.detail}</small><small>{service.name}</small></div><b>공식 페이지 확인 →</b></a>)}
             </div>
           </section>
 

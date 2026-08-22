@@ -12,6 +12,6 @@ module.exports = {
     await config.transform(config, "/겜스고-할인-코드-쿠폰-gamsgo-프로모션"),
   ],
   // Non-finance experiments are excluded until they have complete SEO metadata.
-  exclude: ["/api/*", "/drama/*"],
+  exclude: ["/api/*", "/drama/*", "/gamsgo-discount-code"],
   // ...other options
 };
