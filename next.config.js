@@ -23,6 +23,7 @@ const nextConfig = {
       { source: "/og-image.jpg", destination: "/og-image.svg" },
       { source: "/logo.png", destination: "/og-image.svg" },
       { source: "/images/:path*.jpg", destination: "/og-image.svg" },
+      { source: "/겜스고-할인-코드-쿠폰-gamsgo-프로모션", destination: "/gamsgo-discount-code" },
     ];
   },
   webpack: (config, { isServer }) => {

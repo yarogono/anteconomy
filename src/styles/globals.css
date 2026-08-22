@@ -72,6 +72,64 @@ body {
   overflow: hidden;
 }
 
+.gamsgo-page { --blue: #3d9be9; --ink: #172033; min-height: 100vh; color: var(--ink); background: #fff; font-family: Arial, "Noto Sans KR", sans-serif; }
+.gamsgo-header { height: 76px; max-width: 1120px; margin: auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+.gamsgo-brand { color: #101828; font-size: 20px; font-weight: 900; letter-spacing: -.06em; text-decoration: none; }.gamsgo-brand span { color: var(--blue); font-size: 12px; margin-left: 8px; letter-spacing: 0; }
+.gamsgo-header nav { display: flex; gap: 28px; }.gamsgo-header nav a { color: #1d2939; font-size: 14px; font-weight: 700; text-decoration: none; }.gamsgo-header nav a:hover { color: var(--blue); }
+.gamsgo-hero { max-width: 1120px; margin: 68px auto 80px; padding: 64px; border-radius: 28px; background: linear-gradient(118deg, #edf8ff, #dcedfc); display: grid; grid-template-columns: 1.1fr .9fr; gap: 52px; align-items: center; }
+.gamsgo-eyebrow, .section-kicker { color: #278bd4; font-size: 11px; font-weight: 800; letter-spacing: .18em; margin: 0 0 16px; }.gamsgo-hero h1 { margin: 0; font-size: clamp(34px, 5vw, 58px); line-height: 1.14; letter-spacing: -.06em; }.gamsgo-hero h1 strong { color: #258cd3; }.gamsgo-lead { max-width: 520px; color: #516174; font-size: 17px; line-height: 1.8; margin: 24px 0; }.gamsgo-updated { color: #67768a; font-size: 13px; }.status-dot { width: 8px; height: 8px; display: inline-block; border-radius: 50%; background: #16b979; margin-right: 8px; }
+.coupon-card { padding: 32px; border: 1px solid #c8e5f8; border-radius: 22px; background: rgba(255,255,255,.86); box-shadow: 0 16px 36px rgba(50, 128, 186, .14); }.coupon-card-label { color: #4c6b85; font-size: 13px; font-weight: 700; }.coupon-code { margin: 12px 0; color: #1989d5; font-size: 44px; font-weight: 900; letter-spacing: .12em; }.coupon-card p { color: #66778c; font-size: 13px; line-height: 1.6; }.coupon-actions { display: flex; gap: 10px; margin: 22px 0 14px; }.coupon-actions button, .coupon-actions a { border: 0; border-radius: 999px; padding: 13px 18px; font-size: 13px; font-weight: 800; cursor: pointer; text-decoration: none; }.coupon-actions button { color: #fff; background: #2697df; }.coupon-actions a { color: #fff; background: #172033; }.coupon-card small { color: #8a98a8; font-size: 11px; }
+.toc-section, .content-section, .update-section { max-width: 900px; margin: 0 auto; padding: 0 24px 88px; }.toc-section h2, .content-section h2, .update-section h2 { margin: 0 0 28px; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.06em; }.toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }.toc-grid a { display: flex; align-items: center; gap: 15px; padding: 18px 20px; color: #243247; border: 1px solid #e8edf2; border-radius: 14px; background: #fbfcfe; text-decoration: none; box-shadow: 0 5px 15px rgba(30, 50, 70, .04); }.toc-grid a:hover { border-color: #8cc8f1; }.toc-grid span { color: #2899e1; font-size: 12px; font-weight: 900; }.toc-grid b { margin-left: auto; color: #a5b1be; }
+.content-section p { color: #536275; line-height: 1.9; }.intro-section { border-top: 1px solid #edf0f4; padding-top: 72px; }.notice-box { margin-top: 24px; padding: 20px 24px; border-left: 4px solid #40a9ec; color: #56697d; background: #f2f9fe; line-height: 1.8; }.notice-box strong { color: #258bd1; }.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }.step-card { min-height: 150px; padding: 20px; border-radius: 16px; background: #f7faff; }.step-card span { display: grid; width: 30px; height: 30px; place-items: center; color: white; border-radius: 50%; background: #42a5e8; font-weight: 900; }.step-card p { font-size: 14px; line-height: 1.65; }.section-description { margin-top: -12px; }.service-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }.service-card { display: flex; min-height: 140px; padding: 18px; flex-direction: column; justify-content: space-between; border: 1px solid #e9edf2; border-radius: 16px; color: #1e293b; text-decoration: none; transition: transform .15s, box-shadow .15s; }.service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(27, 45, 70, .1); }.service-card > span { display: grid; width: 32px; height: 32px; place-items: center; color: #fff; border-radius: 9px; background: #5e61db; font-weight: 900; }.service-card.red > span { background: #f04444; }.service-card.black > span { background: #161b25; }.service-card.yellow > span { color: #513b00; background: #ffd54f; }.service-card.pink > span { background: #df4f91; }.service-card strong, .service-card small { display: block; }.service-card strong { font-size: 14px; }.service-card small { color: #92a0af; font-size: 10px; margin-top: 4px; }.service-card b { color: #398fca; font-size: 11px; text-align: right; }
+.faq-list { border-top: 1px solid #dde5ed; }.faq-list details { border-bottom: 1px solid #dde5ed; }.faq-list summary { display: flex; justify-content: space-between; gap: 20px; padding: 22px 4px; color: #263448; cursor: pointer; font-size: 16px; font-weight: 700; list-style: none; }.faq-list summary::-webkit-details-marker { display: none; }.faq-list summary span { color: #3299df; font-size: 24px; font-weight: 400; }.faq-list details[open] summary span { transform: rotate(45deg); }.faq-list details p { margin: -4px 36px 22px 4px; color: #617184; font-size: 14px; line-height: 1.8; }
+.update-section { padding: 26px 28px; margin-bottom: 80px; display: flex; justify-content: space-between; gap: 32px; border-radius: 18px; background: #f7f9fb; }.update-section h2 { margin: 0; }.update-section > p { color: #66778a; font-size: 13px; line-height: 1.8; text-align: right; }.update-section > p strong { color: #2a91d6; }.gamsgo-footer { padding: 42px 24px; color: #8a98a8; background: #172033; font-size: 12px; line-height: 1.8; text-align: center; }.gamsgo-footer strong { color: #fff; font-size: 16px; }.gamsgo-footer p { max-width: 700px; margin: 8px auto 0; }
+@media (max-width: 760px) { .gamsgo-header { height: auto; padding-top: 20px; align-items: flex-start; flex-direction: column; gap: 18px; }.gamsgo-header nav { width: 100%; justify-content: space-between; gap: 8px; }.gamsgo-header nav a { font-size: 12px; }.gamsgo-hero { margin: 34px 14px 56px; padding: 32px 22px; grid-template-columns: 1fr; gap: 30px; border-radius: 20px; }.gamsgo-hero h1 { font-size: 38px; }.gamsgo-lead { font-size: 15px; }.coupon-card { padding: 24px 20px; }.coupon-code { font-size: 36px; }.coupon-actions { flex-direction: column; }.coupon-actions button, .coupon-actions a { text-align: center; }.toc-section, .content-section, .update-section { padding-left: 20px; padding-right: 20px; padding-bottom: 62px; }.toc-grid, .steps-grid { grid-template-columns: 1fr; }.service-grid { grid-template-columns: repeat(2, 1fr); }.service-card { min-height: 125px; }.update-section { margin: 0 20px 56px; display: block; }.update-section > p { text-align: left; } }
+
+/* GamsGo readability and mobile overrides */
+.gamsgo-page { overflow-x: hidden; font-weight: 500; }
+.gamsgo-header nav a { font-weight: 800; }
+.gamsgo-lead { color: #3f5064; font-weight: 700; line-height: 1.85; }
+.gamsgo-updated { color: #52657a; font-weight: 700; }
+.coupon-card p { color: #4d6075; font-size: 14px; font-weight: 700; line-height: 1.7; }
+.coupon-actions button, .coupon-actions a { min-height: 48px; align-items: center; display: inline-flex; justify-content: center; font-size: 14px; font-weight: 900; }
+.coupon-card small { color: #65778b; font-size: 12px; font-weight: 700; }
+.content-section p { color: #43566b; font-weight: 600; line-height: 1.95; }
+.notice-box { color: #435a70; font-weight: 600; line-height: 1.85; }
+.step-card span { width: 34px; height: 34px; }
+.step-card p { font-weight: 700; line-height: 1.75; }
+.service-card > span { width: 36px; height: 36px; }
+.service-card strong { font-size: 15px; font-weight: 900; }
+.service-card small { color: #647589; font-weight: 600; }
+.service-card b { font-size: 12px; font-weight: 900; }
+.faq-list summary { min-height: 66px; color: #1e2d42; font-size: 17px; font-weight: 900; line-height: 1.5; }
+.faq-list details p { color: #4e6278; font-size: 15px; font-weight: 600; line-height: 1.9; }
+
+@media (max-width: 760px) {
+  .gamsgo-header { padding: 18px 16px 0; }
+  .gamsgo-header nav { width: calc(100vw - 32px); justify-content: flex-start; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .gamsgo-header nav::-webkit-scrollbar { display: none; }
+  .gamsgo-header nav a { min-height: 42px; display: inline-flex; align-items: center; flex: 0 0 auto; padding: 0 13px; font-size: 14px; }
+  .gamsgo-hero { margin: 28px 12px 52px; padding: 30px 20px; gap: 28px; }
+  .gamsgo-hero h1 { font-size: 36px; line-height: 1.22; }
+  .gamsgo-lead { font-size: 16px; }
+  .coupon-actions { flex-direction: column; }
+  .coupon-actions button, .coupon-actions a { width: 100%; text-align: center; }
+  .toc-grid a { min-height: 58px; font-size: 15px; font-weight: 800; }
+  .step-card { min-height: 0; display: flex; align-items: center; gap: 14px; padding: 17px; }
+  .step-card p { margin: 0; font-size: 15px; }
+  .service-grid { gap: 10px; }
+  .service-card { min-height: 136px; padding: 15px; }
+  .faq-list summary { min-height: 72px; padding: 17px 2px; font-size: 16px; }
+  .faq-list details p { margin-right: 8px; }
+  .gamsgo-footer { font-size: 13px; }
+}
+
+@media (max-width: 380px) {
+  .gamsgo-hero h1 { font-size: 32px; }
+  .coupon-code { font-size: 29px; letter-spacing: .08em; }
+  .gamsgo-header nav a { padding: 0 10px; }
+}
+
 .homepage-content .ad-container {
   min-height: 0;
 }
