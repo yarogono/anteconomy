@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 23 Aug 2026 13:36:47 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Aug 2026 14:26:25 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Sun, 23 Aug 2026 13:36:47 GMT</pubDate>
+        <pubDate>Sun, 23 Aug 2026 14:26:25 GMT</pubDate>
         <copyright><![CDATA[© anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -565,6 +565,28 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 23 Aug 2026 13:33:50 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[겜스고-할인-코드-쿠폰-gamsgo-프로모션]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/겜스고-할인-코드-쿠폰-gamsgo-프로모션</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/겜스고-할인-코드-쿠폰-gamsgo-프로모션</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sun, 23 Aug 2026 13:57:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[유튜브-프리미엄-겜스고-70-할인-코드-싸게-구독-결제-쿠폰]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/유튜브-프리미엄-겜스고-70-할인-코드-싸게-구독-결제-쿠폰</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/유튜브-프리미엄-겜스고-70-할인-코드-싸게-구독-결제-쿠폰</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sun, 23 Aug 2026 13:57:17 GMT</pubDate>
         </item>
     </channel>
 </rss>

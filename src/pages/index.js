@@ -1,613 +1,106 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Head from "next/head";
-import "@/styles/globals.css";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 import AdsenseAd from "../components/AdsenseAd";
 import AdsenseInit from "../components/AdsenseInit";
 
-export async function getStaticProps() {
-  return {
-    props: {
-      initialRate: "환율 정보를 불러오는 중...",
-    },
+const couponCode = "JMHR5";
+const gamsgoUrl = "https://www.gamsgo.com/partner/xV82m";
+const youtubeUrl = "/youtube-premium-gamsgo-discount";
+
+const services = [
+  { title: "유튜브 프리미엄", detail: "광고 없는 영상·음악 구독", href: youtubeUrl, icon: "▶", color: "bg-red-500" },
+  { title: "넷플릭스", detail: "영상 구독 할인 조건 확인", href: "/gamsgo-discount-code#services", icon: "N", color: "bg-slate-950" },
+  { title: "챗GPT", detail: "AI 구독 할인 정보 확인", href: "/gamsgo-discount-code#services", icon: "✦", color: "bg-indigo-500" },
+  { title: "포켓몬고·발로란트", detail: "게임 구독 할인 조건 확인", href: "/gamsgo-discount-code#services", icon: "◇", color: "bg-amber-500" },
+];
+
+const faqs = [
+  ["할인 코드는 어떻게 사용하나요?", "겜스고에서 원하는 서비스를 선택한 뒤 결제 단계에서 JMHR5를 입력하고 할인 금액이 반영되었는지 확인합니다."],
+  ["JMHR5는 모든 서비스에 적용되나요?", "서비스·기간·이용자 조건에 따라 적용 여부가 달라질 수 있습니다. 최종 결제 화면의 할인 금액을 기준으로 확인하세요."],
+  ["결제 전에 무엇을 확인해야 하나요?", "이용 기간, 계정 방식, 자동 갱신, 환불 조건과 서비스별 이용 제한을 서비스 안내에서 확인해야 합니다."],
+];
+
+export default function Home() {
+  const [copied, setCopied] = useState(false);
+  const copyCoupon = async () => {
+    try {
+      await navigator.clipboard.writeText(couponCode);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2200);
+    } catch { setCopied(false); }
   };
-}
 
-export default function Home({ initialRate }) {
-  const [amount, setAmount] = useState(1);
-  const [fromCurrency, setFromCurrency] = useState("USD");
-  const [toCurrency, setToCurrency] = useState("KRW");
-  const [rate, setRate] = useState(initialRate);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const fetchRate = async () => {
-      setIsLoading(true);
-      try {
-        const response = await fetch(
-          `https://m.search.naver.com/p/csearch/content/qapirender.nhn?key=calculator&pkid=141&q=%ED%99%98%EC%9C%A8&where=m&u1=keb&u6=standardUnit&u7=0&u3=${fromCurrency}&u4=${toCurrency}&u8=down&u2=${amount}`
-        );
-        const data = await response.json();
-        setRate(data?.country[1].subValue || "환율 정보를 불러올 수 없습니다.");
-      } catch (error) {
-        console.error("환율 정보를 불러오는데 실패했습니다:", error);
-        setRate("환율 정보를 불러올 수 없습니다.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchRate();
-  }, [amount, fromCurrency, toCurrency]);
+  const faqSchema = faqs.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  }));
 
   return (
     <>
-      <AdsenseInit />
       <Head>
-        <title>실시간 환율 계산기 및 글로벌 금융 시장 분석</title>
-        <meta
-          name="description"
-          content="실시간 환율 계산과 함께 글로벌 금융 시장, 주식, 부동산, 가상화폐 등 다양한 투자 분야의 전문적인 분석 정보를 제공합니다."
-        />
-        <meta
-          name="keywords"
-          content="환율 계산기, 실시간 환율, 금융 시장 분석, 주식 투자, 부동산 투자, 가상화폐, ESG 투자, 글로벌 경제"
-        />
-
-        {/* 구글 서치 콘솔 */}
-        <meta
-          name="google-site-verification"
-          content="UTD90ZX-CkWyU8r9HYnHm8cLOIkl4586zXCqWdduKUQ"
-        />
-        {/* 네이버 서치 어드바이저 */}
-        <meta
-          name="naver-site-verification"
-          content="bddc3ddea95360ac9a2b5d8b5f7d059be0a74a17"
-        />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://anteconomy.co.kr/" />
-        <meta
-          property="og:title"
-          content="실시간 환율 계산기 및 글로벌 금융 시장 분석"
-        />
-        <meta
-          property="og:description"
-          content="실시간 환율 계산과 함께 글로벌 금융 시장, 주식, 부동산, 가상화폐 등 다양한 투자 분야의 전문적인 분석 정보를 제공합니다."
-        />
-        <meta
-          property="og:image"
-          content="https://anteconomy.co.kr/og-image.jpg"
-        />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://anteconomy.co.kr/" />
-        <meta
-          property="twitter:title"
-          content="실시간 환율 계산기 및 글로벌 금융 시장 분석"
-        />
-        <meta
-          property="twitter:description"
-          content="실시간 환율 계산과 함께 글로벌 금융 시장, 주식, 부동산, 가상화폐 등 다양한 투자 분야의 전문적인 분석 정보를 제공합니다."
-        />
-        <meta
-          property="twitter:image"
-          content="https://anteconomy.co.kr/og-image.jpg"
-        />
-
-        {/* Additional SEO tags */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="anteconomy" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>겜스고 할인 코드 JMHR5 | 유튜브 프리미엄·넷플릭스·챗GPT 할인</title>
+        <meta name="description" content="겜스고 할인 코드 JMHR5를 복사하고 유튜브 프리미엄, 넷플릭스, 챗GPT 등 인기 구독 서비스의 할인 정보를 확인하세요." />
+        <meta name="keywords" content="겜스고 할인 코드, 겜스고 쿠폰, 유튜브 프리미엄 겜스고, 넷플릭스 겜스고, 챗GPT 겜스고" />
         <link rel="canonical" href="https://anteconomy.co.kr/" />
-
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="겜스고 할인 코드 JMHR5" />
+        <meta property="og:description" content="JMHR5 할인 코드를 복사하고 인기 구독 서비스의 겜스고 할인 정보를 확인하세요." />
+        <meta property="og:url" content="https://anteconomy.co.kr/" />
+        <meta property="og:image" content="https://anteconomy.co.kr/og-image.svg" />
+        <link rel="icon" href="/gamsgo-favicon.svg" type="image/svg+xml" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqSchema,
+        }) }} />
       </Head>
-      <div className="homepage-shell min-h-screen bg-slate-50 text-slate-900">
-        {/* 환율 계산기 섹션 */}
-        <section className="homepage-hero px-4 py-14 sm:py-20">
-          <div className="mx-auto flex max-w-6xl flex-col items-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-100">
-              Ant Economy
-            </p>
-            <h1 className="mb-4 text-center text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              실시간 환율 계산기
-            </h1>
-            <p className="mb-9 max-w-xl text-center text-base leading-7 text-white/90 sm:text-lg">
-              주요 통화의 환율을 빠르게 확인하고 원하는 금액으로 바로 계산해보세요.
-            </p>
-            <div className="w-full max-w-2xl rounded-3xl bg-white p-5 text-slate-900 shadow-2xl shadow-emerald-950/20 sm:p-8">
-              <label className="mb-2 block text-base font-semibold text-slate-700">금액</label>
-            <input
-              type="number"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              className="mb-5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-lg outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
-            />
-            <div className="mb-5 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
-              <select
-                value={fromCurrency}
-                onChange={(e) => setFromCurrency(e.target.value)}
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-base font-medium outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
-              >
-                <option value="USD">🇺🇸 USD</option>
-                <option value="KRW">🇰🇷 KRW</option>
-                <option value="EUR">🇪🇺 EUR</option>
-                <option value="JPY">🇯🇵 JPY</option>
-                <option value="CNY">🇨🇳 CNY</option>
-              </select>
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-lg font-bold text-emerald-700">→</span>
-              <select
-                value={toCurrency}
-                onChange={(e) => setToCurrency(e.target.value)}
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-base font-medium outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
-              >
-                <option value="KRW">🇰🇷 KRW</option>
-                <option value="USD">🇺🇸 USD</option>
-                <option value="EUR">🇪🇺 EUR</option>
-                <option value="JPY">🇯🇵 JPY</option>
-                <option value="CNY">🇨🇳 CNY</option>
-              </select>
-            </div>
-            <div className="rounded-2xl bg-emerald-50 px-4 py-4 text-xl font-bold text-emerald-900">
-              {isLoading ? (
-                <p className="text-gray-500">환율 정보를 불러오는 중...</p>
-              ) : (
-                <p>{rate}</p>
-              )}
-            </div>
-          </div>
-        </div>
-        </section>
+      <AdsenseInit />
+      <div className="homepage-shell min-h-screen text-slate-900">
+        <header className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+          <Link href="/" className="text-xl font-black tracking-tight text-slate-950">겜스고 할인 <span className="text-red-500">쿠폰 가이드</span></Link>
+          <nav className="flex gap-5 overflow-x-auto whitespace-nowrap text-sm font-bold text-slate-700" aria-label="겜스고 할인 메뉴">
+            <a href="#coupon">할인 코드</a><a href="#services">인기 서비스</a><a href="#how-to-use">사용 방법</a><a href="#faq">자주 묻는 질문</a>
+          </nav>
+        </header>
 
-        <div className="homepage-content">
-          <AdsenseAd slot="homepage-top" />
-
-          <AdsenseInit />
-
-        {/* 주요 금융 시장 분석 섹션 */}
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
-          <div className="mb-8 flex items-end justify-between gap-4">
+        <main>
+          <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
             <div>
-              <p className="mb-2 text-sm font-semibold text-emerald-700">금융 도구 모음</p>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900">주요 금융 시장 분석</h2>
+              <p className="mb-4 text-sm font-black tracking-[0.18em] text-red-500">지금 바로 할인받기</p>
+              <h1 className="text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-6xl">겜스고 할인 코드<br /><span className="text-red-500">JMHR5로 구독료 아끼기</span></h1>
+              <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-slate-600">유튜브 프리미엄, 넷플릭스, 챗GPT 등 인기 구독 서비스를 확인하고, 결제 전에 프로모션 코드 JMHR5를 적용해보세요.</p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-red-500 px-7 py-4 text-center font-black text-white shadow-lg shadow-red-200">겜스고 할인 링크 바로가기</a><a href="#services" className="rounded-full bg-white px-7 py-4 text-center font-black text-slate-900 ring-1 ring-slate-200">할인 정보 먼저 보기</a></div>
+              <p className="mt-4 text-sm font-bold text-slate-500">서비스·기간·이용 조건에 따라 할인 적용 결과가 달라질 수 있습니다.</p>
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">실시간 금 시세</h3>
-              <p className="mb-4">
-                국제 금 시세와 차트를 실시간으로 제공하며, 투자 전략을
-                분석합니다.
-              </p>
-              <Link
-                href="/gold-price"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                실시간 금 시세 보러가기
-              </Link>
+            <div id="coupon" className="rounded-3xl bg-white p-7 shadow-2xl ring-1 ring-slate-200 sm:p-9">
+              <span className="text-sm font-black text-slate-500">현재 프로모션 코드</span>
+              <strong className="my-4 block text-5xl font-black tracking-widest text-red-500">{couponCode}</strong>
+              <p className="font-semibold leading-7 text-slate-600">코드를 복사한 뒤 겜스고 할인 링크로 이동해 원하는 서비스의 최종 할인 금액을 확인하세요.</p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2"><button type="button" onClick={copyCoupon} className="rounded-full bg-red-500 px-5 py-4 font-black text-white">{copied ? "복사 완료 ✓" : "JMHR5 코드 복사"}</button><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-slate-950 px-5 py-4 text-center font-black text-white">할인 정보 보러가기</a></div>
+              <small className="mt-4 block font-semibold text-slate-500">할인 금액은 결제 화면에서 최종 확인하세요.</small>
             </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">적금 이자 계산기</h3>
-              <p className="mb-4">
-                단리, 복리 방식의 이자 계산과 비과세, 세금우대 등 세금 공제를
-                고려한 정확한 수령액을 계산해보세요.
-              </p>
-              <Link
-                href="/savings-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                적금 이자 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">예금 이자 계산기</h3>
-              <p className="mb-4">
-                예치금액, 기간, 이자율에 따른 수익을 계산하고 세금까지 고려한
-                최종 수령액을 확인하세요.
-              </p>
-              <Link
-                href="/deposit-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                예금 이자 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">퍼센트 계산기</h3>
-              <p className="mb-4">
-                백분율(%), 천분율(‰), 만분율(‱)을 쉽고 정확하게 계산해보세요.
-              </p>
-              <Link
-                href="/percent-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                퍼센트 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">날짜 계산기</h3>
-              <p className="mb-4">
-                날짜 간의 일수를 계산하고, 특정 날짜로부터 며칠 전/후의 날짜를
-                계산해보세요.
-              </p>
-              <Link
-                href="/date-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                날짜 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">육아휴직 급여 계산기</h3>
-              <p className="mb-4">
-                육아휴직 기간 동안 받을 수 있는 급여를 계산하고 6+6
-                부모육아휴직제 혜택도 확인해보세요.
-              </p>
-              <Link
-                href="/parental-leave-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                육아휴직 급여 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">연봉 실수령액 계산기</h3>
-              <p className="mb-4">
-                연봉에서 세금과 4대 보험료를 공제한 실수령액을 계산해보세요.
-              </p>
-              <Link
-                href="/annual-salary-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                연봉 실수령액 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">중도상환수수료 계산기</h3>
-              <p className="mb-4">
-                대출 조기상환 시 발생하는 수수료를 계산해보세요. 금융기관과 상품별
-                수수료율을 확인하여 예상 비용을 계산할 수 있습니다.
-              </p>
-              <Link
-                href="/prepayment-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                중도상환수수료 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">실업급여 계산기</h3>
-              <p className="mb-4">
-                실업급여(구직급여) 예상 금액을 계산해보세요. 퇴직 전
-                임금과 나이, 고용보험 가입기간에 따른 실업급여 모의계산이
-                가능합니다.
-              </p>
-              <Link
-                href="/unemployment-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                실업급여 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">연차 수당 계산기</h3>
-              <p className="mb-4">
-                미사용 연차 수당을 계산해보세요. 근속기간과 급여,
-                사용한 연차 일수를 입력하여 받을 수 있는 연차 수당을 확인하세요.
-              </p>
-              <Link
-                href="/leave-allowance-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                연차 수당 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">퇴직금 계산기</h3>
-              <p className="mb-4">
-                퇴직금을 계산해보세요. 근속기간과 급여를 입력하여
-                받을 수 있는 퇴직금을 확인하세요.
-              </p>
-              <Link
-                href="/severance-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                퇴직금 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-2">휴업수당 계산기</h3>
-              <p className="mb-4">
-                휴업 기간과 이전 3개월 임금을 입력하여 받을 수 있는 휴업수당을
-                계산해보세요.
-              </p>
-              <Link
-                href="/layoff-allowance-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                휴업수당 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">연차 계산기</h3>
-              <p className="mb-4">
-                입사일과 출근율을 입력하여 받을 수 있는 연차를 계산해보세요.
-              </p>
-              <Link
-                href="/annual-leave-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                연차 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">세후 월급 계산기</h3>
-              <p className="mb-4">
-                세후 월급을 계산해보세요. 4대 보험과 세금을 고려한
-                실수령액을 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/after-tax-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                세후 월급 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">
-                마이너스통장 이자 계산기
-              </h3>
-              <p className="mb-4">
-                마이너스통장(한도대출)의 이자를 간편하게 계산해보세요. 대출금액,
-                금리, 기간에 따른 이자를 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/loan-interest-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                이자 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">대출 이자 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                원리금균등상환, 원금균등상환, 만기일시상환 방식의 대출 이자를
-                계산해보세요.
-              </p>
-              <Link
-                href="/loan-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                대출 이자 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">자동차 할부 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                차량 구매 시 할부금액과 이자를 계산해보세요. 계약금, 할부 개월,
-                이자율을 입력하여 월납금액을 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/car-loan-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                자동차 할부 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">DSR 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                주택담보대출, 신용대출, 기타대출의 원리금상환액을 고려하여 DSR을
-                계산해보세요. 연소득, 월소득, 각종 대출의 월 상환액을 입력하여
-                총부채원리금상환비율을 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/dsr-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                DSR 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">LTV/DTI 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                주택가격, 대출금액, 소득, 부채를 고려하여 LTV와 DTI를
-                계산해보세요. 주택담보대출 한도를 예측하고 대출 가능성을 확인할
-                수 있습니다.
-              </p>
-              <Link
-                href="/ltv-dti-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                LTV/DTI 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">전세 대출 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                전세금액, 보증금, 대출금액, 이자율을 고려하여 전세 대출의 월
-                상환액을 계산해보세요. 전세 대출 한도를 예측하고 대출 가능성을
-                확인할 수 있습니다.
-              </p>
-              <Link
-                href="/jeonse-loan-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                전세 대출 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">월세 대출 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                월세 보증금, 대출금액, 이자율을 고려하여 월세 대출의 월 상환액을
-                계산해보세요. 월세 대출 한도를 예측하고 대출 가능성을 확인할 수
-                있습니다.
-              </p>
-              <Link
-                href="/monthly-rent-loan-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                월세 대출 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">복리 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                원금, 이자율, 기간을 입력하여 복리로 계산된 최종 금액과 이자를
-                계산해보세요. 복리 주기를 선택하여 다양한 복리 계산이
-                가능합니다.
-              </p>
-              <Link
-                href="/compound-interest-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                복리 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">평단가 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                주식, 코인 등의 평균 매수 단가(평단가)를 계산해보세요. 매수
-                금액과 수량을 입력하여 정확한 평단가를 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/average-price-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                평단가 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">대출 상환 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                원리금균등상환, 원금균등상환, 만기일시상환 방식의 대출 상환액을
-                계산해보세요. 대출금액, 기간, 이자율을 입력하여 상환 스케줄을
-                확인할 수 있습니다.
-              </p>
-              <Link
-                href="/loan-repayment-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                대출 상환 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">학점 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                과목별 학점과 성적을 입력하여 평균 평점(GPA)을 계산해보세요. 각
-                과목의 이수 학점과 성적을 고려한 정확한 학점 계산이 가능합니다.
-              </p>
-              <Link
-                href="/gpa-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                학점 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">자동차 연비 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                주행거리와 연료 소비량을 입력하여 자동차의 연비와 연료비용을
-                계산해보세요. 휘발유, 경유, LPG 등 다양한 연료 종류의 연비를
-                계산할 수 있습니다.
-              </p>
-              <Link
-                href="/fuel-efficiency-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                연비 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">칼로리 소모량 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                운동 종류, 운동 시간, 체중을 입력하여 소모된 칼로리를
-                계산해보세요. 걷기, 달리기, 수영 등 다양한 운동의 칼로리
-                소모량을 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/calorie-burn-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                칼로리 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">BMI & 체지방률 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                키, 체중, 성별, 나이를 입력하여 BMI(신체질량지수)와 체지방률을
-                계산해보세요. 정상 범위와 건강 상태를 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/bmi-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                BMI 계산하기
-              </Link>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">전기 요금 계산기</h3>
-              <p className="text-sm text-gray-300 mb-4">
-                전력 사용량을 입력하여 예상 전기 요금을 계산해보세요. 기본요금,
-                전력량요금, 기후환경요금, 연료비조정액 등을 포함한 상세 요금
-                내역을 확인할 수 있습니다.
-              </p>
-              <Link
-                href="/electricity-bill-calculator"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-colors"
-              >
-                전기 요금 계산하기
-              </Link>
-            </div>
-          </div>
-        </div>
+          </section>
 
-        <AdsenseAd slot="homepage-middle" />
+          <div className="mx-auto max-w-6xl px-5"><AdsenseAd slot="homepage-top" /></div>
 
-        {/* 최신 금융 뉴스 섹션 */}
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
-          <p className="mb-2 text-sm font-semibold text-emerald-700">인사이트</p>
-          <h2 className="mb-8 text-3xl font-bold tracking-tight text-slate-900">글로벌 금융 동향</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">금융 정책 분석</h3>
-              <p className="mb-4">
-                주요국의 금융 정책과 그 영향에 대한 심층 분석을 제공합니다.
-              </p>
-              <a
-                href="/global-financial-policies"
-                className="text-green-300 hover:text-green-100"
-              >
-                정책 분석 보기 →
-              </a>
-            </div>
-            <div className="bg-green-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">산업 전망</h3>
-              <p className="mb-4">주요 산업별 전망과 투자 기회를 분석합니다.</p>
-              <a
-                href="/global-industry-outlook"
-                className="text-green-300 hover:text-green-100"
-              >
-                산업 분석 보기 →
-              </a>
-            </div>
-          </div>
-        </div>
+          <section id="services" className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
+            <p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">인기 구독 서비스</p>
+            <h2 className="text-3xl font-black tracking-tight sm:text-4xl">어떤 서비스의 할인 정보를 찾으시나요?</h2>
+            <p className="mt-4 max-w-2xl font-semibold leading-7 text-slate-600">원하는 서비스를 선택하면 할인 코드와 이용 조건을 확인할 수 있습니다. 바로 확인하려면 할인 링크 바로가기 버튼을 이용하세요.</p>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{services.map((service) => <article key={service.title} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><span className={`grid h-11 w-11 place-items-center rounded-xl text-xl font-black text-white ${service.color}`}>{service.icon}</span><h3 className="mt-5 text-xl font-black">{service.title}</h3><p className="mt-2 min-h-12 text-sm font-semibold leading-6 text-slate-600">{service.detail}</p><div className="mt-5 flex flex-col gap-2"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-red-500 px-4 py-3 text-center text-sm font-black text-white">할인 링크 바로가기</a><Link href={service.href} className="rounded-full px-4 py-3 text-center text-sm font-black text-slate-700 ring-1 ring-slate-200">상세 조건 확인</Link></div></article>)}</div>
+          </section>
 
-        <AdsenseAd slot="homepage-bottom" />
+          <section className="bg-slate-950 px-5 py-14 text-white sm:py-20"><div className="mx-auto max-w-6xl"><p className="mb-3 text-sm font-black tracking-[0.18em] text-red-400">겜스고 할인 혜택</p><h2 className="text-3xl font-black sm:text-4xl">할인 정보를 확인하고 원하는 서비스를 선택하세요</h2><div className="mt-8 grid gap-5 md:grid-cols-3"><div className="rounded-2xl bg-white/10 p-6"><h3 className="text-xl font-black">서비스별 할인 확인</h3><p className="mt-3 font-semibold leading-7 text-white/75">관심 있는 서비스의 할인 코드와 이용 기간별 조건을 확인하세요.</p></div><div className="rounded-2xl bg-white/10 p-6"><h3 className="text-xl font-black">프로모션 코드 적용</h3><p className="mt-3 font-semibold leading-7 text-white/75">결제 전 JMHR5를 입력하고 할인 금액이 실제로 반영되는지 확인하세요.</p></div><div className="rounded-2xl bg-white/10 p-6"><h3 className="text-xl font-black">이용 조건 확인</h3><p className="mt-3 font-semibold leading-7 text-white/75">자동 갱신, 환불, 계정 방식과 서비스별 제한을 확인하세요.</p></div></div><div className="mt-9 text-center"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="inline-block rounded-full bg-red-500 px-8 py-4 font-black text-white shadow-lg shadow-red-950">JMHR5 할인 정보 확인하기</a></div></div></section>
 
-        {/* 푸터 섹션 */}
-        <footer className="bg-slate-900 py-8 text-center text-slate-300">
-          <p className="text-sm">© 2026 안트이코노미. All rights reserved.</p>
-          <p className="text-sm mt-2">
-            실시간 금융 시장 분석과 투자 정보를 제공합니다.
-          </p>
-        </footer>
-      </div>
+          <section id="how-to-use" className="mx-auto max-w-6xl px-5 py-14 sm:py-20"><p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">간단한 확인 순서</p><h2 className="text-3xl font-black sm:text-4xl">겜스고 할인 코드 사용 방법</h2><div className="mt-8 grid gap-5 md:grid-cols-3"><div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><b className="text-3xl text-red-500">01</b><h3 className="mt-5 text-xl font-black">코드 복사</h3><p className="mt-3 font-semibold leading-7 text-slate-600">위의 JMHR5 코드 복사 버튼을 누릅니다.</p></div><div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><b className="text-3xl text-red-500">02</b><h3 className="mt-5 text-xl font-black">서비스 선택</h3><p className="mt-3 font-semibold leading-7 text-slate-600">겜스고 할인 링크에서 원하는 서비스와 기간을 확인합니다.</p></div><div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><b className="text-3xl text-red-500">03</b><h3 className="mt-5 text-xl font-black">할인 조건 확인</h3><p className="mt-3 font-semibold leading-7 text-slate-600">코드를 입력하고 할인·환불·갱신 조건을 확인한 뒤 결제합니다.</p></div></div><div className="mt-8 text-center"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="inline-block rounded-full bg-slate-950 px-8 py-4 font-black text-white">겜스고 할인 링크 바로가기</a></div></section>
+
+          <section id="notice" className="mx-auto max-w-6xl px-5 pb-14 sm:pb-20"><div className="rounded-3xl bg-red-50 p-7 ring-1 ring-red-100 sm:p-10"><h2 className="text-3xl font-black">결제 전 꼭 확인하세요</h2><div className="mt-6 grid gap-5 md:grid-cols-3"><div><h3 className="font-black">서비스·기간</h3><p className="mt-2 font-semibold leading-7 text-slate-700">서비스와 구독 기간에 따라 가격과 제공 범위가 달라질 수 있습니다.</p></div><div><h3 className="font-black">계정 이용 방식</h3><p className="mt-2 font-semibold leading-7 text-slate-700">개인 계정, 가족 그룹, 공유형 등 서비스별 이용 방식을 확인하세요.</p></div><div><h3 className="font-black">환불·갱신</h3><p className="mt-2 font-semibold leading-7 text-slate-700">자동 갱신과 환불 기준은 결제 전 공식 서비스 안내를 확인하세요.</p></div></div></div></section>
+
+          <section id="faq" className="mx-auto max-w-6xl px-5 pb-14 sm:pb-20"><p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">자주 묻는 질문</p><h2 className="text-3xl font-black tracking-tight sm:text-4xl">겜스고 할인 코드 FAQ</h2><div className="mt-7 divide-y divide-slate-200 rounded-2xl bg-white px-6 shadow-sm ring-1 ring-slate-200">{faqs.map(([question, answer]) => <details className="py-5" key={question}><summary className="cursor-pointer text-lg font-black">{question}</summary><p className="mt-3 font-semibold leading-7 text-slate-600">{answer}</p></details>)}</div></section>
+        </main>
+        <footer className="bg-slate-950 px-5 py-10 text-center text-sm font-semibold leading-7 text-white/60"><strong className="text-lg text-white">겜스고 할인 쿠폰 가이드</strong><p className="mx-auto mt-3 max-w-2xl">본 페이지에는 겜스고 제휴 링크가 포함되어 있습니다. 서비스·할인·이용 조건은 공식 결제 화면을 기준으로 확인하세요.</p></footer>
       </div>
     </>
   );

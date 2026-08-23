@@ -156,6 +156,27 @@ body {
 .youtube-price-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr 1fr; align-items: center; min-height: 62px; padding: 0 18px; border-bottom: 1px solid #f5e6e6; gap: 12px; color: #4a5c70; font-size: 14px; }.youtube-price-row:last-child { border-bottom: 0; }.youtube-price-row strong { color: #1e2d42; font-size: 17px; font-weight: 900; }.youtube-price-row em { color: #db3c3c; font-style: normal; font-weight: 900; }.youtube-price-head { min-height: 44px; color: #9b5c62; background: #fff7f7; font-size: 12px; font-weight: 900; }.youtube-price-hook { margin: 14px 0; padding: 17px 19px; border-left: 4px solid #e74747; color: #56687b !important; background: #fff7f7; font-size: 14px !important; }.youtube-price-hook strong { color: #d93333; font-size: 18px; }.youtube-price-link { display: inline-flex; min-height: 46px; align-items: center; padding: 0 18px; border-radius: 999px; color: #fff; background: #e53939; font-size: 13px; font-weight: 900; text-decoration: none; }
 @media (max-width: 760px) { .youtube-price-row { grid-template-columns: 1.2fr 1fr 1fr; padding: 0 12px; gap: 7px; font-size: 12px; }.youtube-price-row b:last-child, .youtube-price-row em { display: none; }.youtube-price-row strong { font-size: 14px; }.youtube-price-head b:nth-child(4) { display: none; }.youtube-price-link { width: 100%; justify-content: center; box-sizing: border-box; } }
 
+/* Shared mobile safety rules for all pages */
+html, body, #__next { width: 100%; min-width: 0; }
+body { overflow-x: hidden; }
+img, video, iframe, svg { max-width: 100%; }
+button, input, select, textarea { max-width: 100%; font: inherit; }
+pre, code { max-width: 100%; overflow-x: auto; }
+
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  main, header, footer { max-width: 100%; }
+  table { min-width: 560px; }
+  .overflow-x-auto { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .ad-container { max-width: 100%; overflow: hidden; }
+  .ad-container ins { max-width: 100%; }
+  input, select, textarea { min-height: 44px; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button { min-height: 44px; }
+  .youtube-price-table { overflow-x: auto; }
+  .youtube-price-row { min-width: 360px; }
+}
+
 .homepage-content .ad-container {
   min-height: 0;
 }
