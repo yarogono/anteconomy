@@ -44,6 +44,8 @@ export default function GamsgoDiscountCode() {
     <>
       <Head>
         <title>겜스고 할인 코드 JMHR5 | GamsGo 쿠폰·프로모션</title>
+        <link rel="icon" href="/gamsgo-favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/gamsgo-favicon.svg" type="image/svg+xml" />
         <meta name="description" content="겜스고 할인 코드 JMHR5와 GamsGo 쿠폰 사용 방법을 확인하세요. 챗GPT, 유튜브, 넷플릭스 등 상품별 할인 적용 조건과 결제 전 주의사항을 안내합니다." />
         <link rel="canonical" href="https://anteconomy.co.kr/겜스고-할인-코드-쿠폰-gamsgo-프로모션" />
         <meta property="og:title" content="겜스고 할인 코드 JMHR5 | GamsGo 쿠폰·프로모션" />

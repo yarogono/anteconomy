@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 22 Aug 2026 14:38:09 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Aug 2026 13:36:47 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Sat, 22 Aug 2026 14:38:09 GMT</pubDate>
+        <pubDate>Sun, 23 Aug 2026 13:36:47 GMT</pubDate>
         <copyright><![CDATA[© anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -278,7 +278,7 @@
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
-            <pubDate>Sat, 22 Aug 2026 14:35:44 GMT</pubDate>
+            <pubDate>Sun, 23 Aug 2026 12:47:49 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[global-commodities-market]]></title>
@@ -554,6 +554,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Thu, 20 Aug 2026 14:26:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[youtube-premium-gamsgo-discount]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/youtube-premium-gamsgo-discount</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/youtube-premium-gamsgo-discount</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Sun, 23 Aug 2026 13:33:50 GMT</pubDate>
         </item>
     </channel>
 </rss>

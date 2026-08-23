@@ -32,6 +32,7 @@ export default function SeoDefaults() {
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const isCalculator = canonicalPath.includes("calculator");
   const isGamsgo = canonicalPath.includes("gamsgo-discount-code") || canonicalPath.includes("겜스고-할인-코드");
+  const isYoutubeGamsgo = canonicalPath.includes("youtube-premium-gamsgo-discount") || canonicalPath.includes("유튜브-프리미엄-겜스고");
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -83,7 +84,7 @@ export default function SeoDefaults() {
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: isGamsgo ? "겜스고 할인 코드" : "계산기 및 금융 정보",
+                  name: isYoutubeGamsgo ? "유튜브 프리미엄 겜스고 할인 코드" : (isGamsgo ? "겜스고 할인 코드" : "계산기 및 금융 정보"),
                   item: canonicalUrl,
                 },
               ]

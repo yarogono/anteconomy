@@ -10,8 +10,9 @@ module.exports = {
   sitemapSize: 5000,
   additionalPaths: async (config) => [
     await config.transform(config, "/겜스고-할인-코드-쿠폰-gamsgo-프로모션"),
+    await config.transform(config, "/유튜브-프리미엄-겜스고-70-할인-코드-싸게-구독-결제-쿠폰"),
   ],
   // Non-finance experiments are excluded until they have complete SEO metadata.
-  exclude: ["/api/*", "/drama/*", "/gamsgo-discount-code"],
+  exclude: ["/api/*", "/drama/*", "/gamsgo-discount-code", "/youtube-premium-gamsgo-discount"],
   // ...other options
 };
