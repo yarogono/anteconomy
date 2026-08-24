@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function useMDXComponents(components) {
   return {
     h1: ({ children }) => (
@@ -31,6 +33,7 @@ export function useMDXComponents(components) {
           sizes="100vw"
           className="max-w-full h-auto"
           {...props}
+          alt={props.alt || ""}
           width={props.width || 800}
           height={props.height || 450}
         />

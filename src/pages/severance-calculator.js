@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function SeveranceCalculator() {
   const [startDate, setStartDate] = useState("");
@@ -304,7 +303,6 @@ export default function SeveranceCalculator() {
             </div>
           </div>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

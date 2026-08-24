@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function SalaryTable2025() {
   const [searchSalary, setSearchSalary] = useState("");
@@ -1306,7 +1305,6 @@ export default function SalaryTable2025() {
             </div>
           </div>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

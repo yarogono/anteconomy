@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function DSRCalculator() {
   const [annualIncome, setAnnualIncome] = useState("");
@@ -343,7 +342,6 @@ export default function DSRCalculator() {
             </section>
           </main>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

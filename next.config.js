@@ -15,7 +15,6 @@ const nextConfig = {
         hostname: "antblog-images-bucket.s3.ap-northeast-2.amazonaws.com",
       },
     ],
-    unoptimized: true,
   },
   async rewrites() {
     return [

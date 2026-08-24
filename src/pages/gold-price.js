@@ -1,17 +1,11 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import axios from "axios";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
-import GoldPriceChart from "../components/GoldPriceChart";
-import CoupangBanner from "../components/CoupangBanner";
+import dynamic from "next/dynamic";
+
+const GoldPriceHistoryChart = dynamic(() => import("../components/GoldPriceHistoryChart"), {
+  ssr: false,
+  loading: () => <div className="flex h-full items-center justify-center text-gray-500">차트를 불러오는 중...</div>,
+});
 
 export default function GoldPrice() {
   const [goldPrice, setGoldPrice] = useState(null);
@@ -54,20 +48,17 @@ export default function GoldPrice() {
 
     const fetchExchangeRate = async () => {
       try {
-        const response = await axios.get(
-          "https://m.search.naver.com/p/csearch/content/qapirender.nhn?key=calculator&pkid=141&q=%ED%99%98%EC%9C%A8&where=m&u1=keb&u6=standardUnit&u7=0&u3=USD&u4=KRW&u8=down&u2=1"
-        );
-        const rate = response.data?.country[1].subValue;
-        if (rate) {
-          setExchangeRate(parseFloat(rate.replace(/,/g, "")));
-        }
+        const response = await fetch("/api/exchange-rates");
+        if (!response.ok) throw new Error("환율 API 응답 오류");
+        const data = await response.json();
+        setExchangeRate(data.rates?.USD ?? null);
       } catch (error) {
         console.error("환율 정보를 불러오는데 실패했습니다:", error);
       }
     };
 
     fetchExchangeRate();
-    const exchangeRateTimer = setInterval(fetchExchangeRate, 60000);
+    const exchangeRateTimer = setInterval(fetchExchangeRate, 5 * 60 * 1000);
 
     return () => clearInterval(exchangeRateTimer);
   }, [mounted]);
@@ -78,13 +69,12 @@ export default function GoldPrice() {
     const fetchGoldPrice = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("/api/gold-price");
-
-        if (!response.data) {
+        const response = await fetch("/api/gold-price");
+        if (!response.ok) {
           throw new Error("Invalid API response format");
         }
 
-        const data = response.data;
+        const data = await response.json();
         setGoldPrice(data);
         setChartData((prevData) => {
           const newData = [
@@ -108,42 +98,8 @@ export default function GoldPrice() {
         setLoading(false);
       } catch (err) {
         console.error("금 시세를 불러오는데 실패했습니다:", err);
-        if (err.response) {
-          console.log("Error Response:", err.response.data);
-          console.log("Error Status:", err.response.status);
-        }
-
-        const sampleData = {
-          price: "2023.50",
-          change: "-12.30",
-          changePercent: "-0.60",
-          high: "2035.80",
-          low: "2020.40",
-          timestamp: new Date().toISOString(),
-          volume: 145230,
-        };
-
-        setGoldPrice(sampleData);
-        setChartData((prevData) => {
-          const newData = [
-            ...prevData,
-            {
-              time: new Date().toLocaleTimeString(),
-              price: parseFloat(sampleData.price),
-              priceKRW: exchangeRate
-                ? parseFloat(sampleData.price) * exchangeRate
-                : null,
-            },
-          ];
-
-          if (newData.length > 60) {
-            return newData.slice(-60);
-          }
-          return newData;
-        });
-        setError(
-          `실시간 데이터를 불러올 수 없어 샘플 데이터를 표시합니다. (${err.message})`
-        );
+        setGoldPrice(null);
+        setError("실시간 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.");
         setLoading(false);
       }
     };
@@ -268,61 +224,11 @@ export default function GoldPrice() {
               </div>
             </div>
 
-            <CoupangBanner />
 
             <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
               <h2 className="text-2xl font-bold mb-6">실시간 차트</h2>
               <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={chartData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="time" />
-                    <YAxis
-                      yAxisId="left"
-                      orientation="left"
-                      domain={["auto", "auto"]}
-                      tickFormatter={(value) =>
-                        `₩${(value / 1000).toFixed(0)}K`
-                      }
-                    />
-                    <YAxis
-                      yAxisId="right"
-                      orientation="right"
-                      domain={["auto", "auto"]}
-                      tickFormatter={(value) => `$${value.toFixed(2)}`}
-                    />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: "white",
-                        border: "none",
-                        borderRadius: "0.5rem",
-                        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
-                      }}
-                      formatter={(value, name) => [
-                        name === "price"
-                          ? `₩${value.toLocaleString()}`
-                          : `$${value.toFixed(2)}`,
-                        name === "price" ? "원" : "달러",
-                      ]}
-                    />
-                    <Line
-                      yAxisId="left"
-                      type="monotone"
-                      dataKey="priceKRW"
-                      stroke="#10b981"
-                      strokeWidth={2}
-                      dot={false}
-                    />
-                    <Line
-                      yAxisId="right"
-                      type="monotone"
-                      dataKey="price"
-                      stroke="#2563eb"
-                      strokeWidth={2}
-                      dot={false}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
+                <GoldPriceHistoryChart data={chartData} />
               </div>
             </div>
 
@@ -360,7 +266,6 @@ export default function GoldPrice() {
                 </div>
               </div>
 
-              <CoupangBanner />
 
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold mb-4">투자 정보</h2>

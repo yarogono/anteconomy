@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function JeonseLoanCalculator() {
   const [depositAmount, setDepositAmount] = useState("");
@@ -332,7 +331,6 @@ export default function JeonseLoanCalculator() {
             </section>
           </main>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

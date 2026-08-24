@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function AnnualLeaveCalculator() {
   const [startDate, setStartDate] = useState("");
@@ -233,7 +232,6 @@ export default function AnnualLeaveCalculator() {
             </div>
           </div>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

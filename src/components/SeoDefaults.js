@@ -23,6 +23,10 @@ const PAGES_WITHOUT_LOCAL_CANONICAL = new Set([
   "/savings-calculator",
   "/severance-calculator",
   "/unemployment-calculator",
+  "/겜스고-할인-코드-적용-안됨",
+  "/넷플릭스-겜스고-할인-코드",
+  "/넷플릭스-요금제-할인-가격-겜스고-쿠폰-코드",
+  "/유튜브-프리미엄-겜스고-70-할인-코드-싸게-구독-결제-쿠폰",
 ]);
 
 export default function SeoDefaults() {

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function LayoffAllowanceCalculator() {
   const [startDate, setStartDate] = useState("");
@@ -288,7 +287,6 @@ export default function LayoffAllowanceCalculator() {
             </div>
           </div>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function PercentCalculator() {
   const [percentValue, setPercentValue] = useState("");
@@ -134,7 +133,6 @@ export default function PercentCalculator() {
           </div>
         </div>
 
-        <CoupangBanner />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -185,7 +183,6 @@ export default function PercentCalculator() {
           </div>
         </div>
 
-        <CoupangBanner />
 
         <div className="mt-8 bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">비율 계산 설명</h2>

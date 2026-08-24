@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import axios from "axios";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function ExchangeRate() {
   const [mounted, setMounted] = useState(false);
@@ -25,6 +24,45 @@ export default function ExchangeRate() {
       setMounted(false);
     };
   }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function fetchExchangeRates() {
+      setLoading(true);
+      try {
+        const response = await fetch("/api/exchange-rates", {
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error("환율 API 응답 오류");
+        const data = await response.json();
+        setExchangeRates(data.rates);
+        setError(null);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          setError("환율 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.");
+        }
+      } finally {
+        if (!controller.signal.aborted) setLoading(false);
+      }
+    }
+
+    fetchExchangeRates();
+    const timer = setInterval(fetchExchangeRates, 5 * 60 * 1000);
+    return () => {
+      controller.abort();
+      clearInterval(timer);
+    };
+  }, []);
+
+  const formatRate = (rate) =>
+    typeof rate === "number" ? rate.toLocaleString("ko-KR", { maximumFractionDigits: 2 }) : "-";
+
+  const calculateResult = () => {
+    const value = Number(amount);
+    const rate = exchangeRates?.[currency];
+    return Number.isFinite(value) && rate ? (value * rate).toLocaleString("ko-KR", { maximumFractionDigits: 0 }) : "-";
+  };
 
   return (
     <>
@@ -105,7 +143,6 @@ export default function ExchangeRate() {
               </div>
             </div>
 
-            <CoupangBanner />
 
             <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
               <h2 className="text-2xl font-bold mb-6">환율 계산기</h2>
@@ -163,7 +200,6 @@ export default function ExchangeRate() {
                 </div>
               </div>
 
-              <CoupangBanner />
 
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold mb-4">환율 변동 요인</h2>

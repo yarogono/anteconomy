@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function PrepaymentCalculator() {
   const [activeTab, setActiveTab] = useState("explanation"); // explanation, rate
@@ -211,7 +210,6 @@ export default function PrepaymentCalculator() {
           </div>
         </div>
 
-        <CoupangBanner />
       </main>
     </>
   );

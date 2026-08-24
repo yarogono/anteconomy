@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function AfterTaxCalculator() {
   const [salary, setSalary] = useState("");
@@ -252,7 +251,6 @@ export default function AfterTaxCalculator() {
             </div>
           </div>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

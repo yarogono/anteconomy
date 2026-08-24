@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function DepositCalculator() {
   const [deposit, setDeposit] = useState("");
@@ -189,7 +188,6 @@ export default function DepositCalculator() {
           </div>
         </section>
 
-        <CoupangBanner />
 
         <section
           className="bg-white p-6 rounded-lg shadow-lg mb-8"
@@ -230,7 +228,6 @@ export default function DepositCalculator() {
           </div>
         </section>
 
-        <CoupangBanner />
 
         <section className="mt-8 prose max-w-none" aria-label="이자 계산 설명">
           <h2 className="text-2xl font-bold mb-4">이자 계산 방식 설명</h2>

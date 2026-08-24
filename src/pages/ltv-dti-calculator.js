@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function LTVDTICalculator() {
   const [housePrice, setHousePrice] = useState("");
@@ -376,7 +375,6 @@ export default function LTVDTICalculator() {
             </section>
           </main>
 
-          <CoupangBanner />
         </div>
       </div>
     </>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function SavingsCalculator() {
   const [monthlyDeposit, setMonthlyDeposit] = useState("");
@@ -235,7 +234,6 @@ export default function SavingsCalculator() {
           </button>
         </div>
 
-        <CoupangBanner />
 
         <div className="mt-8 bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">적금 이자 계산 안내</h2>
@@ -277,7 +275,6 @@ export default function SavingsCalculator() {
           </div>
         </div>
 
-        <CoupangBanner />
       </main>
     </>
   );

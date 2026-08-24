@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 const couponCode = "JMHR5";
 const gamsgoUrl = "https://www.gamsgo.com/partner/xV82m";
@@ -73,8 +74,8 @@ export default function GamsgoDiscountCode() {
             <a href="#how-to-use">사용 방법</a>
             <a href="#services">서비스</a>
             <a href="#faq">FAQ</a>
-            <a href="/gamsgo-discount-code-not-working">코드 오류 해결</a>
-            <a href="/넷플릭스-요금제-할인-가격-겜스고-쿠폰-코드">넷플릭스 할인</a>
+            <Link href="/gamsgo-discount-code-not-working">코드 오류 해결</Link>
+            <Link href="/넷플릭스-요금제-할인-가격-겜스고-쿠폰-코드">넷플릭스 할인</Link>
           </nav>
         </header>
 

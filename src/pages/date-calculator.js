@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import CoupangBanner from "../components/CoupangBanner";
 
 export default function DateCalculator() {
   const [startDate, setStartDate] = useState("");
@@ -157,7 +156,6 @@ export default function DateCalculator() {
           </div>
         </div>
 
-        <CoupangBanner />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -228,7 +226,6 @@ export default function DateCalculator() {
           </div>
         </div>
 
-        <CoupangBanner />
       </main>
     </>
   );
