@@ -2,8 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function GPACalculator() {
   const [subjects, setSubjects] = useState([
@@ -75,7 +73,6 @@ export default function GPACalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>학점 계산기 - 평균 평점(GPA) 계산</title>
         <meta
@@ -136,7 +133,6 @@ export default function GPACalculator() {
         <div className="max-w-6xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-8">학점 계산기</h1>
 
-          <AdsenseAd slot="calculator-top" />
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
             <div className="overflow-x-auto">
@@ -339,7 +335,6 @@ export default function GPACalculator() {
           </div>
         </div>
 
-        <AdsenseAd slot="calculator-bottom" />
 
         <footer className="bg-green-950 text-center py-8">
           <p className="text-sm">© 2024 안트이코노미. All rights reserved.</p>

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 const couponCode = "JMHR5";
 const gamsgoUrl = "https://www.gamsgo.com/partner/xV82m";
@@ -56,7 +54,6 @@ export default function Home() {
           mainEntity: faqSchema,
         }) }} />
       </Head>
-      <AdsenseInit />
       <div className="homepage-shell min-h-screen text-slate-900">
         <header className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
           <Link href="/" className="text-xl font-black tracking-tight text-slate-950">겜스고 할인 <span className="text-red-500">쿠폰 가이드</span></Link>
@@ -83,7 +80,6 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="mx-auto max-w-6xl px-5"><AdsenseAd slot="homepage-top" /></div>
 
           <section id="services" className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
             <p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">인기 구독 서비스</p>

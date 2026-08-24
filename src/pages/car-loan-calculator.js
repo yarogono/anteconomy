@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function CarLoanCalculator() {
   const [carPrice, setCarPrice] = useState("");
@@ -85,7 +83,6 @@ export default function CarLoanCalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>자동차 할부 계산기 - 차량 구매 할부금액 계산</title>
         <meta
@@ -166,7 +163,6 @@ export default function CarLoanCalculator() {
             </p>
           </header>
 
-          <AdsenseAd slot="car-loan-calculator-top" />
 
           <main>
             <section className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
@@ -309,7 +305,6 @@ export default function CarLoanCalculator() {
               </section>
             )}
 
-            <AdsenseAd slot="car-loan-calculator-bottom" />
 
             <section className="bg-green-800 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold mb-4">

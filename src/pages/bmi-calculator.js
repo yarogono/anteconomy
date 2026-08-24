@@ -2,8 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function BMICalculator() {
   const [height, setHeight] = useState("");
@@ -100,7 +98,6 @@ export default function BMICalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>BMI & 체지방률 계산기 - 신체질량지수와 체지방률 계산</title>
         <meta
@@ -164,7 +161,6 @@ export default function BMICalculator() {
         <div className="max-w-6xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-8">BMI & 체지방률 계산기</h1>
 
-          <AdsenseAd slot="calculator-top" />
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -353,7 +349,6 @@ export default function BMICalculator() {
           </div>
         </div>
 
-        <AdsenseAd slot="calculator-bottom" />
 
         <footer className="bg-green-950 text-center py-8">
           <p className="text-sm">© 2024 안트이코노미. All rights reserved.</p>

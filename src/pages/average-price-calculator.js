@@ -2,8 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function AveragePriceCalculator() {
   const [entries, setEntries] = useState([
@@ -83,7 +81,6 @@ export default function AveragePriceCalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>평단가 계산기 - 주식/코인 평균 매수 단가 계산</title>
         <meta
@@ -150,7 +147,6 @@ export default function AveragePriceCalculator() {
         <div className="max-w-6xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-8">평단가 계산기</h1>
 
-          <AdsenseAd slot="calculator-top" />
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
             <div className="grid grid-cols-12 gap-4 mb-4 font-bold">
@@ -302,7 +298,6 @@ export default function AveragePriceCalculator() {
           </div>
         </div>
 
-        <AdsenseAd slot="calculator-bottom" />
 
         <footer className="bg-green-950 text-center py-8">
           <p className="text-sm">© 2024 안트이코노미. All rights reserved.</p>

@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function LTVDTICalculator() {
   const [housePrice, setHousePrice] = useState("");
@@ -69,7 +67,6 @@ export default function LTVDTICalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>LTV/DTI 계산기 - 주택담보대출 한도 계산</title>
         <meta
@@ -151,7 +148,6 @@ export default function LTVDTICalculator() {
             </p>
           </header>
 
-          <AdsenseAd slot="ltv-dti-calculator-top" />
 
           <main>
             <section className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
@@ -314,7 +310,6 @@ export default function LTVDTICalculator() {
               </section>
             )}
 
-            <AdsenseAd slot="ltv-dti-calculator-bottom" />
 
             <section className="bg-green-800 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold mb-4">LTV/DTI 계산기 안내</h2>

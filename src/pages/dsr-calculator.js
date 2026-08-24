@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function DSRCalculator() {
   const [annualIncome, setAnnualIncome] = useState("");
@@ -69,7 +67,6 @@ export default function DSRCalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>DSR(총부채원리금상환비율) 계산기 - 대출 상환능력 분석</title>
         <meta
@@ -150,7 +147,6 @@ export default function DSRCalculator() {
             </p>
           </header>
 
-          <AdsenseAd slot="dsr-calculator-top" />
 
           <main>
             <section className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
@@ -295,7 +291,6 @@ export default function DSRCalculator() {
               </section>
             )}
 
-            <AdsenseAd slot="dsr-calculator-bottom" />
 
             <section className="bg-green-800 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold mb-4">DSR 계산기 안내</h2>

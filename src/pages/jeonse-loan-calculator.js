@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function JeonseLoanCalculator() {
   const [depositAmount, setDepositAmount] = useState("");
@@ -72,7 +70,6 @@ export default function JeonseLoanCalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>전세 대출 계산기 - 전세금 대출 한도 계산</title>
         <meta
@@ -154,7 +151,6 @@ export default function JeonseLoanCalculator() {
             </p>
           </header>
 
-          <AdsenseAd slot="jeonse-loan-calculator-top" />
 
           <main>
             <section className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
@@ -282,7 +278,6 @@ export default function JeonseLoanCalculator() {
               </section>
             )}
 
-            <AdsenseAd slot="jeonse-loan-calculator-bottom" />
 
             <section className="bg-green-800 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold mb-4">전세 대출 계산기 안내</h2>

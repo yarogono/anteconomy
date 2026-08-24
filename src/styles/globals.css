@@ -66,12 +66,6 @@ body {
   background: #0d9488;
 }
 
-.ad-container ins {
-  display: block;
-  max-width: 728px;
-  overflow: hidden;
-}
-
 .gamsgo-page { --blue: #3d9be9; --ink: #172033; min-height: 100vh; color: var(--ink); background: #fff; font-family: Arial, "Noto Sans KR", sans-serif; }
 .gamsgo-header { height: 76px; max-width: 1120px; margin: auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
 .gamsgo-brand { color: #101828; font-size: 20px; font-weight: 900; letter-spacing: -.06em; text-decoration: none; }.gamsgo-brand span { color: var(--blue); font-size: 12px; margin-left: 8px; letter-spacing: 0; }
@@ -168,17 +162,11 @@ pre, code { max-width: 100%; overflow-x: auto; }
   main, header, footer { max-width: 100%; }
   table { min-width: 560px; }
   .overflow-x-auto { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .ad-container { max-width: 100%; overflow: hidden; }
-  .ad-container ins { max-width: 100%; }
   input, select, textarea { min-height: 44px; }
   button, a { -webkit-tap-highlight-color: transparent; }
   button { min-height: 44px; }
   .youtube-price-table { overflow-x: auto; }
   .youtube-price-row { min-width: 360px; }
-}
-
-.homepage-content .ad-container {
-  min-height: 0;
 }
 
 .homepage-content .bg-green-800 h3 {

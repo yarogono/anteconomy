@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function LoanCalculator() {
   const [loanAmount, setLoanAmount] = useState("");
@@ -133,7 +131,6 @@ export default function LoanCalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>
           대출 이자 계산기 - 원리금균등상환, 원금균등상환, 만기일시상환 계산
@@ -214,7 +211,6 @@ export default function LoanCalculator() {
             </p>
           </header>
 
-          <AdsenseAd slot="loan-calculator-top" />
 
           <main>
             <section className="bg-white text-black p-6 rounded-lg shadow-lg mb-8">
@@ -347,7 +343,6 @@ export default function LoanCalculator() {
               </section>
             )}
 
-            <AdsenseAd slot="loan-calculator-bottom" />
 
             <section className="bg-green-800 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold mb-4">상환방식 설명</h2>

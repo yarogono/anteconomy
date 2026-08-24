@@ -2,8 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import CoupangBanner from "../components/CoupangBanner";
-import AdsenseAd from "../components/AdsenseAd";
-import AdsenseInit from "../components/AdsenseInit";
 
 export default function FuelEfficiencyCalculator() {
   const [distance, setDistance] = useState("");
@@ -73,7 +71,6 @@ export default function FuelEfficiencyCalculator() {
 
   return (
     <>
-      <AdsenseInit />
       <Head>
         <title>자동차 연비 계산기 - 주행거리당 연료비용 계산</title>
         <meta
@@ -140,7 +137,6 @@ export default function FuelEfficiencyCalculator() {
         <div className="max-w-6xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-8">자동차 연비 계산기</h1>
 
-          <AdsenseAd slot="calculator-top" />
 
           <div className="bg-green-800 p-6 rounded-lg mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -303,7 +299,6 @@ export default function FuelEfficiencyCalculator() {
           </div>
         </div>
 
-        <AdsenseAd slot="calculator-bottom" />
 
         <footer className="bg-green-950 text-center py-8">
           <p className="text-sm">© 2024 안트이코노미. All rights reserved.</p>
