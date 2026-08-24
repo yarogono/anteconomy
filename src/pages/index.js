@@ -10,7 +10,7 @@ const youtubeUrl = "/youtube-premium-gamsgo-discount";
 
 const services = [
   { title: "유튜브 프리미엄", detail: "광고 없는 영상·음악 구독", href: youtubeUrl, icon: "▶", color: "bg-red-500" },
-  { title: "넷플릭스", detail: "영상 구독 할인 조건 확인", href: "/gamsgo-discount-code#services", icon: "N", color: "bg-slate-950" },
+  { title: "넷플릭스", detail: "영상 구독 할인 조건 확인", href: "/netflix-gamsgo-discount-code", icon: "N", color: "bg-slate-950" },
   { title: "챗GPT", detail: "AI 구독 할인 정보 확인", href: "/gamsgo-discount-code#services", icon: "✦", color: "bg-indigo-500" },
   { title: "포켓몬고·발로란트", detail: "게임 구독 할인 조건 확인", href: "/gamsgo-discount-code#services", icon: "◇", color: "bg-amber-500" },
 ];

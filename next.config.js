@@ -25,6 +25,8 @@ const nextConfig = {
       { source: "/images/:path*.jpg", destination: "/og-image.svg" },
       { source: "/%EA%B2%9C%EC%8A%A4%EA%B3%A0-%ED%95%A0%EC%9D%B8-%EC%BD%94%EB%93%9C-%EC%BF%A0%ED%8F%B0-gamsgo-%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98", destination: "/gamsgo-discount-code" },
       { source: "/%EC%9C%A0%ED%8A%9C%EB%B8%8C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EA%B2%9C%EC%8A%A4%EA%B3%A0-70-%ED%95%A0%EC%9D%B8-%EC%BD%94%EB%93%9C-%EC%8B%B8%EA%B2%8C-%EA%B5%AC%EB%8F%85-%EA%B2%B0%EC%A0%9C-%EC%BF%A0%ED%8F%B0", destination: "/youtube-premium-gamsgo-discount" },
+      { source: "/%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4-%EA%B2%9C%EC%8A%A4%EA%B3%A0-%ED%95%A0%EC%9D%B8-%EC%BD%94%EB%93%9C", destination: "/netflix-gamsgo-discount-code" },
+      { source: "/%EA%B2%9C%EC%8A%A4%EA%B3%A0-%ED%95%A0%EC%9D%B8-%EC%BD%94%EB%93%9C-%EC%A0%81%EC%9A%A9-%EC%95%88%EB%90%A8", destination: "/gamsgo-discount-code-not-working" },
     ];
   },
   webpack: (config, { isServer }) => {
