@@ -9,10 +9,10 @@
             <link>https://anteconomy.co.kr</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 23 Aug 2026 14:26:25 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Aug 2026 07:55:28 GMT</lastBuildDate>
         <atom:link href="https://anteconomy.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[anteconomy]]></author>
-        <pubDate>Sun, 23 Aug 2026 14:26:25 GMT</pubDate>
+        <pubDate>Mon, 24 Aug 2026 07:55:28 GMT</pubDate>
         <copyright><![CDATA[© anteconomy]]></copyright>
         <language><![CDATA[ko-KR]]></language>
         <ttl>60</ttl>
@@ -270,6 +270,17 @@
             <pubDate>Thu, 20 Aug 2026 14:14:48 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[gamsgo-discount-code-not-working]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/gamsgo-discount-code-not-working</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/gamsgo-discount-code-not-working</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Mon, 24 Aug 2026 07:53:28 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[gamsgo-discount-code]]></title>
             <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
             <link>https://anteconomy.co.kr/gamsgo-discount-code</link>
@@ -278,7 +289,7 @@
             <category><![CDATA[투자]]></category>
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
-            <pubDate>Sun, 23 Aug 2026 12:47:49 GMT</pubDate>
+            <pubDate>Mon, 24 Aug 2026 07:53:40 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[global-commodities-market]]></title>
@@ -565,6 +576,17 @@
             <category><![CDATA[경제]]></category>
             <dc:creator><![CDATA[anteconomy]]></dc:creator>
             <pubDate>Sun, 23 Aug 2026 13:33:50 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[겜스고-할인-코드-적용-안됨]]></title>
+            <description><![CDATA[금융 시장 분석과 투자 정보]]></description>
+            <link>https://anteconomy.co.kr/겜스고-할인-코드-적용-안됨</link>
+            <guid isPermaLink="false">https://anteconomy.co.kr/겜스고-할인-코드-적용-안됨</guid>
+            <category><![CDATA[금융]]></category>
+            <category><![CDATA[투자]]></category>
+            <category><![CDATA[경제]]></category>
+            <dc:creator><![CDATA[anteconomy]]></dc:creator>
+            <pubDate>Mon, 24 Aug 2026 07:53:29 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[겜스고-할인-코드-쿠폰-gamsgo-프로모션]]></title>

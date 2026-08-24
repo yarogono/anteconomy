@@ -73,6 +73,7 @@ export default function GamsgoDiscountCode() {
             <a href="#how-to-use">사용 방법</a>
             <a href="#services">서비스</a>
             <a href="#faq">FAQ</a>
+            <a href="/gamsgo-discount-code-not-working">코드 오류 해결</a>
           </nav>
         </header>
 
