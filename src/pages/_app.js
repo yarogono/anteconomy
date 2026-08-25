@@ -13,6 +13,12 @@ function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-MFS6DMRF45');`}
       </Script>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5633731930294890"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <SeoDefaults />
       <Component {...pageProps} />
       <TrustFooter />
