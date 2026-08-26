@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 const SITE_URL = "https://anteconomy.co.kr";
 const SITE_NAME = "안트이코노미";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`;
+const YOUTUBE_GAMSGO_IMAGE = `${SITE_URL}/youtube-premium-gamsgo-og.png`;
 const PAGES_WITHOUT_LOCAL_CANONICAL = new Set([
   "/after-tax-calculator",
   "/annual-leave-calculator",
@@ -37,6 +38,7 @@ export default function SeoDefaults() {
   const isCalculator = canonicalPath.includes("calculator");
   const isGamsgo = canonicalPath.includes("gamsgo-discount-code") || canonicalPath.includes("겜스고-할인-코드");
   const isYoutubeGamsgo = canonicalPath.includes("youtube-premium-gamsgo-discount") || canonicalPath.includes("유튜브-프리미엄-겜스고");
+  const ogImage = isYoutubeGamsgo ? YOUTUBE_GAMSGO_IMAGE : DEFAULT_IMAGE;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -105,11 +107,11 @@ export default function SeoDefaults() {
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="ko_KR" />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={DEFAULT_IMAGE} />
-      <meta property="og:image:alt" content={`${SITE_NAME} 금융 계산기`} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={isYoutubeGamsgo ? "유튜브 프리미엄 겜스고 할인 코드 JMHR5" : `${SITE_NAME} 금융 계산기`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:image" content={DEFAULT_IMAGE} />
+      <meta name="twitter:image" content={ogImage} />
       {PAGES_WITHOUT_LOCAL_CANONICAL.has(router.pathname) && (
         <link rel="canonical" href={canonicalUrl} />
       )}

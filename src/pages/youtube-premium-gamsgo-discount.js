@@ -45,6 +45,7 @@ export default function YoutubePremiumGamsgoDiscount() {
         <link rel="canonical" href="https://anteconomy.co.kr/유튜브-프리미엄-겜스고-70-할인-코드-싸게-구독-결제-쿠폰" />
         <meta property="og:image" content="https://anteconomy.co.kr/youtube-premium-gamsgo-og.png" />
         <meta property="og:image:alt" content="유튜브 프리미엄 겜스고 할인 코드 JMHR5" />
+        <meta name="twitter:image" content="https://anteconomy.co.kr/youtube-premium-gamsgo-og.png" />
         <meta property="og:title" content="유튜브 프리미엄 겜스고 최대 70% 할인 코드 JMHR5" />
         <meta property="og:description" content="겜스고 유튜브 프리미엄 할인 코드와 싸게 구독·결제하는 방법을 확인하세요." />
         <meta property="og:type" content="article" />
