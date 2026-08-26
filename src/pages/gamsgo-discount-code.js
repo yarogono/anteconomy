@@ -7,11 +7,19 @@ const gamsgoUrl = "https://www.gamsgo.com/partner/xV82m";
 const updatedAt = "2026년 8월 22일";
 
 const services = [
-  { name: "ChatGPT", label: "챗GPT", detail: "AI 구독 상품", icon: "✦", tone: "violet" },
-  { name: "YouTube Premium", label: "유튜브 프리미엄", detail: "영상 구독 상품", icon: "▶", tone: "red" },
-  { name: "Netflix", label: "넷플릭스", detail: "영상 구독 상품", icon: "N", tone: "black" },
-  { name: "Pokémon GO", label: "포켓몬고", detail: "게임 상품", icon: "⌁", tone: "yellow" },
-  { name: "VALORANT", label: "발로란트", detail: "게임 상품", icon: "◇", tone: "pink" },
+  { name: "ChatGPT", label: "챗GPT", detail: "AI 구독 상품", icon: "✦", tone: "violet", href: "https://www.gamsgo.com/details/chatgpt/partner/xV82m" },
+  { name: "Claude", label: "클로드", detail: "AI 구독 상품", icon: "◌", tone: "black", href: "https://www.gamsgo.com/accounts/claude/partner/xV82m" },
+  { name: "Gemini", label: "제미나이", detail: "AI 구독 상품", icon: "✧", tone: "blue", href: "https://www.gamsgo.com/details/gemini/partner/xV82m" },
+  { name: "Cursor AI", label: "커서AI", detail: "AI 개발 도구", icon: "⌘", tone: "violet", href: "https://www.gamsgo.com/details/cursor/partner/xV82m" },
+  { name: "Perplexity", label: "퍼플렉시티", detail: "AI 검색 서비스", icon: "P", tone: "blue", href: "https://www.gamsgo.com/details/perplexity_ai/partner/xV82m" },
+  { name: "Midjourney", label: "미드저니", detail: "AI 이미지 생성", icon: "✺", tone: "black", href: "https://www.gamsgo.com/details/midjourney_official/partner/xV82m" },
+  { name: "Genspark", label: "젠스파크", detail: "AI 검색 서비스", icon: "✦", tone: "yellow", href: "https://www.gamsgo.com/details/genspark/partner/xV82m" },
+  { name: "Grok", label: "그록", detail: "AI 챗봇 서비스", icon: "𝕏", tone: "black", href: "https://www.gamsgo.com/details/grok/partner/xV82m" },
+  { name: "Miricanvas", label: "미리캔버스", detail: "디자인 도구", icon: "▧", tone: "pink", href: "https://www.gamsgo.com/details/miricanvas/partner/xV82m" },
+  { name: "ElevenLabs", label: "일레븐랩스", detail: "AI 음성 서비스", icon: "♫", tone: "violet", href: "https://www.gamsgo.com/details/elevenlabs/partner/xV82m" },
+  { name: "Gamma", label: "감마", detail: "AI 프레젠테이션", icon: "◈", tone: "blue", href: "https://www.gamsgo.com/details/gama_ai/partner/xV82m" },
+  { name: "Manus", label: "마누스", detail: "AI 에이전트", icon: "◎", tone: "yellow", href: "https://www.gamsgo.com/details/manus/partner/xV82m" },
+  { name: "Replit", label: "리플릿", detail: "AI 개발 플랫폼", icon: "⟩", tone: "orange", href: "https://www.gamsgo.com/accounts/replit/partner/xV82m" },
 ];
 
 const faqs = [
@@ -144,7 +152,7 @@ export default function GamsgoDiscountCode() {
             <h2>서비스별 겜스고 할인 확인</h2>
             <p className="section-description">아래 서비스의 상품 판매 여부와 프로모션 적용 조건은 공식 상품 페이지에서 확인하세요.</p>
             <div className="service-grid">
-              {services.map((service) => <a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className={`service-card ${service.tone}`} key={service.name}><span>{service.icon}</span><div><strong>{service.label}</strong><small>{service.detail}</small><small>{service.name}</small></div><b>공식 페이지 확인 →</b></a>)}
+              {services.map((service) => <a href={service.href} target="_blank" rel="sponsored noopener noreferrer" className={`service-card ${service.tone}`} key={service.name}><span>{service.icon}</span><div><strong>{service.label}</strong><small>{service.detail}</small><small>{service.name}</small></div><b>공식 페이지 확인 →</b></a>)}
             </div>
           </section>
 
