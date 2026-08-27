@@ -152,10 +152,18 @@ body {
 
 /* Shared mobile safety rules for all pages */
 html, body, #__next { width: 100%; min-width: 0; }
-body { overflow-x: hidden; }
+body { overflow-x: hidden; word-break: keep-all; }
 img, video, iframe, svg { max-width: 100%; }
 button, input, select, textarea { max-width: 100%; font: inherit; }
 pre, code { max-width: 100%; overflow-x: auto; }
+
+/* Keep Korean copy readable while still allowing long URLs and identifiers to wrap. */
+:where(h1, h2, h3, h4, h5, h6, p, li, a, button, summary, label, small, strong, b, span) {
+  overflow-wrap: break-word;
+}
+:where(a, code, pre, input, textarea) {
+  word-break: break-word;
+}
 
 @media (max-width: 640px) {
   body { font-size: 15px; }

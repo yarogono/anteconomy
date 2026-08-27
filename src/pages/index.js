@@ -96,7 +96,7 @@ export default function Home() {
 
           <section id="faq" className="mx-auto max-w-6xl px-5 pb-14 sm:pb-20"><p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">자주 묻는 질문</p><h2 className="text-3xl font-black tracking-tight sm:text-4xl">겜스고 할인 코드 FAQ</h2><div className="mt-7 divide-y divide-slate-200 rounded-2xl bg-white px-6 shadow-sm ring-1 ring-slate-200">{faqs.map(([question, answer]) => <details className="py-5" key={question}><summary className="cursor-pointer text-lg font-black">{question}</summary><p className="mt-3 font-semibold leading-7 text-slate-600">{answer}</p></details>)}</div></section>
         </main>
-        <footer className="bg-slate-950 px-5 py-10 text-center text-sm font-semibold leading-7 text-white/60"><strong className="text-lg text-white">겜스고 할인 쿠폰 가이드</strong><p className="mx-auto mt-3 max-w-2xl">본 페이지에는 겜스고 제휴 링크가 포함되어 있습니다. 서비스·할인·이용 조건은 공식 결제 화면을 기준으로 확인하세요.</p></footer>
+        <footer className="bg-slate-950 px-5 py-10 text-center text-sm font-semibold leading-7 text-white/60"><strong className="text-lg text-white">겜스고 할인 쿠폰 가이드</strong><p className="mx-auto mt-3 max-w-xl">본 페이지에는 겜스고 제휴 링크가 포함되어 있습니다.<br />서비스·할인·이용 조건은 공식 결제 화면을 기준으로 확인하세요.</p></footer>
       </div>
     </>
   );
