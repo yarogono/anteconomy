@@ -7,10 +7,12 @@ const gamsgoUrl = "https://www.gamsgo.com/partner/xV82m";
 const youtubeUrl = "/youtube-premium-gamsgo-discount";
 
 const services = [
-  { title: "유튜브 프리미엄", detail: "광고 없는 영상·음악 구독", href: youtubeUrl, icon: "▶", color: "bg-red-500" },
-  { title: "넷플릭스", detail: "요금제 할인 가격·쿠폰 코드 확인", href: "/넷플릭스-요금제-할인-가격-겜스고-쿠폰-코드", icon: "N", color: "bg-slate-950" },
-  { title: "챗GPT", detail: "AI 구독 할인 정보 확인", href: "/gamsgo-discount-code#services", gamsgoUrl: "https://www.gamsgo.com/details/chatgpt/partner/xV82m", icon: "✦", color: "bg-indigo-500" },
-  { title: "포켓몬고·발로란트", detail: "게임 구독 할인 조건 확인", href: "/gamsgo-discount-code#services", icon: "◇", color: "bg-amber-500" },
+  { title: "유튜브 프리미엄", detail: "광고 없는 영상·음악 구독", benefit: "최대 70% 할인", href: youtubeUrl, icon: "▶", color: "bg-red-500" },
+  { title: "넷플릭스", detail: "요금제와 쿠폰 코드 확인", benefit: "할인 가격 확인", href: "/넷플릭스-요금제-할인-가격-겜스고-쿠폰-코드", icon: "N", color: "bg-slate-950" },
+  { title: "챗GPT", detail: "AI 구독 할인 정보", benefit: "AI 구독 할인", href: "/gamsgo-discount-code#services", gamsgoUrl: "https://www.gamsgo.com/details/chatgpt/partner/xV82m", icon: "✦", color: "bg-indigo-500" },
+  { title: "클로드", detail: "AI 구독 할인 정보", benefit: "AI 구독 할인", href: "/gamsgo-discount-code#services", gamsgoUrl: "https://www.gamsgo.com/accounts/claude/partner/xV82m", icon: "◌", color: "bg-slate-800" },
+  { title: "제미나이", detail: "AI 구독 할인 정보", benefit: "AI 구독 할인", href: "/gamsgo-discount-code#services", gamsgoUrl: "https://www.gamsgo.com/details/gemini/partner/xV82m", icon: "✧", color: "bg-blue-600" },
+  { title: "포켓몬고·발로란트", detail: "게임 구독 할인 조건", benefit: "게임 할인 확인", href: "/gamsgo-discount-code#services", icon: "◇", color: "bg-amber-500" },
 ];
 
 const faqs = [
@@ -65,27 +67,27 @@ export default function Home() {
         <main>
           <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
             <div>
-              <p className="mb-4 text-sm font-black tracking-[0.18em] text-red-500">지금 바로 할인받기</p>
-              <h1 className="text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-6xl">겜스고 할인 코드<br /><span className="text-red-500">JMHR5로 구독료 아끼기</span></h1>
-              <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-slate-600">유튜브 프리미엄, 넷플릭스, 챗GPT 등 인기 구독 서비스를 확인하고, 결제 전에 프로모션 코드 JMHR5를 적용해보세요.</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-red-500 px-7 py-4 text-center font-black text-white shadow-lg shadow-red-200">겜스고 할인 링크 바로가기</a><a href="#services" className="rounded-full bg-white px-7 py-4 text-center font-black text-slate-900 ring-1 ring-slate-200">할인 정보 먼저 보기</a></div>
-              <p className="mt-4 text-sm font-bold text-slate-500">서비스·기간·이용 조건에 따라 할인 적용 결과가 달라질 수 있습니다.</p>
+              <p className="mb-4 text-sm font-black tracking-[0.18em] text-red-500">겜스고 할인 혜택</p>
+              <h1 className="text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-6xl">최대 70% 할인<br /><span className="text-red-500">쿠폰 코드 JMHR5</span></h1>
+              <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-slate-600">유튜브 프리미엄, 넷플릭스, 챗GPT를 더 저렴하게 이용하세요.</p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-red-500 px-7 py-4 text-center font-black text-white shadow-lg shadow-red-200">최대 70% 할인받기</a><a href="#services" className="rounded-full bg-white px-7 py-4 text-center font-black text-slate-900 ring-1 ring-slate-200">서비스 보기</a></div>
+              <p className="mt-4 text-sm font-bold text-slate-500">할인율은 서비스·기간별로 달라질 수 있습니다.</p>
             </div>
             <div id="coupon" className="rounded-3xl bg-white p-7 shadow-2xl ring-1 ring-slate-200 sm:p-9">
-              <span className="text-sm font-black text-slate-500">현재 프로모션 코드</span>
-              <strong className="my-4 block text-5xl font-black tracking-widest text-red-500">{couponCode}</strong>
-              <p className="font-semibold leading-7 text-slate-600">코드를 복사한 뒤 겜스고 할인 링크로 이동해 원하는 서비스의 최종 할인 금액을 확인하세요.</p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2"><button type="button" onClick={copyCoupon} className="rounded-full bg-red-500 px-5 py-4 font-black text-white">{copied ? "복사 완료 ✓" : "JMHR5 코드 복사"}</button><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-slate-950 px-5 py-4 text-center font-black text-white">할인 정보 보러가기</a></div>
-              <small className="mt-4 block font-semibold text-slate-500">할인 금액은 결제 화면에서 최종 확인하세요.</small>
+              <span className="text-sm font-black text-slate-500">지금 받을 수 있는 할인</span>
+              <strong className="my-3 block text-6xl font-black tracking-tight text-red-500">최대 70%</strong>
+              <p className="font-semibold leading-7 text-slate-600">쿠폰 코드 <b className="text-slate-950">{couponCode}</b></p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2"><button type="button" onClick={copyCoupon} className="rounded-full bg-red-500 px-5 py-4 font-black text-white">{copied ? "복사 완료 ✓" : "코드 복사"}</button><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-slate-950 px-5 py-4 text-center font-black text-white">할인받기</a></div>
+              <small className="mt-4 block font-semibold text-slate-500">결제 화면에서 최종 할인 금액을 확인하세요.</small>
             </div>
           </section>
 
 
           <section id="services" className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
-            <p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">인기 구독 서비스</p>
-            <h2 className="text-3xl font-black tracking-tight sm:text-4xl">어떤 서비스의 할인 정보를 찾으시나요?</h2>
-            <p className="mt-4 max-w-2xl font-semibold leading-7 text-slate-600">원하는 서비스를 선택하면 할인 코드와 이용 조건을 확인할 수 있습니다. 바로 확인하려면 할인 링크 바로가기 버튼을 이용하세요.</p>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{services.map((service) => <article key={service.title} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><span className={`grid h-11 w-11 place-items-center rounded-xl text-xl font-black text-white ${service.color}`}>{service.icon}</span><h3 className="mt-5 text-xl font-black">{service.title}</h3><p className="mt-2 min-h-12 text-sm font-semibold leading-6 text-slate-600">{service.detail}</p><div className="mt-5 flex flex-col gap-2"><a href={service.gamsgoUrl || gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="rounded-full bg-red-500 px-4 py-3 text-center text-sm font-black text-white">할인 링크 바로가기</a><Link href={service.href} className="rounded-full px-4 py-3 text-center text-sm font-black text-slate-700 ring-1 ring-slate-200">상세 조건 확인</Link></div></article>)}</div>
+            <p className="mb-3 text-sm font-black tracking-[0.18em] text-red-500">인기 서비스</p>
+            <h2 className="text-3xl font-black tracking-tight sm:text-4xl">할인받을 서비스를 선택하세요</h2>
+            <p className="mt-4 max-w-2xl font-semibold leading-7 text-slate-600">서비스별 할인 혜택과 쿠폰 코드를 한눈에 확인하세요.</p>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{services.map((service) => <article key={service.title} className="group rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg"><div className="grid h-32 place-items-center rounded-xl bg-slate-50"><span className={`grid h-16 w-16 place-items-center rounded-2xl text-3xl font-black text-white shadow-sm ${service.color}`}>{service.icon}</span></div><div className="px-1 pt-4"><p className="text-sm font-semibold text-slate-500">{service.title}</p><h3 className="mt-1 text-lg font-black text-slate-950">{service.benefit}</h3><p className="mt-1 min-h-6 text-sm font-semibold text-slate-500">{service.detail}</p><div className="mt-4 flex items-center justify-between gap-3"><a href={service.gamsgoUrl || gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="flex-1 rounded-full bg-red-500 px-3 py-2.5 text-center text-sm font-black text-white">할인받기</a><Link href={service.href} className="text-sm font-black text-slate-700 underline underline-offset-4">자세히 →</Link></div></div></article>)}</div>
           </section>
 
           <section className="bg-slate-950 px-5 py-14 text-white sm:py-20"><div className="mx-auto max-w-6xl"><p className="mb-3 text-sm font-black tracking-[0.18em] text-red-400">겜스고 할인 혜택</p><h2 className="text-3xl font-black sm:text-4xl">할인 정보를 확인하고 원하는 서비스를 선택하세요</h2><div className="mt-8 grid gap-5 md:grid-cols-3"><div className="rounded-2xl bg-white/10 p-6"><h3 className="text-xl font-black">서비스별 할인 확인</h3><p className="mt-3 font-semibold leading-7 text-white/75">관심 있는 서비스의 할인 코드와 이용 기간별 조건을 확인하세요.</p></div><div className="rounded-2xl bg-white/10 p-6"><h3 className="text-xl font-black">프로모션 코드 적용</h3><p className="mt-3 font-semibold leading-7 text-white/75">결제 전 JMHR5를 입력하고 할인 금액이 실제로 반영되는지 확인하세요.</p></div><div className="rounded-2xl bg-white/10 p-6"><h3 className="text-xl font-black">이용 조건 확인</h3><p className="mt-3 font-semibold leading-7 text-white/75">자동 갱신, 환불, 계정 방식과 서비스별 제한을 확인하세요.</p></div></div><div className="mt-9 text-center"><a href={gamsgoUrl} target="_blank" rel="sponsored noopener noreferrer" className="inline-block rounded-full bg-red-500 px-8 py-4 font-black text-white shadow-lg shadow-red-950">JMHR5 할인 정보 확인하기</a></div></div></section>
