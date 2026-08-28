@@ -67,8 +67,8 @@ export default function GamsgoDiscountCode() {
           url: "https://anteconomy.co.kr/겜스고-할인-코드-쿠폰-gamsgo-프로모션",
           inLanguage: "ko-KR",
           dateModified: "2026-08-22",
-          author: { "@type": "Organization", name: "안트이코노미 편집팀", url: "https://anteconomy.co.kr" },
-          isPartOf: { "@type": "WebSite", name: "안트이코노미", url: "https://anteconomy.co.kr" },
+          author: { "@type": "Organization", name: "Anteconomy 편집팀", url: "https://anteconomy.co.kr" },
+          isPartOf: { "@type": "WebSite", name: "Anteconomy", url: "https://anteconomy.co.kr" },
           mainEntity: { "@type": "FAQPage", mainEntity: faqSchema },
         }) }} />
       </Head>
@@ -129,7 +129,7 @@ export default function GamsgoDiscountCode() {
           <section className="content-section verification-section" id="verification">
             <p className="section-kicker">VERIFICATION</p>
             <h2>JMHR5 할인 코드 확인 기준</h2>
-            <p>안트이코노미 편집팀은 겜스고 공식 제휴 링크와 결제 화면을 기준으로 할인 코드 정보를 확인합니다. 상품과 이용자 조건에 따라 적용 결과가 달라질 수 있으므로, 최종 결제 금액이 실제로 줄어드는지 확인한 뒤 결제하세요.</p>
+            <p>Anteconomy 편집팀은 겜스고 공식 제휴 링크와 결제 화면을 기준으로 할인 코드 정보를 확인합니다. 상품과 이용자 조건에 따라 적용 결과가 달라질 수 있으므로, 최종 결제 금액이 실제로 줄어드는지 확인한 뒤 결제하세요.</p>
             <div className="verification-grid">
               <div><strong>마지막 확인</strong><span>{updatedAt}</span></div>
               <div><strong>확인 코드</strong><span>JMHR5</span></div>

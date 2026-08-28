@@ -34,7 +34,7 @@ export default function GlobalTradeTrends({ tradeData }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
-          글로벌 무역 트렌드 - 국제 무역 동향과 투자 전략 | 안트이코노미
+          글로벌 무역 트렌드 - 국제 무역 동향과 투자 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -50,7 +50,7 @@ export default function GlobalTradeTrends({ tradeData }) {
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="글로벌 무역 트렌드 - 국제 무역 동향과 투자 전략 | 안트이코노미"
+          content="글로벌 무역 트렌드 - 국제 무역 동향과 투자 전략 | Anteconomy"
         />
         <meta
           property="og:description"
@@ -58,7 +58,7 @@ export default function GlobalTradeTrends({ tradeData }) {
         />
         <meta
           property="og:image"
-          content="https://anteconomy.co.kr/images/trade-2024.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
         <meta
           property="og:url"
@@ -75,7 +75,7 @@ export default function GlobalTradeTrends({ tradeData }) {
         />
         <meta
           name="twitter:image"
-          content="https://anteconomy.co.kr/images/trade-2024.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
         <link
           rel="canonical"

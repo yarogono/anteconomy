@@ -93,7 +93,7 @@ export default function DSRCalculator() {
         />
         <meta
           property="og:image"
-          content="https://anteconomy.co.kr/og-image.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
 
         {/* Twitter */}
@@ -112,12 +112,12 @@ export default function DSRCalculator() {
         />
         <meta
           property="twitter:image"
-          content="https://anteconomy.co.kr/og-image.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
 
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="anteconomy" />
+        <meta name="author" content="Anteconomy" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://anteconomy.co.kr/dsr-calculator" />
 

@@ -34,7 +34,7 @@ export default function GlobalCommoditiesMarket({ commoditiesData }) {
     <>
       <Head>
         <title>
-          글로벌 원자재 시장 - 국제 상품 시장 동향과 투자 전략 | 안트이코노미
+          글로벌 원자재 시장 - 국제 상품 시장 동향과 투자 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -46,7 +46,7 @@ export default function GlobalCommoditiesMarket({ commoditiesData }) {
         />
         <meta
           property="og:title"
-          content="글로벌 원자재 시장 - 국제 상품 시장 동향과 투자 전략 | 안트이코노미"
+          content="글로벌 원자재 시장 - 국제 상품 시장 동향과 투자 전략 | Anteconomy"
         />
         <meta
           property="og:description"

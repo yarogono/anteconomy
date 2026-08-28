@@ -31,7 +31,7 @@ export default function CryptoMarketOutlook({ cryptoData }) {
     <>
       <Head>
         <title>
-          암호화폐 시장 전망 - 디지털 자산 투자 가이드 | 안트이코노미
+          암호화폐 시장 전망 - 디지털 자산 투자 가이드 | Anteconomy
         </title>
         <meta
           name="description"
@@ -43,7 +43,7 @@ export default function CryptoMarketOutlook({ cryptoData }) {
         />
         <meta
           property="og:title"
-          content="암호화폐 시장 전망 - 디지털 자산 투자 가이드 | 안트이코노미"
+          content="암호화폐 시장 전망 - 디지털 자산 투자 가이드 | Anteconomy"
         />
         <meta
           property="og:description"

@@ -12,7 +12,7 @@ export default function BondInvestmentGuide() {
     <>
       <Head>
         <title>
-          채권 투자 가이드 - 안정적인 수익을 위한 전략 | 안트이코노미
+          채권 투자 가이드 - 안정적인 수익을 위한 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -24,7 +24,7 @@ export default function BondInvestmentGuide() {
         />
         <meta
           property="og:title"
-          content="채권 투자 가이드 - 안정적인 수익을 위한 전략 | 안트이코노미"
+          content="채권 투자 가이드 - 안정적인 수익을 위한 전략 | Anteconomy"
         />
         <meta
           property="og:description"

@@ -36,7 +36,7 @@ export default function GlobalFinancialPolicies({ policyData }) {
     <>
       <Head>
         <title>
-          글로벌 금융 정책 - 세계 주요국 통화/금융 정책 분석 | 안트이코노미
+          글로벌 금융 정책 - 세계 주요국 통화/금융 정책 분석 | Anteconomy
         </title>
         <meta
           name="description"
@@ -48,7 +48,7 @@ export default function GlobalFinancialPolicies({ policyData }) {
         />
         <meta
           property="og:title"
-          content="글로벌 금융 정책 - 세계 주요국 통화/금융 정책 분석 | 안트이코노미"
+          content="글로벌 금융 정책 - 세계 주요국 통화/금융 정책 분석 | Anteconomy"
         />
         <meta
           property="og:description"

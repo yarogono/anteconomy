@@ -32,7 +32,7 @@ export default function FinancialRiskManagement({ riskData }) {
     <>
       <Head>
         <title>
-          금융 리스크 관리 - 효과적인 투자 위험 관리 전략 | 안트이코노미
+          금융 리스크 관리 - 효과적인 투자 위험 관리 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -44,7 +44,7 @@ export default function FinancialRiskManagement({ riskData }) {
         />
         <meta
           property="og:title"
-          content="금융 리스크 관리 - 효과적인 투자 위험 관리 전략 | 안트이코노미"
+          content="금융 리스크 관리 - 효과적인 투자 위험 관리 전략 | Anteconomy"
         />
         <meta
           property="og:description"

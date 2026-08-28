@@ -65,7 +65,7 @@ export default function DepositCalculator() {
           name="keywords"
           content="예금 이자 계산기, 예금 수익률, 단리 계산, 복리 계산, 세금 계산, 예금 이자율, 예금 만기액, 예금 수익, 예금 세금, 예금 비과세, 예금 세금우대"
         />
-        <meta name="author" content="안트이코노미" />
+        <meta name="author" content="Anteconomy" />
         <meta
           property="og:title"
           content="예금 이자 계산기 - 단리/복리 계산 및 세금 계산"

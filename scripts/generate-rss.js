@@ -6,7 +6,7 @@ const EXTERNAL_DATA_URL = "https://anteconomy.co.kr";
 
 // RSS 피드 설정
 const feed = new RSS({
-  title: "안트이코노미 - 글로벌 금융 시장 분석",
+  title: "Anteconomy - 글로벌 금융 시장 분석",
   description: "실시간 금융 시장 분석과 투자 전략 정보를 제공합니다.",
   feed_url: `${EXTERNAL_DATA_URL}/rss.xml`,
   site_url: EXTERNAL_DATA_URL,
@@ -14,8 +14,8 @@ const feed = new RSS({
   language: "ko-KR",
   pubDate: new Date(),
   ttl: "60",
-  copyright: "© anteconomy",
-  author: "anteconomy",
+  copyright: "© Anteconomy",
+  author: "Anteconomy",
 });
 
 // pages 디렉토리 스캔
@@ -66,7 +66,7 @@ function getPages(dir) {
           : "금융 시장 분석과 투자 정보",
         url: url === "/index" ? "" : url,
         date: fs.statSync(fullPath).mtime,
-        author: "anteconomy",
+        author: "Anteconomy",
         categories: ["금융", "투자", "경제"],
       };
     })

@@ -40,7 +40,7 @@ export default function StockInvestmentGuide({ investmentGuideData }) {
     <>
       <Head>
         <title>
-          주식 투자 가이드 - 초보자를 위한 단계별 투자 전략 | 안트이코노미
+          주식 투자 가이드 - 초보자를 위한 단계별 투자 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -52,7 +52,7 @@ export default function StockInvestmentGuide({ investmentGuideData }) {
         />
         <meta
           property="og:title"
-          content="주식 투자 가이드 - 초보자를 위한 단계별 투자 전략 | 안트이코노미"
+          content="주식 투자 가이드 - 초보자를 위한 단계별 투자 전략 | Anteconomy"
         />
         <meta
           property="og:description"

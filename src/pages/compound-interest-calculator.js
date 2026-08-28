@@ -78,7 +78,7 @@ export default function CompoundInterestCalculator() {
         />
         <meta
           property="og:image"
-          content="https://anteconomy.co.kr/og-image.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
 
         {/* Twitter */}
@@ -94,12 +94,12 @@ export default function CompoundInterestCalculator() {
         />
         <meta
           property="twitter:image"
-          content="https://anteconomy.co.kr/og-image.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
 
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="anteconomy" />
+        <meta name="author" content="Anteconomy" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="canonical"
@@ -279,7 +279,7 @@ export default function CompoundInterestCalculator() {
 
 
         <footer className="bg-green-950 text-center py-8">
-          <p className="text-sm">© 2024 안트이코노미. All rights reserved.</p>
+          <p className="text-sm">© 2024 Anteconomy. All rights reserved.</p>
           <p className="text-sm mt-2">
             실시간 금융 시장 분석과 투자 정보를 제공합니다.
           </p>

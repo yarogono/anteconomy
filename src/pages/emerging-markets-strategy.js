@@ -32,7 +32,7 @@ export default function EmergingMarketsStrategy({ emergingData }) {
     <>
       <Head>
         <title>
-          신흥시장 투자 전략 - 성장 기회와 리스크 분석 | 안트이코노미
+          신흥시장 투자 전략 - 성장 기회와 리스크 분석 | Anteconomy
         </title>
         <meta
           name="description"
@@ -44,7 +44,7 @@ export default function EmergingMarketsStrategy({ emergingData }) {
         />
         <meta
           property="og:title"
-          content="신흥시장 투자 전략 - 성장 기회와 리스크 분석 | 안트이코노미"
+          content="신흥시장 투자 전략 - 성장 기회와 리스크 분석 | Anteconomy"
         />
         <meta
           property="og:description"

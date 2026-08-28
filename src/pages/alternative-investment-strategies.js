@@ -35,7 +35,7 @@ export default function AlternativeInvestmentStrategies({ alternativeData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
           대체투자 전략 가이드 - 포트폴리오 다각화를 위한 투자 전략 |
-          안트이코노미
+          Anteconomy
         </title>
         <meta
           name="description"
@@ -51,7 +51,7 @@ export default function AlternativeInvestmentStrategies({ alternativeData }) {
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="대체투자 전략 가이드 - 포트폴리오 다각화를 위한 투자 전략 | 안트이코노미"
+          content="대체투자 전략 가이드 - 포트폴리오 다각화를 위한 투자 전략 | Anteconomy"
         />
         <meta
           property="og:description"
@@ -59,7 +59,7 @@ export default function AlternativeInvestmentStrategies({ alternativeData }) {
         />
         <meta
           property="og:image"
-          content="https://anteconomy.co.kr/images/alternative-2024.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
         <meta
           property="og:url"
@@ -80,7 +80,7 @@ export default function AlternativeInvestmentStrategies({ alternativeData }) {
         />
         <meta
           name="twitter:image"
-          content="https://anteconomy.co.kr/images/alternative-2024.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
       </Head>
 

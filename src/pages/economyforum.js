@@ -28,7 +28,7 @@ export default function EconomicForum({ forumData }) {
   return (
     <>
       <Head>
-        <title>경제 포럼 - 글로벌 경제 동향과 전망 분석 | 안트이코노미</title>
+        <title>경제 포럼 - 글로벌 경제 동향과 전망 분석 | Anteconomy</title>
         <meta
           name="description"
           content="세계 경제의 주요 이슈와 트렌드를 분석하고 미래 전망을 제시합니다. 글로벌 경제 정책, 시장 동향, 산업 변화에 대한 전문가들의 심층 분석을 제공합니다."
@@ -39,7 +39,7 @@ export default function EconomicForum({ forumData }) {
         />
         <meta
           property="og:title"
-          content="경제 포럼 - 글로벌 경제 동향과 전망 분석 | 안트이코노미"
+          content="경제 포럼 - 글로벌 경제 동향과 전망 분석 | Anteconomy"
         />
         <meta
           property="og:description"

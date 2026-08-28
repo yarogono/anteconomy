@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">안트이코노미 금융 계산기</title>
-  <desc id="desc">환율, 대출, 급여, 투자 계산기와 경제 정보를 제공하는 안트이코노미</desc>
+  <title id="title">Anteconomy 금융 계산기</title>
+  <desc id="desc">환율, 대출, 급여, 투자 계산기와 경제 정보를 제공하는 Anteconomy</desc>
   <rect width="1200" height="630" fill="#14532d"/>
   <circle cx="1010" cy="110" r="210" fill="#166534"/>
   <circle cx="110" cy="570" r="260" fill="#052e16"/>
   <text x="100" y="250" fill="#bbf7d0" font-family="Arial, sans-serif" font-size="38" font-weight="700">ANT ECONOMY</text>
-  <text x="100" y="350" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="700">안트이코노미</text>
+  <text x="100" y="350" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="700">Anteconomy</text>
   <text x="105" y="425" fill="#dcfce7" font-family="Arial, sans-serif" font-size="32">금융 계산기 · 경제 정보 · 투자 가이드</text>
   <path d="M930 390l55-95 55 95h-35v95h-40v-95z" fill="#86efac"/>
 </svg>

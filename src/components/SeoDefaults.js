@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const SITE_URL = "https://anteconomy.co.kr";
-const SITE_NAME = "안트이코노미";
+const SITE_NAME = "Anteconomy";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`;
 const YOUTUBE_GAMSGO_IMAGE = `${SITE_URL}/youtube-premium-gamsgo-og.png`;
 const PAGES_WITHOUT_LOCAL_CANONICAL = new Set([

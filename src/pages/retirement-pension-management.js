@@ -33,7 +33,7 @@ export default function RetirementPensionManagement({ pensionData }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
-          퇴직연금 관리 - 효율적인 연금자산 운용 전략 | 안트이코노미
+          퇴직연금 관리 - 효율적인 연금자산 운용 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -49,7 +49,7 @@ export default function RetirementPensionManagement({ pensionData }) {
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="퇴직연금 관리 - 효율적인 연금자산 운용 전략 | 안트이코노미"
+          content="퇴직연금 관리 - 효율적인 연금자산 운용 전략 | Anteconomy"
         />
         <meta
           property="og:description"
@@ -57,7 +57,7 @@ export default function RetirementPensionManagement({ pensionData }) {
         />
         <meta
           property="og:image"
-          content="https://anteconomy.co.kr/images/pension-2024.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
         <meta
           property="og:url"
@@ -74,7 +74,7 @@ export default function RetirementPensionManagement({ pensionData }) {
         />
         <meta
           name="twitter:image"
-          content="https://anteconomy.co.kr/images/pension-2024.jpg"
+          content="https://anteconomy.co.kr/og-image.svg"
         />
         <link
           rel="canonical"

@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>겜스고 할인 코드 JMHR5 | 유튜브 프리미엄·넷플릭스·챗GPT 할인</title>
+        <title>겜스고 할인 코드 JMHR5 | 유튜브·넷플릭스·챗GPT 할인 | Anteconomy</title>
         <meta name="description" content="겜스고 할인 코드 JMHR5를 복사하고 유튜브 프리미엄, 넷플릭스, 챗GPT 등 인기 구독 서비스의 할인 정보를 확인하세요." />
         <meta name="keywords" content="겜스고 할인 코드, 겜스고 쿠폰, 유튜브 프리미엄 겜스고, 넷플릭스 겜스고, 챗GPT 겜스고" />
         <link rel="canonical" href="https://anteconomy.co.kr/" />
@@ -58,7 +58,7 @@ export default function Home() {
       </Head>
       <div className="homepage-shell min-h-screen text-slate-900">
         <header className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
-          <Link href="/" className="text-xl font-black tracking-tight text-slate-950">겜스고 할인 <span className="text-red-500">쿠폰 가이드</span></Link>
+          <Link href="/" className="text-xl font-black tracking-tight text-slate-950">Anteconomy <span className="text-red-500">겜스고 쿠폰 가이드</span></Link>
           <nav className="flex gap-5 overflow-x-auto whitespace-nowrap text-sm font-bold text-slate-700" aria-label="겜스고 할인 메뉴">
             <a href="#coupon">할인 코드</a><a href="#services">인기 서비스</a><a href="#how-to-use">사용 방법</a><a href="#faq">자주 묻는 질문</a>
           </nav>

@@ -36,7 +36,7 @@ export default function GlobalIndustryOutlook({ industryData }) {
     <>
       <Head>
         <title>
-          글로벌 산업 전망 - 주요 산업별 성장성과 투자 기회 | 안트이코노미
+          글로벌 산업 전망 - 주요 산업별 성장성과 투자 기회 | Anteconomy
         </title>
         <meta
           name="description"
@@ -48,7 +48,7 @@ export default function GlobalIndustryOutlook({ industryData }) {
         />
         <meta
           property="og:title"
-          content="글로벌 산업 전망 - 주요 산업별 성장성과 투자 기회 | 안트이코노미"
+          content="글로벌 산업 전망 - 주요 산업별 성장성과 투자 기회 | Anteconomy"
         />
         <meta
           property="og:description"

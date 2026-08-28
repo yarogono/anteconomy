@@ -33,7 +33,7 @@ export default function TechCompanyAnalysis({ techData }) {
     <>
       <Head>
         <title>
-          기술기업 분석 - 글로벌 테크 기업 동향과 투자 전략 | 안트이코노미
+          기술기업 분석 - 글로벌 테크 기업 동향과 투자 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -45,7 +45,7 @@ export default function TechCompanyAnalysis({ techData }) {
         />
         <meta
           property="og:title"
-          content="기술기업 분석 - 글로벌 테크 기업 동향과 투자 전략 | 안트이코노미"
+          content="기술기업 분석 - 글로벌 테크 기업 동향과 투자 전략 | Anteconomy"
         />
         <meta
           property="og:description"

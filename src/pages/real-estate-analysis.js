@@ -38,7 +38,7 @@ export default function RealEstateAnalysis({ realEstateData }) {
     <>
       <Head>
         <title>
-          부동산 시장 분석 - 글로벌 부동산 동향과 투자 전략 | 안트이코노미
+          부동산 시장 분석 - 글로벌 부동산 동향과 투자 전략 | Anteconomy
         </title>
         <meta
           name="description"
@@ -50,7 +50,7 @@ export default function RealEstateAnalysis({ realEstateData }) {
         />
         <meta
           property="og:title"
-          content="부동산 시장 분석 - 글로벌 부동산 동향과 투자 전략 | 안트이코노미"
+          content="부동산 시장 분석 - 글로벌 부동산 동향과 투자 전략 | Anteconomy"
         />
         <meta
           property="og:description"

@@ -25,7 +25,7 @@ export default function ESGInvestmentStrategies({ esgData }) {
     <>
       <Head>
         <title>
-          ESG 투자 전략 - 지속가능한 성장을 위한 투자 가이드 | 안트이코노미
+          ESG 투자 전략 - 지속가능한 성장을 위한 투자 가이드 | Anteconomy
         </title>
         <meta
           name="description"
@@ -37,7 +37,7 @@ export default function ESGInvestmentStrategies({ esgData }) {
         />
         <meta
           property="og:title"
-          content="ESG 투자 전략 - 지속가능한 성장을 위한 투자 가이드 | 안트이코노미"
+          content="ESG 투자 전략 - 지속가능한 성장을 위한 투자 가이드 | Anteconomy"
         />
         <meta
           property="og:description"
