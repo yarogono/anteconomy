@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>겜스고 할인 코드 JMHR5 | 유튜브·넷플릭스·챗GPT 할인 | Anteconomy</title>
+        <title>겜스고 할인 쿠폰 코드 챗gpt 유튜브 넷플릭스</title>
         <meta name="description" content="겜스고 할인 코드 JMHR5를 복사하고 유튜브 프리미엄, 넷플릭스, 챗GPT 등 인기 구독 서비스의 할인 정보를 확인하세요." />
         <meta name="keywords" content="겜스고 할인 코드, 겜스고 쿠폰, 유튜브 프리미엄 겜스고, 넷플릭스 겜스고, 챗GPT 겜스고" />
         <link rel="canonical" href="https://anteconomy.co.kr/" />
